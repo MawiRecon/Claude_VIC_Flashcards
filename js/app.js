@@ -59,12 +59,19 @@ async function withFeedback(btn, label, fn) {
 // Token handling (the ONLY thing we persist locally)
 // ---------------------------------------------------------------------------
 
+// Edit mode is gated on having a token. With no token the app is a clean,
+// read-only study/test experience (for friends): all editing chrome is hidden,
+// leaving only a subtle "Owner sign-in" so the owner can still edit anywhere.
 function refreshTokenUI() {
   const has = !!state.token;
-  $('token-status').textContent = has ? 'token: set (this browser only)' : 'token: not set';
+  document.body.classList.toggle('read-only', !has);
+  $('token-status').hidden = !has;
+  $('token-status').textContent = has ? 'token: set (this browser only)' : '';
   $('token-status').classList.toggle('ok', has);
   $('btn-forget').hidden = !has;
-  $('btn-token').textContent = has ? 'Change token' : 'Set token';
+  $('btn-new-card').hidden = !has;
+  $('btn-token').textContent = has ? 'Change token' : 'Owner sign-in';
+  if (!has) $('editor').hidden = true; // never show the editor in read-only mode
 }
 
 function requireToken() {
@@ -280,6 +287,7 @@ function go(delta) {
 
 function renderEditor(card) {
   const editor = $('editor');
+  if (!state.token) { editor.hidden = true; return; } // read-only: no editor at all
   if (!card) { editor.hidden = true; return; }
   editor.hidden = false;
 
@@ -411,7 +419,8 @@ function wireEvents() {
       if (state.token) localStorage.setItem(TOKEN_KEY, state.token);
       else localStorage.removeItem(TOKEN_KEY);
       refreshTokenUI();
-      toast(state.token ? 'Token saved (browser only).' : 'Token cleared.', 'ok');
+      renderView(); // show/hide the editor for the current card immediately
+      toast(state.token ? 'Signed in — editing enabled.' : 'Token cleared.', 'ok');
     }
     $('token-input').value = '';
   });
@@ -419,7 +428,8 @@ function wireEvents() {
     state.token = '';
     localStorage.removeItem(TOKEN_KEY);
     refreshTokenUI();
-    toast('Token forgotten.', 'ok');
+    renderView(); // collapse back to read-only view
+    toast('Signed out — read-only.', 'ok');
   });
 
   // editor: add tag
