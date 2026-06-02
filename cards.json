@@ -1540,34 +1540,12 @@
     "id": "nato-coyote-view4",
     "deck": "NATO",
     "name": "Coyote",
-    "image": "Reference Cards/NATO/Extracted Images/NATO_Coyote_View4.jpg",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Coyote_View4.png",
     "pov": "alt",
     "tags": [
       "IFV"
     ],
     "view": 4
-  },
-  {
-    "id": "nato-coyote-view5",
-    "deck": "NATO",
-    "name": "Coyote",
-    "image": "Reference Cards/NATO/Extracted Images/NATO_Coyote_View5.jpg",
-    "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 5
-  },
-  {
-    "id": "nato-coyote-view6",
-    "deck": "NATO",
-    "name": "Coyote",
-    "image": "Reference Cards/NATO/Extracted Images/NATO_Coyote_View6.png",
-    "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 6
   },
   {
     "id": "nato-himars",
@@ -1612,15 +1590,6 @@
     "pov": "alt",
     "tags": [],
     "view": 4
-  },
-  {
-    "id": "nato-himars-view5",
-    "deck": "NATO",
-    "name": "HIMARS",
-    "image": "Reference Cards/NATO/Extracted Images/NATO_HIMARS_View5.jpg",
-    "pov": "alt",
-    "tags": [],
-    "view": 5
   },
   {
     "id": "nato-k1a1",
@@ -1881,15 +1850,6 @@
     "pov": "alt",
     "tags": [],
     "view": 4
-  },
-  {
-    "id": "nato-paladin-view5",
-    "deck": "NATO",
-    "name": "Paladin",
-    "image": "Reference Cards/NATO/Extracted Images/NATO_Paladin_View5.jpg",
-    "pov": "alt",
-    "tags": [],
-    "view": 5
   },
   {
     "id": "nato-stryker",
@@ -2417,17 +2377,6 @@
     "view": 4
   },
   {
-    "id": "russia-bmp2-view5",
-    "deck": "Russia",
-    "name": "BMP 2",
-    "image": "Reference Cards/Russia/Extracted Images/Russia_BMP-2_View5.jpg",
-    "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 5
-  },
-  {
     "id": "russia-bmp3",
     "deck": "Russia",
     "name": "BMP 3",
@@ -2883,17 +2832,6 @@
     "view": 4
   },
   {
-    "id": "russia-havoc-view5",
-    "deck": "Russia",
-    "name": "HAVOC",
-    "image": "Reference Cards/Russia/Extracted Images/Russia_Havoc_View5.jpg",
-    "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
-    "view": 5
-  },
-  {
     "id": "russia-hind",
     "deck": "Russia",
     "name": "HIND",
@@ -3072,17 +3010,6 @@
     "view": 4
   },
   {
-    "id": "russia-t72b3-view5",
-    "deck": "Russia",
-    "name": "T-72B3",
-    "image": "Reference Cards/Russia/Extracted Images/Russia_T-72B3_View5.jpg",
-    "pov": "alt",
-    "tags": [
-      "tank"
-    ],
-    "view": 5
-  },
-  {
     "id": "russia-t80u",
     "deck": "Russia",
     "name": "T-80U",
@@ -3135,17 +3062,6 @@
       "tank"
     ],
     "view": 4
-  },
-  {
-    "id": "russia-t80u-view5",
-    "deck": "Russia",
-    "name": "T-80U",
-    "image": "Reference Cards/Russia/Extracted Images/Russia_T-80U_View5.jpg",
-    "pov": "alt",
-    "tags": [
-      "tank"
-    ],
-    "view": 5
   },
   {
     "id": "russia-t90a",

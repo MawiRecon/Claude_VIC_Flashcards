@@ -125,6 +125,7 @@ function scanAlt(standardNamesByDeck) {
 
     for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
       if (!entry.isFile() || !IMAGE_EXT.test(entry.name)) continue;
+      if (/_OLD\.[a-z]+$/i.test(entry.name)) continue; // retired sliced halves, no longer used
       const ext = path.extname(entry.name);
       const base = entry.name.slice(0, -ext.length);
       const m = base.match(REF_FILE);
@@ -231,13 +232,23 @@ function main() {
     }
   }
 
-  // 3) Derive missingImage from actual file presence.
+  // 3) Reconcile against file presence.
+  //    - Standard cards: keep, flag missingImage (a vehicle is worth keeping even
+  //      if its image is temporarily absent).
+  //    - Alt cards: each is 1:1 with a specific image file, so PRUNE it when the
+  //      file is gone (this is how renumbered/removed views drop out cleanly).
   let missingCount = 0;
   const missingNames = [];
-  for (const card of byId.values()) {
+  let prunedAlt = 0;
+  const prunedNames = [];
+  for (const [id, card] of [...byId.entries()]) {
     const present = card.image && diskPaths.has(card.image);
     if (present) {
       if ('missingImage' in card) delete card.missingImage;
+    } else if (card.pov === 'alt') {
+      byId.delete(id);
+      prunedAlt += 1;
+      prunedNames.push(`${card.deck}/${card.name} v${card.view ?? '?'}`);
     } else {
       card.missingImage = true;
       missingCount += 1;
@@ -277,6 +288,7 @@ function main() {
     console.log(`  ${deck}: ${perDeck[deck].standard} / ${perDeck[deck].alt}`);
   }
   console.log(`missing images: ${missingCount}${missingNames.length ? '  (' + missingNames.slice(0, 20).join(', ') + (missingNames.length > 20 ? ', …' : '') + ')' : ''}`);
+  console.log(`pruned alt views (file gone): ${prunedAlt}${prunedNames.length ? '  (' + prunedNames.join(', ') + ')' : ''}`);
   if (unresolved.length) console.log(`UNRESOLVED alt images (${unresolved.length}): ${unresolved.join(', ')}`);
   console.log(`cards.json ${changed ? 'UPDATED' : 'unchanged'}`);
 

@@ -5,6 +5,9 @@
 # Stale sample, no longer tracked (cards.json is the real manifest)
 cards.csv
 
+# Retired sliced-half source images (kept on disk, not used by the app)
+*_OLD.*
+
 # OS cruft
 .DS_Store
 Thumbs.db
