@@ -202,7 +202,9 @@
     "deck": "NATO",
     "name": "Abrams",
     "image": "images_NATO/Abrams.png",
-    "tags": []
+    "tags": [
+      "tank"
+    ]
   },
   {
     "id": "nato-apache",
