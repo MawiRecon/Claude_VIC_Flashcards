@@ -375,7 +375,9 @@
     "deck": "Russia",
     "name": "BTR 70",
     "image": "images_russia/BTR 70.png",
-    "tags": []
+    "tags": [
+      "IFV"
+    ]
   },
   {
     "id": "russia-btr80",
