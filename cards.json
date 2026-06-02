@@ -423,7 +423,9 @@
     "deck": "Russia",
     "name": "HAVOC",
     "image": "images_russia/HAVOC.png",
-    "tags": []
+    "tags": [
+      "helicopter"
+    ]
   },
   {
     "id": "russia-hind",
