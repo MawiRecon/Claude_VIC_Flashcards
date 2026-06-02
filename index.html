@@ -16,21 +16,32 @@
     </div>
   </header>
 
-  <!-- Deck + tag filters -->
+  <!-- Filters: Country (primary) > POV > Tags -->
   <nav class="filters">
-    <div class="filter-row">
+    <div class="filter-row search-row">
       <input id="search-input" class="search-input" type="search"
              placeholder="&#128269; Search by name or tag…" autocomplete="off" />
+      <button id="btn-jump" class="btn">&#9776; Jump to</button>
       <button id="search-clear" class="btn btn-ghost" hidden>Clear search</button>
     </div>
-    <div class="filter-row" id="pov-filter" aria-label="Point-of-view filter">
-      <span class="filter-label">POV:</span>
-      <button class="chip active" data-pov="standard">Standard POV</button>
-      <button class="chip" data-pov="all">All POVs</button>
+
+    <div class="filter-group filter-primary">
+      <span class="group-label">Country</span>
+      <div class="group-chips" id="deck-filter" aria-label="Country filter"></div>
     </div>
-    <div class="filter-row" id="deck-filter" aria-label="Deck filter"></div>
-    <div class="filter-row" id="tag-filter" aria-label="Tag filter"></div>
-    <div class="filter-row">
+    <div class="filter-group">
+      <span class="group-label">POV</span>
+      <div class="group-chips" id="pov-filter" aria-label="Point-of-view filter">
+        <button class="chip active" data-pov="standard">Standard POV</button>
+        <button class="chip" data-pov="all">All POVs</button>
+      </div>
+    </div>
+    <div class="filter-group">
+      <span class="group-label">Tags</span>
+      <div class="group-chips" id="tag-filter" aria-label="Tag filter"></div>
+    </div>
+
+    <div class="filter-row actions-row">
       <button id="btn-clear-filters" class="btn btn-ghost">Clear filters</button>
       <button id="btn-practice-filter" class="chip" aria-pressed="false">&#9733; Practice set (0)</button>
       <button id="btn-practice-clear" class="btn btn-ghost" hidden>Clear set</button>
@@ -153,6 +164,55 @@
         <button value="save" class="btn btn-primary">Save token</button>
       </div>
     </form>
+  </dialog>
+
+  <!-- Practice Test setup -->
+  <dialog id="test-setup-dialog">
+    <form method="dialog" class="dialog-form setup-form">
+      <h2>Practice Test setup</h2>
+      <div class="setup-group">
+        <span class="group-label">Country</span>
+        <div class="group-chips" id="setup-deck"></div>
+      </div>
+      <div class="setup-group">
+        <span class="group-label">POV</span>
+        <div class="group-chips" id="setup-pov">
+          <button type="button" class="chip active" data-pov="standard">Standard POV</button>
+          <button type="button" class="chip" data-pov="all">All POVs</button>
+        </div>
+      </div>
+      <div class="setup-group">
+        <span class="group-label">Tags</span>
+        <div class="group-chips" id="setup-tags"></div>
+      </div>
+      <div class="setup-group" id="setup-practice-group" hidden>
+        <span class="group-label">Practice set</span>
+        <div class="group-chips" id="setup-practice"></div>
+      </div>
+      <div class="setup-group">
+        <span class="group-label"># Questions</span>
+        <div class="group-chips" id="setup-count"></div>
+      </div>
+      <p class="note" id="setup-pool">0 cards available</p>
+      <div class="dialog-actions">
+        <button value="cancel" class="btn btn-ghost">Cancel</button>
+        <button value="start" id="setup-start" class="btn btn-primary">Start test</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Jump to vehicle (browse by country) -->
+  <dialog id="jump-dialog">
+    <div class="dialog-form">
+      <div class="jump-header">
+        <h2>Jump to vehicle</h2>
+        <input id="jump-filter" class="search-input" type="search" placeholder="filter…" autocomplete="off" />
+      </div>
+      <div class="jump-list" id="jump-list"></div>
+      <div class="dialog-actions">
+        <button id="jump-close" class="btn btn-ghost">Close</button>
+      </div>
+    </div>
   </dialog>
 
   <!-- Practice Test overlay -->

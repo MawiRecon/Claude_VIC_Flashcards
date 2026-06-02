@@ -418,6 +418,165 @@ function afterMutation(keepId) {
 }
 
 // ---------------------------------------------------------------------------
+// Practice Test setup (choose country / POV / tags / count before starting)
+// ---------------------------------------------------------------------------
+
+const COUNTS = [10, 25, 50];
+const testSetup = { deck: 'All', pov: 'standard', tags: new Set(), count: 0, practiceOnly: false };
+
+function makeChip(label, active, onclick, extra) {
+  const b = document.createElement('button');
+  b.type = 'button';
+  b.className = 'chip' + (extra ? ' ' + extra : '') + (active ? ' active' : '');
+  b.textContent = label;
+  b.onclick = onclick;
+  return b;
+}
+
+function openTestSetup() {
+  testSetup.deck = state.deck;
+  testSetup.pov = state.pov;
+  testSetup.tags = new Set(state.tags);
+  testSetup.count = 0;
+  testSetup.practiceOnly = state.practiceOnly && state.practice.size > 0;
+  renderTestSetup();
+  $('test-setup-dialog').showModal();
+}
+
+function setupBase() {
+  return filterCards(store.getCards(), {
+    deck: testSetup.deck, tags: testSetup.tags, pov: testSetup.pov,
+    practiceOnly: testSetup.practiceOnly, practiceSet: state.practice,
+  });
+}
+
+function renderTestSetup() {
+  const deckWrap = $('setup-deck');
+  deckWrap.innerHTML = '';
+  for (const d of ['All', ...DECKS]) {
+    deckWrap.appendChild(makeChip(d, testSetup.deck === d, () => { testSetup.deck = d; renderTestSetup(); }));
+  }
+
+  for (const b of document.querySelectorAll('#setup-pov [data-pov]')) {
+    b.classList.toggle('active', b.dataset.pov === testSetup.pov);
+    b.onclick = () => { testSetup.pov = b.dataset.pov; renderTestSetup(); };
+  }
+
+  const tagWrap = $('setup-tags');
+  tagWrap.innerHTML = '';
+  const tags = allTags(store.getCards());
+  if (!tags.length) tagWrap.innerHTML = '<span class="muted">no tags</span>';
+  for (const t of tags) {
+    tagWrap.appendChild(makeChip(t, testSetup.tags.has(t), () => {
+      if (testSetup.tags.has(t)) testSetup.tags.delete(t); else testSetup.tags.add(t);
+      renderTestSetup();
+    }, 'chip-tag'));
+  }
+
+  // Practice-set option only when the user has a non-empty set.
+  const hasSet = state.practice.size > 0;
+  $('setup-practice-group').hidden = !hasSet;
+  if (hasSet) {
+    const pw = $('setup-practice');
+    pw.innerHTML = '';
+    pw.appendChild(makeChip(`★ Only my set (${state.practice.size})`, testSetup.practiceOnly, () => {
+      testSetup.practiceOnly = !testSetup.practiceOnly;
+      renderTestSetup();
+    }));
+  } else {
+    testSetup.practiceOnly = false;
+  }
+
+  const countWrap = $('setup-count');
+  countWrap.innerHTML = '';
+  for (const n of [...COUNTS, 0]) {
+    countWrap.appendChild(makeChip(n === 0 ? 'All' : String(n), testSetup.count === n, () => {
+      testSetup.count = n; renderTestSetup();
+    }));
+  }
+
+  const pool = setupBase().length;
+  const willTest = testSetup.count && testSetup.count < pool ? testSetup.count : pool;
+  $('setup-pool').textContent = pool
+    ? `${pool} cards available — testing ${willTest}`
+    : 'No cards match these settings';
+  $('setup-start').disabled = pool === 0;
+}
+
+function wireTestSetup() {
+  $('test-setup-dialog').addEventListener('close', () => {
+    if ($('test-setup-dialog').returnValue !== 'start') return;
+    if (!startTest(setupBase(), testSetup.count)) toast('No cards match these settings.', 'error');
+  });
+}
+
+// ---------------------------------------------------------------------------
+// Jump to vehicle (browse standard cards grouped by country)
+// ---------------------------------------------------------------------------
+
+function openJump() {
+  $('jump-filter').value = '';
+  renderJumpList('');
+  $('jump-dialog').showModal();
+  $('jump-filter').focus();
+}
+
+function renderJumpList(q) {
+  const query = q.trim().toLowerCase();
+  const list = $('jump-list');
+  list.innerHTML = '';
+  const vehicles = store.getCards().filter((c) => c.pov !== 'alt'); // one entry per vehicle
+  for (const deck of DECKS) {
+    let items = vehicles.filter((c) => c.deck === deck);
+    if (query) {
+      items = items.filter((c) =>
+        c.name.toLowerCase().includes(query) || (c.altName || '').toLowerCase().includes(query));
+    }
+    items.sort((a, b) => a.name.localeCompare(b.name));
+    if (!items.length) continue;
+    const h = document.createElement('h3');
+    h.className = 'jump-country';
+    h.textContent = `${deck} (${items.length})`;
+    list.appendChild(h);
+    const grid = document.createElement('div');
+    grid.className = 'jump-grid';
+    for (const c of items) {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'jump-item';
+      b.textContent = c.name;
+      b.onclick = () => { $('jump-dialog').close(); jumpToVehicle(c.id); };
+      grid.appendChild(b);
+    }
+    list.appendChild(grid);
+  }
+  if (!list.children.length) list.innerHTML = '<p class="muted">No vehicles match.</p>';
+}
+
+// Jump scopes the viewer to that vehicle's country and clears other filters.
+function jumpToVehicle(id) {
+  const card = store.findById(id);
+  if (!card) return;
+  state.deck = card.deck;
+  state.tags.clear();
+  state.practiceOnly = false;
+  state.search = '';
+  $('search-input').value = '';
+  $('search-clear').hidden = true;
+  applyFilters(true, false);
+  const i = state.filtered.findIndex((c) => c.id === id);
+  if (i >= 0) state.index = i;
+  state.flipped = false;
+  renderView();
+}
+
+function wireJump() {
+  $('btn-jump').addEventListener('click', openJump);
+  $('jump-close').addEventListener('click', () => $('jump-dialog').close());
+  $('jump-filter').addEventListener('input', (e) => renderJumpList(e.target.value));
+}
+
+// ---------------------------------------------------------------------------
 // Wiring
 // ---------------------------------------------------------------------------
 
@@ -480,18 +639,10 @@ function wireEvents() {
   });
   $('btn-reshuffle').addEventListener('click', () => applyFilters(true, true));
 
-  // practice test (uses the current filter incl. the practice set; shuffles internally)
-  $('btn-test').addEventListener('click', () => {
-    const base = filterCards(store.getCards(), {
-      deck: state.deck, tags: state.tags,
-      practiceOnly: state.practiceOnly, practiceSet: state.practice,
-    });
-    if (!startTest(base)) {
-      toast(state.practiceOnly && !state.practice.size
-        ? 'Your practice set is empty — check some cards first.'
-        : 'No cards in the current filter to test.', 'error');
-    }
-  });
+  // practice test -> open the setup dialog (choose country/POV/tags/count first)
+  $('btn-test').addEventListener('click', openTestSetup);
+  wireTestSetup();
+  wireJump();
 
   // practice set: per-card checkbox, filter chip, clear
   $('practice-check').addEventListener('change', (e) => {

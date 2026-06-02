@@ -191,6 +191,48 @@ dialog::backdrop { background: rgba(0,0,0,0.6); }
 .filter-spacer { flex: 1 1 auto; }
 .filter-label { font-size: 0.8rem; color: var(--muted); align-self: center; }
 
+/* Filter hierarchy: Country (primary) > POV > Tags, each on a labelled row */
+.filter-group { display: flex; align-items: baseline; gap: 0.6rem; padding: 0.4rem 0; }
+.filter-group + .filter-group { border-top: 1px solid var(--line); }
+.group-label {
+  flex: 0 0 64px; font-size: 0.68rem; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--muted); padding-top: 0.15rem;
+}
+.group-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; flex: 1; min-width: 0; }
+.filter-primary { padding-bottom: 0.55rem; }
+.filter-primary .group-label { color: var(--text); font-weight: 700; font-size: 0.74rem; }
+.filter-primary .chip { font-size: 0.85rem; padding: 0.38rem 0.9rem; }
+.actions-row { margin-top: 0.4rem; }
+
+/* Practice Test setup dialog */
+#test-setup-dialog { max-width: 520px; width: 94vw; }
+.setup-form { gap: 0.4rem; }
+.setup-group { display: flex; align-items: baseline; gap: 0.6rem; padding: 0.35rem 0; border-top: 1px solid var(--line); }
+.setup-group:first-of-type { border-top: none; }
+.setup-group .group-label { flex: 0 0 92px; }
+.setup-group .group-chips { gap: 0.35rem; }
+#setup-pool { margin: 0.4rem 0 0; color: var(--text); }
+
+/* Jump-to dialog */
+#jump-dialog { max-width: 600px; width: 94vw; }
+.jump-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.jump-header h2 { margin: 0; }
+.jump-header .search-input { flex: 0 0 40%; min-width: 120px; }
+.jump-list { max-height: 60vh; overflow-y: auto; margin: 0.75rem 0; }
+.jump-country {
+  font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--accent); margin: 0.85rem 0 0.45rem; position: sticky; top: 0;
+  background: var(--panel); padding: 0.25rem 0;
+}
+.jump-country:first-child { margin-top: 0; }
+.jump-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.35rem; }
+.jump-item {
+  text-align: left; font: inherit; font-size: 0.85rem; color: var(--text);
+  background: var(--panel-2); border: 1px solid var(--line); border-radius: 6px;
+  padding: 0.4rem 0.55rem; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.jump-item:hover { border-color: var(--accent); }
+
 /* Search + list view ------------------------------------------------------*/
 .search-input {
   flex: 1; min-width: 200px; font-size: 0.95rem;

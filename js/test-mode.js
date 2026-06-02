@@ -20,6 +20,7 @@ let idx = 0;          // current card index
 let answers = [];     // user answers, parallel to deck
 let timers = [];      // active timeouts/intervals to clear on exit/advance
 let lastBase = [];    // the unshuffled set, so Retake can reshuffle it
+let lastLimit = 0;    // question cap from the last run (for Retake)
 
 function clearTimers() {
   for (const t of timers) { clearTimeout(t); clearInterval(t); }
@@ -36,7 +37,7 @@ function escapeHtml(s) {
 export function initTest() {
   $('test-exit').addEventListener('click', exitTest);
   $('test-close').addEventListener('click', exitTest);
-  $('test-retake').addEventListener('click', () => startTest(lastBase));
+  $('test-retake').addEventListener('click', () => startTest(lastBase, lastLimit));
   $('test-answer-form').addEventListener('submit', (e) => {
     e.preventDefault();
     saveCurrent(true);
@@ -47,11 +48,14 @@ export function initTest() {
   });
 }
 
-// Start a run from a base set (the current filter). Returns false if empty.
-export function startTest(base) {
+// Start a run from a base set. `limit` (optional) caps the number of questions
+// (the deck is shuffled first, then sliced). Returns false if empty.
+export function startTest(base, limit) {
   if (!base || !base.length) return false;
   lastBase = base;
+  lastLimit = limit || 0;
   deck = shuffle(base);
+  if (limit && limit > 0 && limit < deck.length) deck = deck.slice(0, limit);
   idx = 0;
   answers = new Array(deck.length).fill('');
 
