@@ -70,7 +70,9 @@
     "deck": "China",
     "name": "Type 07",
     "image": "images_china/Type 07.png",
-    "tags": []
+    "tags": [
+      "radar"
+    ]
   },
   {
     "id": "china-type09",
