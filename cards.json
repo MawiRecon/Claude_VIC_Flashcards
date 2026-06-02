@@ -47,7 +47,9 @@
     "deck": "China",
     "name": "Type 03",
     "image": "images_china/Type 03.png",
-    "tags": []
+    "tags": [
+      "practice_china"
+    ]
   },
   {
     "id": "china-type04",
