@@ -16,7 +16,9 @@
     "name": "MBT 2000",
     "image": "Reference Cards/China/Extracted Images/China_Type-90-II_View1.jpg",
     "pov": "alt",
-    "tags": [],
+    "tags": [
+      "tank"
+    ],
     "view": 1,
     "altName": "Type-90-II"
   },
