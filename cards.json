@@ -441,7 +441,9 @@
     "deck": "Russia",
     "name": "KA 52",
     "image": "images_russia/KA 52.png",
-    "tags": []
+    "tags": [
+      "helicopter"
+    ]
   },
   {
     "id": "russia-t72b3",
