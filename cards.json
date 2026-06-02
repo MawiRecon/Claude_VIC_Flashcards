@@ -491,6 +491,8 @@
     "deck": "Russia",
     "name": "ZSU 234",
     "image": "images_russia/ZSU 234.png",
-    "tags": []
+    "tags": [
+      "radar"
+    ]
   }
 ]
