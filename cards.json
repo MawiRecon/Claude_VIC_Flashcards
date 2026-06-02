@@ -260,7 +260,9 @@
     "deck": "NATO",
     "name": "K1A1",
     "image": "images_NATO/K1A1.png",
-    "tags": []
+    "tags": [
+      "tank"
+    ]
   },
   {
     "id": "nato-leopard2a4",
