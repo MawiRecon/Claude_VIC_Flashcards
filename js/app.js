@@ -146,6 +146,7 @@ function searchMatches() {
   return state.filtered.filter(
     (c) =>
       c.name.toLowerCase().includes(q) ||
+      (c.altName || '').toLowerCase().includes(q) ||
       (c.tags || []).some((t) => t.toLowerCase().includes(q))
   );
 }
@@ -291,6 +292,7 @@ function renderEditor(card) {
   toggle.classList.toggle('open', state.editorOpen);
 
   $('edit-name').value = card.name;
+  $('edit-alt').value = card.altName || '';
   $('edit-deck').value = card.deck;
 
   // current tags as removable chips
@@ -436,15 +438,17 @@ function wireEvents() {
     if (e.key === 'Enter') { e.preventDefault(); $('btn-add-tag').click(); }
   });
 
-  // editor: save name
+  // editor: save name + alternative name (one commit)
   $('btn-save-name').addEventListener('click', (e) => {
     const card = currentCard();
     if (!card) return;
     const name = $('edit-name').value.trim();
-    if (!name || name === card.name) return;
-    withFeedback(e.currentTarget, 'Rename card', async () => {
+    const alt = $('edit-alt').value.trim();
+    if (!name) { toast('Name cannot be empty.', 'error'); return; }
+    if (name === card.name && alt === (card.altName || '')) return; // nothing changed
+    withFeedback(e.currentTarget, 'Save name(s)', async () => {
       if (!requireToken()) throw new Error('no token');
-      await store.renameCard(card.id, name, state.token);
+      await store.editCardNames(card.id, name, alt, state.token);
       afterMutation(card.id);
     });
   });

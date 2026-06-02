@@ -142,7 +142,8 @@ function finish() {
   let correct = 0;
   const rows = deck.map((card, i) => {
     const ua = (answers[i] || '').trim();
-    const ok = !!ua && normalizeAnswer(ua) === normalizeAnswer(card.name);
+    const accepted = [card.name, card.altName].filter(Boolean).map(normalizeAnswer);
+    const ok = !!ua && accepted.includes(normalizeAnswer(ua));
     if (ok) correct += 1;
     return { card, ua, ok };
   });
@@ -160,7 +161,8 @@ function finish() {
            onerror="this.style.visibility='hidden'">
       <div class="result-meta">
         <div class="result-correct"><span class="label">Answer:</span>
-          ${escapeHtml(r.card.name)} <span class="deck">(${escapeHtml(r.card.deck)})</span></div>
+          ${escapeHtml(r.card.name)} <span class="deck">(${escapeHtml(r.card.deck)})</span>
+          ${r.card.altName ? `<span class="result-alt">also accepts: ${escapeHtml(r.card.altName)}</span>` : ''}</div>
         <div class="result-user"><span class="label">You:</span>
           ${r.ua ? escapeHtml(r.ua) : '<em>(blank)</em>'}
           <span class="mark">${r.ok ? '✓' : '✗'}</span></div>

@@ -139,14 +139,19 @@ export async function removeTag(id, tag, token) {
   return card;
 }
 
-// Rename a card's answer.
-export async function renameCard(id, newName, token) {
+// Edit a card's name plus its optional alternative name (both committed at once).
+// An empty altName removes the field. The alt name is an accepted answer on the
+// test but is never shown on the card's answer side.
+export async function editCardNames(id, newName, altName, token) {
   const card = findById(id);
   if (!card) throw new Error('card not found');
   const clean = String(newName).trim();
   if (!clean) throw new Error('name cannot be empty');
   card.name = clean;
-  await saveManifest(token, `cards: rename to "${clean}"`);
+  const alt = String(altName || '').trim();
+  if (alt) card.altName = alt;
+  else delete card.altName;
+  await saveManifest(token, `cards: edit names for "${clean}"${alt ? ` (alt "${alt}")` : ''}`);
   return card;
 }
 
