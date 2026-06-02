@@ -312,7 +312,9 @@
     "deck": "NATO",
     "name": "Warrior",
     "image": "images_NATO/Warrior.png",
-    "tags": []
+    "tags": [
+      "IFV"
+    ]
   },
   {
     "id": "russia-2s19",
