@@ -166,7 +166,9 @@
     "deck": "China",
     "name": "WZ 10",
     "image": "images_china/WZ 10.png",
-    "tags": []
+    "tags": [
+      "helicopter"
+    ]
   },
   {
     "id": "china-wz19",
