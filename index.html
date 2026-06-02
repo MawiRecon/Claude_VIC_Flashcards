@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VIC Flashcards</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>VIC Flashcards</h1>
+    <div class="topbar-actions">
+      <span id="token-status" class="token-status">token: not set</span>
+      <button id="btn-token" class="btn">Set token</button>
+      <button id="btn-forget" class="btn btn-ghost" hidden>Forget token</button>
+    </div>
+  </header>
+
+  <!-- Deck + tag filters -->
+  <nav class="filters">
+    <div class="filter-row" id="deck-filter" aria-label="Deck filter"></div>
+    <div class="filter-row" id="tag-filter" aria-label="Tag filter"></div>
+    <div class="filter-row">
+      <button id="btn-clear-filters" class="btn btn-ghost">Clear filters</button>
+      <button id="btn-new-card" class="btn btn-primary">+ New card</button>
+    </div>
+  </nav>
+
+  <!-- Card viewer -->
+  <main class="stage">
+    <button id="btn-prev" class="nav-arrow" aria-label="Previous">&#8249;</button>
+
+    <section class="card-area">
+      <div id="card" class="card" tabindex="0" role="button"
+           aria-label="Flashcard. Click or press space to flip.">
+        <div class="card-face card-front">
+          <img id="card-img" alt="" />
+          <div id="img-fallback" class="img-fallback" hidden></div>
+        </div>
+        <div class="card-face card-back" hidden>
+          <div id="card-name" class="card-name"></div>
+          <div id="card-deck" class="card-deck-label"></div>
+        </div>
+      </div>
+      <div class="counter"><span id="counter">0 / 0</span></div>
+      <div class="hint">click / space to flip &middot; &larr; &rarr; to navigate</div>
+    </section>
+
+    <button id="btn-next" class="nav-arrow" aria-label="Next">&#8250;</button>
+  </main>
+
+  <!-- Editor for the current card -->
+  <section class="editor" id="editor" hidden>
+    <h2>Edit card</h2>
+    <div class="editor-grid">
+      <label>Name / answer
+        <input type="text" id="edit-name" />
+      </label>
+      <label>Deck
+        <input type="text" id="edit-deck" readonly />
+      </label>
+    </div>
+
+    <div class="tags-editor">
+      <div class="tags-current" id="edit-tags"></div>
+      <div class="tags-add">
+        <input list="tag-suggestions" id="tag-input" placeholder="add tag (type or pick)" />
+        <datalist id="tag-suggestions"></datalist>
+        <button id="btn-add-tag" class="btn">Add tag</button>
+      </div>
+    </div>
+
+    <div class="editor-actions">
+      <button id="btn-save-name" class="btn btn-primary">Save name</button>
+      <button id="btn-replace-img" class="btn">Replace image</button>
+      <button id="btn-duplicate" class="btn">Duplicate</button>
+      <button id="btn-delete" class="btn btn-danger">Delete</button>
+      <input type="file" id="file-replace" accept="image/png,image/*" hidden />
+    </div>
+  </section>
+
+  <!-- New-card dialog -->
+  <dialog id="new-card-dialog">
+    <form method="dialog" class="dialog-form">
+      <h2>Create new card</h2>
+      <label>Deck
+        <select id="new-deck"></select>
+      </label>
+      <label>Name / answer
+        <input type="text" id="new-name" required />
+      </label>
+      <label>Image (.png)
+        <input type="file" id="new-file" accept="image/png,image/*" required />
+      </label>
+      <label>Tags (comma separated, optional)
+        <input type="text" id="new-tags" placeholder="Tank, Modern" />
+      </label>
+      <div class="dialog-actions">
+        <button value="cancel" class="btn btn-ghost">Cancel</button>
+        <button id="new-create" value="create" class="btn btn-primary">Create &amp; commit</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Token dialog -->
+  <dialog id="token-dialog">
+    <form method="dialog" class="dialog-form">
+      <h2>GitHub token</h2>
+      <p class="note">
+        Paste a <strong>fine-grained PAT</strong> scoped to <em>this repo only</em>,
+        with <strong>Contents: Read and write</strong>. It is cached only in this
+        browser's localStorage and is <strong>never</strong> sent anywhere except
+        github.com. Use “Forget token” to clear it.
+      </p>
+      <label>Token
+        <input type="password" id="token-input" autocomplete="off"
+               placeholder="github_pat_..." />
+      </label>
+      <div class="dialog-actions">
+        <button value="cancel" class="btn btn-ghost">Cancel</button>
+        <button value="save" class="btn btn-primary">Save token</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

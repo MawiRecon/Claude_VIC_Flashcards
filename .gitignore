@@ -1,5 +1,9 @@
-# Local Claude Code settings (not secret, but machine-local)
+# Local Claude Code settings / dev preview config (machine-local, not secret)
 .claude/settings.local.json
+.claude/launch.json
+
+# Stale sample, no longer tracked (cards.json is the real manifest)
+cards.csv
 
 # OS cruft
 .DS_Store
