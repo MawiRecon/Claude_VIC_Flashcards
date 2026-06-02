@@ -184,7 +184,9 @@
     "deck": "China",
     "name": "WZ 501",
     "image": "images_china/WZ 501.png",
-    "tags": []
+    "tags": [
+      "red arrow guided missile"
+    ]
   },
   {
     "id": "china-zsl92",
