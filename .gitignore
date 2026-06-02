@@ -1,0 +1,23 @@
+# Local Claude Code settings (not secret, but machine-local)
+.claude/settings.local.json
+
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Secrets — never commit (the app uses a runtime PAT, never a file)
+.env
+.env.*
+*.env
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+credentials.json
+service-account*.json
+*secret*
+*apikey*
+*api_key*
+*.token
+token.txt
