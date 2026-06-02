@@ -47,24 +47,29 @@ const REF_ROOT = 'Reference Cards';
 const REF_SUBDIR = 'Extracted Images';
 const REF_DECKS = { Russia: 'Russia', China: 'China', NATO: 'NATO' };
 
-// Canonical two-name list (Country,Designation,Name; "-" = no second name).
+// Canonical vehicle data (Country,Designation,Name,Category,Class; "-" = no
+// second name). The single source of truth for second names + Category/Class.
 const NAMES_CSV = path.join(ROOT, REF_ROOT, 'vehicle_names.csv');
 
-// Build deck -> (normalized-name -> the OTHER name), so a card can look up its
-// alternate name by its own name. Used to backfill altName on every card.
-function loadSecondaryNames() {
-  const map = {}; // deck -> Map(normName -> secondaryName)
+// Build deck -> Map(normalized-name -> { secondary, category, class }), so a card
+// can look up its alternate name + category/class by its own name.
+function loadVehicleInfo() {
+  const map = {};
   if (!fs.existsSync(NAMES_CSV)) return map;
   const lines = fs.readFileSync(NAMES_CSV, 'utf8').trim().split(/\r?\n/).slice(1);
   for (const line of lines) {
-    const [country, designation, name] = line.split(',').map((s) => (s || '').trim());
+    const [country, designation, name, category, klass] = line.split(',').map((s) => (s || '').trim());
     if (!country || !designation) continue;
     const names = [designation];
     if (name && name !== '-') names.push(name);
+    const info = {
+      category: category && category !== '-' ? category : null,
+      class: klass && klass !== '-' ? klass : null,
+    };
     const m = (map[country] = map[country] || new Map());
     for (const a of names) {
       const other = names.find((b) => slug(b) !== slug(a)) || null;
-      if (other) m.set(slug(a), other);
+      m.set(slug(a), { ...info, secondary: other });
     }
   }
   return map;
@@ -224,14 +229,8 @@ function main() {
   for (const d of disk) {
     const prior = byId.get(d.id);
     if (!prior) {
-      const card = { id: d.id, deck: d.deck, name: d.name, image: d.image, pov: d.pov, tags: [] };
-      if (d.pov === 'alt') {
-        card.view = d.view;
-        // New alt views inherit the standard card's tags (standard is processed
-        // first, so the parent already exists). Per-card edits stay independent.
-        const parent = byId.get(cardId(d.deck, d.name));
-        if (parent && Array.isArray(parent.tags)) card.tags = [...parent.tags];
-      }
+      const card = { id: d.id, deck: d.deck, name: d.name, image: d.image, pov: d.pov };
+      if (d.pov === 'alt') card.view = d.view;
       if (d.altName) card.altName = d.altName;
       byId.set(d.id, card);
       if (d.pov === 'alt') newAlt += 1; else { newStd += 1; newNames.push(`${d.deck}/${d.name}`); }
@@ -245,15 +244,19 @@ function main() {
     }
   }
 
-  // 2) Backfill altName (the second name) onto every card from vehicle_names.csv,
-  //    keyed by the card's own name. Only fills when empty, so in-app edits and
-  //    the per-image reference designations are never overwritten.
-  const secondary = loadSecondaryNames();
+  // 2) Apply canonical data from vehicle_names.csv, keyed by the card's name:
+  //    - altName (second name): fill only when empty (preserve in-app edits)
+  //    - category + class: set authoritatively (CSV is the source of truth)
+  //    Also strip the retired `tags` field.
+  const info = loadVehicleInfo();
   let namedCount = 0;
   for (const card of byId.values()) {
-    if (card.altName) continue;
-    const alt = secondary[card.deck] && secondary[card.deck].get(slug(card.name));
-    if (alt) { card.altName = alt; namedCount += 1; }
+    if ('tags' in card) delete card.tags; // tags feature removed
+    const v = info[card.deck] && info[card.deck].get(slug(card.name));
+    if (!v) continue;
+    if (!card.altName && v.secondary) { card.altName = v.secondary; namedCount += 1; }
+    if (v.category) card.category = v.category; else delete card.category;
+    if (v.class) card.class = v.class; else delete card.class;
   }
 
   // 3) Reconcile against file presence.
@@ -314,6 +317,7 @@ function main() {
   console.log(`missing images: ${missingCount}${missingNames.length ? '  (' + missingNames.slice(0, 20).join(', ') + (missingNames.length > 20 ? ', …' : '') + ')' : ''}`);
   console.log(`pruned alt views (file gone): ${prunedAlt}${prunedNames.length ? '  (' + prunedNames.join(', ') + ')' : ''}`);
   console.log(`second names backfilled from CSV: ${namedCount}`);
+  console.log(`categorized (category+class): ${cards.filter((c) => c.category || c.class).length}`);
   if (unresolved.length) console.log(`UNRESOLVED alt images (${unresolved.length}): ${unresolved.join(', ')}`);
   console.log(`cards.json ${changed ? 'UPDATED' : 'unchanged'}`);
 

@@ -4,11 +4,10 @@
     "deck": "China",
     "name": "MBT 2000",
     "image": "images_china/MBT 2000.png",
-    "tags": [
-      "tank"
-    ],
     "pov": "standard",
-    "altName": "Type-90-II"
+    "altName": "Type-90-II",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-mbt2000-view1",
@@ -16,11 +15,10 @@
     "name": "MBT 2000",
     "image": "Reference Cards/China/Extracted Images/China_Type-90-II_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 1,
-    "altName": "Type-90-II"
+    "altName": "Type-90-II",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-mbt2000-view2",
@@ -28,11 +26,10 @@
     "name": "MBT 2000",
     "image": "Reference Cards/China/Extracted Images/China_Type-90-II_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 2,
-    "altName": "Type-90-II"
+    "altName": "Type-90-II",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-mbt2000-view3",
@@ -40,11 +37,10 @@
     "name": "MBT 2000",
     "image": "Reference Cards/China/Extracted Images/China_Type-90-II_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 3,
-    "altName": "Type-90-II"
+    "altName": "Type-90-II",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-mbt2000-view4",
@@ -52,22 +48,20 @@
     "name": "MBT 2000",
     "image": "Reference Cards/China/Extracted Images/China_Type-90-II_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 4,
-    "altName": "Type-90-II"
+    "altName": "Type-90-II",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-mbt3000",
     "deck": "China",
     "name": "MBT 3000",
     "image": "images_china/MBT 3000.png",
-    "tags": [
-      "tank"
-    ],
     "pov": "standard",
-    "altName": "VT-4"
+    "altName": "VT-4",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-mbt3000-view1",
@@ -75,11 +69,10 @@
     "name": "MBT 3000",
     "image": "Reference Cards/China/Extracted Images/China_VT-4_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 1,
-    "altName": "VT-4"
+    "altName": "VT-4",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-mbt3000-view2",
@@ -87,11 +80,10 @@
     "name": "MBT 3000",
     "image": "Reference Cards/China/Extracted Images/China_VT-4_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 2,
-    "altName": "VT-4"
+    "altName": "VT-4",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-mbt3000-view3",
@@ -99,11 +91,10 @@
     "name": "MBT 3000",
     "image": "Reference Cards/China/Extracted Images/China_VT-4_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 3,
-    "altName": "VT-4"
+    "altName": "VT-4",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-mbt3000-view4",
@@ -111,11 +102,10 @@
     "name": "MBT 3000",
     "image": "Reference Cards/China/Extracted Images/China_VT-4_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 4,
-    "altName": "VT-4"
+    "altName": "VT-4",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-mbt3000-view5",
@@ -123,20 +113,20 @@
     "name": "MBT 3000",
     "image": "Reference Cards/China/Extracted Images/China_VT-4_View5.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 5,
-    "altName": "VT-4"
+    "altName": "VT-4",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-plz05",
     "deck": "China",
     "name": "PLZ 05",
     "image": "images_china/PLZ 05.png",
-    "tags": [],
     "pov": "standard",
-    "altName": "Type-05"
+    "altName": "Type-05",
+    "category": "Self-Propelled Artillery",
+    "class": "Artillery"
   },
   {
     "id": "china-plz05-view1",
@@ -144,9 +134,10 @@
     "name": "PLZ 05",
     "image": "Reference Cards/China/Extracted Images/China_Type-05_View1.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 1,
-    "altName": "Type-05"
+    "altName": "Type-05",
+    "category": "Self-Propelled Artillery",
+    "class": "Artillery"
   },
   {
     "id": "china-plz05-view2",
@@ -154,9 +145,10 @@
     "name": "PLZ 05",
     "image": "Reference Cards/China/Extracted Images/China_Type-05_View2.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 2,
-    "altName": "Type-05"
+    "altName": "Type-05",
+    "category": "Self-Propelled Artillery",
+    "class": "Artillery"
   },
   {
     "id": "china-plz05-view3",
@@ -164,9 +156,10 @@
     "name": "PLZ 05",
     "image": "Reference Cards/China/Extracted Images/China_Type-05_View3.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 3,
-    "altName": "Type-05"
+    "altName": "Type-05",
+    "category": "Self-Propelled Artillery",
+    "class": "Artillery"
   },
   {
     "id": "china-plz05-view4",
@@ -174,9 +167,10 @@
     "name": "PLZ 05",
     "image": "Reference Cards/China/Extracted Images/China_Type-05_View4.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 4,
-    "altName": "Type-05"
+    "altName": "Type-05",
+    "category": "Self-Propelled Artillery",
+    "class": "Artillery"
   },
   {
     "id": "china-plz05-view5",
@@ -184,17 +178,19 @@
     "name": "PLZ 05",
     "image": "Reference Cards/China/Extracted Images/China_Type-05_View5.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 5,
-    "altName": "Type-05"
+    "altName": "Type-05",
+    "category": "Self-Propelled Artillery",
+    "class": "Artillery"
   },
   {
     "id": "china-ptl02",
     "deck": "China",
     "name": "PTL 02",
     "image": "images_china/PTL 02.png",
-    "tags": [],
-    "pov": "standard"
+    "pov": "standard",
+    "category": "Tank Destroyer",
+    "class": "Armor"
   },
   {
     "id": "china-ptl02-view1",
@@ -202,8 +198,9 @@
     "name": "PTL 02",
     "image": "Reference Cards/China/Extracted Images/China_PTL-02_View1.jpg",
     "pov": "alt",
-    "tags": [],
-    "view": 1
+    "view": 1,
+    "category": "Tank Destroyer",
+    "class": "Armor"
   },
   {
     "id": "china-ptl02-view2",
@@ -211,8 +208,9 @@
     "name": "PTL 02",
     "image": "Reference Cards/China/Extracted Images/China_PTL-02_View2.jpg",
     "pov": "alt",
-    "tags": [],
-    "view": 2
+    "view": 2,
+    "category": "Tank Destroyer",
+    "class": "Armor"
   },
   {
     "id": "china-ptl02-view3",
@@ -220,8 +218,9 @@
     "name": "PTL 02",
     "image": "Reference Cards/China/Extracted Images/China_PTL-02_View3.jpg",
     "pov": "alt",
-    "tags": [],
-    "view": 3
+    "view": 3,
+    "category": "Tank Destroyer",
+    "class": "Armor"
   },
   {
     "id": "china-ptl02-view4",
@@ -229,16 +228,18 @@
     "name": "PTL 02",
     "image": "Reference Cards/China/Extracted Images/China_PTL-02_View4.jpg",
     "pov": "alt",
-    "tags": [],
-    "view": 4
+    "view": 4,
+    "category": "Tank Destroyer",
+    "class": "Armor"
   },
   {
     "id": "china-qn506",
     "deck": "China",
     "name": "QN 506",
     "image": "images_china/QN 506.png",
-    "tags": [],
-    "pov": "standard"
+    "pov": "standard",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-qn506-view1",
@@ -246,8 +247,9 @@
     "name": "QN 506",
     "image": "Reference Cards/China/Extracted Images/China_QN-506_View1.jpg",
     "pov": "alt",
-    "tags": [],
-    "view": 1
+    "view": 1,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-qn506-view2",
@@ -255,8 +257,9 @@
     "name": "QN 506",
     "image": "Reference Cards/China/Extracted Images/China_QN-506_View2.jpg",
     "pov": "alt",
-    "tags": [],
-    "view": 2
+    "view": 2,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-qn506-view3",
@@ -264,8 +267,9 @@
     "name": "QN 506",
     "image": "Reference Cards/China/Extracted Images/China_QN-506_View3.jpg",
     "pov": "alt",
-    "tags": [],
-    "view": 3
+    "view": 3,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-qn506-view4",
@@ -273,19 +277,19 @@
     "name": "QN 506",
     "image": "Reference Cards/China/Extracted Images/China_QN-506_View4.jpg",
     "pov": "alt",
-    "tags": [],
-    "view": 4
+    "view": 4,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-type03",
     "deck": "China",
     "name": "Type 03",
     "image": "images_china/Type 03.png",
-    "tags": [
-      "IFV"
-    ],
     "pov": "standard",
-    "altName": "ZBD-03"
+    "altName": "ZBD-03",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-type03-view1",
@@ -293,11 +297,10 @@
     "name": "Type 03",
     "image": "Reference Cards/China/Extracted Images/China_Type 03_View1.png",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 1,
-    "altName": "ZBD-03"
+    "altName": "ZBD-03",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-type03-view2",
@@ -305,11 +308,10 @@
     "name": "Type 03",
     "image": "Reference Cards/China/Extracted Images/China_Type 03_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 2,
-    "altName": "ZBD-03"
+    "altName": "ZBD-03",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-type03-view3",
@@ -317,11 +319,10 @@
     "name": "Type 03",
     "image": "Reference Cards/China/Extracted Images/China_Type 03_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 3,
-    "altName": "ZBD-03"
+    "altName": "ZBD-03",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-type03-view4",
@@ -329,22 +330,20 @@
     "name": "Type 03",
     "image": "Reference Cards/China/Extracted Images/China_Type 03_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 4,
-    "altName": "ZBD-03"
+    "altName": "ZBD-03",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-type04",
     "deck": "China",
     "name": "Type 04",
     "image": "images_china/Type 04.png",
-    "tags": [
-      "IFV"
-    ],
     "pov": "standard",
-    "altName": "ZBD-04"
+    "altName": "ZBD-04",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-type04-view1",
@@ -352,11 +351,10 @@
     "name": "Type 04",
     "image": "Reference Cards/China/Extracted Images/China_Type-04_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 1,
-    "altName": "ZBD-04"
+    "altName": "ZBD-04",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-type04-view2",
@@ -364,11 +362,10 @@
     "name": "Type 04",
     "image": "Reference Cards/China/Extracted Images/China_Type-04_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 2,
-    "altName": "ZBD-04"
+    "altName": "ZBD-04",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-type04-view3",
@@ -376,11 +373,10 @@
     "name": "Type 04",
     "image": "Reference Cards/China/Extracted Images/China_Type-04_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 3,
-    "altName": "ZBD-04"
+    "altName": "ZBD-04",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-type04-view4",
@@ -388,22 +384,20 @@
     "name": "Type 04",
     "image": "Reference Cards/China/Extracted Images/China_Type-04_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 4,
-    "altName": "ZBD-04"
+    "altName": "ZBD-04",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-type04a",
     "deck": "China",
     "name": "Type 04A",
     "image": "images_china/Type 04A.png",
-    "tags": [
-      "IFV"
-    ],
     "pov": "standard",
-    "altName": "ZBD-04A"
+    "altName": "ZBD-04A",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-type04a-view1",
@@ -411,11 +405,10 @@
     "name": "Type 04A",
     "image": "Reference Cards/China/Extracted Images/China_Type-04A_View1.png",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 1,
-    "altName": "ZBD-04A"
+    "altName": "ZBD-04A",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-type04a-view2",
@@ -423,11 +416,10 @@
     "name": "Type 04A",
     "image": "Reference Cards/China/Extracted Images/China_Type-04A_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 2,
-    "altName": "ZBD-04A"
+    "altName": "ZBD-04A",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-type04a-view3",
@@ -435,11 +427,10 @@
     "name": "Type 04A",
     "image": "Reference Cards/China/Extracted Images/China_Type-04A_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 3,
-    "altName": "ZBD-04A"
+    "altName": "ZBD-04A",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-type04a-view4",
@@ -447,22 +438,20 @@
     "name": "Type 04A",
     "image": "Reference Cards/China/Extracted Images/China_Type-04A_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 4,
-    "altName": "ZBD-04A"
+    "altName": "ZBD-04A",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-type07",
     "deck": "China",
     "name": "Type 07",
     "image": "images_china/Type 07.png",
-    "tags": [
-      "radar"
-    ],
     "pov": "standard",
-    "altName": "PGZ-09"
+    "altName": "PGZ-09",
+    "category": "Self-Propelled Air Defense",
+    "class": "Air Defense"
   },
   {
     "id": "china-type07-view1",
@@ -470,11 +459,10 @@
     "name": "Type 07",
     "image": "Reference Cards/China/Extracted Images/China_Type-07_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "radar"
-    ],
     "view": 1,
-    "altName": "PGZ-09"
+    "altName": "PGZ-09",
+    "category": "Self-Propelled Air Defense",
+    "class": "Air Defense"
   },
   {
     "id": "china-type07-view2",
@@ -482,11 +470,10 @@
     "name": "Type 07",
     "image": "Reference Cards/China/Extracted Images/China_Type-07_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "radar"
-    ],
     "view": 2,
-    "altName": "PGZ-09"
+    "altName": "PGZ-09",
+    "category": "Self-Propelled Air Defense",
+    "class": "Air Defense"
   },
   {
     "id": "china-type07-view3",
@@ -494,11 +481,10 @@
     "name": "Type 07",
     "image": "Reference Cards/China/Extracted Images/China_Type-07_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "radar"
-    ],
     "view": 3,
-    "altName": "PGZ-09"
+    "altName": "PGZ-09",
+    "category": "Self-Propelled Air Defense",
+    "class": "Air Defense"
   },
   {
     "id": "china-type07-view4",
@@ -506,22 +492,20 @@
     "name": "Type 07",
     "image": "Reference Cards/China/Extracted Images/China_Type-07_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "radar"
-    ],
     "view": 4,
-    "altName": "PGZ-09"
+    "altName": "PGZ-09",
+    "category": "Self-Propelled Air Defense",
+    "class": "Air Defense"
   },
   {
     "id": "china-type09",
     "deck": "China",
     "name": "Type 09",
     "image": "images_china/Type 09.png",
-    "tags": [
-      "IFV"
-    ],
     "pov": "standard",
-    "altName": "ZBL-09"
+    "altName": "ZBL-09",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-type09-view1",
@@ -529,11 +513,10 @@
     "name": "Type 09",
     "image": "Reference Cards/China/Extracted Images/China_Type 09_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 1,
-    "altName": "ZBL-09"
+    "altName": "ZBL-09",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-type09-view2",
@@ -541,11 +524,10 @@
     "name": "Type 09",
     "image": "Reference Cards/China/Extracted Images/China_Type 09_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 2,
-    "altName": "ZBL-09"
+    "altName": "ZBL-09",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-type09-view3",
@@ -553,11 +535,10 @@
     "name": "Type 09",
     "image": "Reference Cards/China/Extracted Images/China_Type 09_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 3,
-    "altName": "ZBL-09"
+    "altName": "ZBL-09",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-type09-view4",
@@ -565,22 +546,20 @@
     "name": "Type 09",
     "image": "Reference Cards/China/Extracted Images/China_Type 09_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 4,
-    "altName": "ZBL-09"
+    "altName": "ZBL-09",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-type15",
     "deck": "China",
     "name": "Type 15",
     "image": "images_china/Type 15.png",
-    "tags": [
-      "tank"
-    ],
     "pov": "standard",
-    "altName": "ZTQ-15"
+    "altName": "ZTQ-15",
+    "category": "Light Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type15-view1",
@@ -588,11 +567,10 @@
     "name": "Type 15",
     "image": "Reference Cards/China/Extracted Images/China_Type 15_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 1,
-    "altName": "ZTQ-15"
+    "altName": "ZTQ-15",
+    "category": "Light Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type15-view2",
@@ -600,11 +578,10 @@
     "name": "Type 15",
     "image": "Reference Cards/China/Extracted Images/China_Type 15_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 2,
-    "altName": "ZTQ-15"
+    "altName": "ZTQ-15",
+    "category": "Light Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type15-view3",
@@ -612,11 +589,10 @@
     "name": "Type 15",
     "image": "Reference Cards/China/Extracted Images/China_Type 15_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 3,
-    "altName": "ZTQ-15"
+    "altName": "ZTQ-15",
+    "category": "Light Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type15-view4",
@@ -624,11 +600,10 @@
     "name": "Type 15",
     "image": "Reference Cards/China/Extracted Images/China_Type 15_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 4,
-    "altName": "ZTQ-15"
+    "altName": "ZTQ-15",
+    "category": "Light Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type15-view5",
@@ -636,22 +611,20 @@
     "name": "Type 15",
     "image": "Reference Cards/China/Extracted Images/China_Type 15_View5.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 5,
-    "altName": "ZTQ-15"
+    "altName": "ZTQ-15",
+    "category": "Light Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type59",
     "deck": "China",
     "name": "Type 59",
     "image": "images_china/Type 59.png",
-    "tags": [
-      "tank"
-    ],
     "pov": "standard",
-    "altName": "ZTZ-59"
+    "altName": "ZTZ-59",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type59-view1",
@@ -659,11 +632,10 @@
     "name": "Type 59",
     "image": "Reference Cards/China/Extracted Images/China_Type-59_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 1,
-    "altName": "ZTZ-59"
+    "altName": "ZTZ-59",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type59-view2",
@@ -671,11 +643,10 @@
     "name": "Type 59",
     "image": "Reference Cards/China/Extracted Images/China_Type-59_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 2,
-    "altName": "ZTZ-59"
+    "altName": "ZTZ-59",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type59-view3",
@@ -683,11 +654,10 @@
     "name": "Type 59",
     "image": "Reference Cards/China/Extracted Images/China_Type-59_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 3,
-    "altName": "ZTZ-59"
+    "altName": "ZTZ-59",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type59-view4",
@@ -695,11 +665,10 @@
     "name": "Type 59",
     "image": "Reference Cards/China/Extracted Images/China_Type-59_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 4,
-    "altName": "ZTZ-59"
+    "altName": "ZTZ-59",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type59-view5",
@@ -707,22 +676,20 @@
     "name": "Type 59",
     "image": "Reference Cards/China/Extracted Images/China_Type-59_View5.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 5,
-    "altName": "ZTZ-59"
+    "altName": "ZTZ-59",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type63a",
     "deck": "China",
     "name": "Type 63A",
     "image": "images_china/Type 63A.png",
-    "tags": [
-      "tank"
-    ],
     "pov": "standard",
-    "altName": "ZTS-63A"
+    "altName": "ZTS-63A",
+    "category": "Light Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type63a-view1",
@@ -730,11 +697,10 @@
     "name": "Type 63A",
     "image": "Reference Cards/China/Extracted Images/China_Type-63A_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 1,
-    "altName": "ZTS-63A"
+    "altName": "ZTS-63A",
+    "category": "Light Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type63a-view2",
@@ -742,11 +708,10 @@
     "name": "Type 63A",
     "image": "Reference Cards/China/Extracted Images/China_Type-63A_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 2,
-    "altName": "ZTS-63A"
+    "altName": "ZTS-63A",
+    "category": "Light Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type63a-view3",
@@ -754,11 +719,10 @@
     "name": "Type 63A",
     "image": "Reference Cards/China/Extracted Images/China_Type-63A_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 3,
-    "altName": "ZTS-63A"
+    "altName": "ZTS-63A",
+    "category": "Light Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type63a-view4",
@@ -766,22 +730,20 @@
     "name": "Type 63A",
     "image": "Reference Cards/China/Extracted Images/China_Type-63A_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 4,
-    "altName": "ZTS-63A"
+    "altName": "ZTS-63A",
+    "category": "Light Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type95",
     "deck": "China",
     "name": "Type 95",
     "image": "images_china/Type 95.png",
-    "tags": [
-      "radar"
-    ],
     "pov": "standard",
-    "altName": "PGZ-95"
+    "altName": "PGZ-95",
+    "category": "Self-Propelled Air Defense",
+    "class": "Air Defense"
   },
   {
     "id": "china-type95-view1",
@@ -789,11 +751,10 @@
     "name": "Type 95",
     "image": "Reference Cards/China/Extracted Images/China_Type-95_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "radar"
-    ],
     "view": 1,
-    "altName": "PGZ-95"
+    "altName": "PGZ-95",
+    "category": "Self-Propelled Air Defense",
+    "class": "Air Defense"
   },
   {
     "id": "china-type95-view2",
@@ -801,11 +762,10 @@
     "name": "Type 95",
     "image": "Reference Cards/China/Extracted Images/China_Type-95_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "radar"
-    ],
     "view": 2,
-    "altName": "PGZ-95"
+    "altName": "PGZ-95",
+    "category": "Self-Propelled Air Defense",
+    "class": "Air Defense"
   },
   {
     "id": "china-type95-view3",
@@ -813,11 +773,10 @@
     "name": "Type 95",
     "image": "Reference Cards/China/Extracted Images/China_Type-95_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "radar"
-    ],
     "view": 3,
-    "altName": "PGZ-95"
+    "altName": "PGZ-95",
+    "category": "Self-Propelled Air Defense",
+    "class": "Air Defense"
   },
   {
     "id": "china-type95-view4",
@@ -825,22 +784,20 @@
     "name": "Type 95",
     "image": "Reference Cards/China/Extracted Images/China_Type-95_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "radar"
-    ],
     "view": 4,
-    "altName": "PGZ-95"
+    "altName": "PGZ-95",
+    "category": "Self-Propelled Air Defense",
+    "class": "Air Defense"
   },
   {
     "id": "china-type96a",
     "deck": "China",
     "name": "Type 96A",
     "image": "images_china/Type 96A.png",
-    "tags": [
-      "tank"
-    ],
     "pov": "standard",
-    "altName": "ZTZ-96A"
+    "altName": "ZTZ-96A",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type96a-view1",
@@ -848,11 +805,10 @@
     "name": "Type 96A",
     "image": "Reference Cards/China/Extracted Images/China_Type-96A_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 1,
-    "altName": "ZTZ-96A"
+    "altName": "ZTZ-96A",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type96a-view2",
@@ -860,11 +816,10 @@
     "name": "Type 96A",
     "image": "Reference Cards/China/Extracted Images/China_Type-96A_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 2,
-    "altName": "ZTZ-96A"
+    "altName": "ZTZ-96A",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type96a-view3",
@@ -872,11 +827,10 @@
     "name": "Type 96A",
     "image": "Reference Cards/China/Extracted Images/China_Type-96A_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 3,
-    "altName": "ZTZ-96A"
+    "altName": "ZTZ-96A",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type96a-view4",
@@ -884,22 +838,20 @@
     "name": "Type 96A",
     "image": "Reference Cards/China/Extracted Images/China_Type-96A_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 4,
-    "altName": "ZTZ-96A"
+    "altName": "ZTZ-96A",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type98",
     "deck": "China",
     "name": "Type 98",
     "image": "images_china/Type 98.png",
-    "tags": [
-      "tank"
-    ],
     "pov": "standard",
-    "altName": "ZTZ-98"
+    "altName": "ZTZ-98",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type98-view1",
@@ -907,11 +859,10 @@
     "name": "Type 98",
     "image": "Reference Cards/China/Extracted Images/China_Type-98_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 1,
-    "altName": "ZTZ-98"
+    "altName": "ZTZ-98",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type98-view2",
@@ -919,11 +870,10 @@
     "name": "Type 98",
     "image": "Reference Cards/China/Extracted Images/China_Type-98_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 2,
-    "altName": "ZTZ-98"
+    "altName": "ZTZ-98",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type98-view3",
@@ -931,11 +881,10 @@
     "name": "Type 98",
     "image": "Reference Cards/China/Extracted Images/China_Type-98_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 3,
-    "altName": "ZTZ-98"
+    "altName": "ZTZ-98",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type98-view4",
@@ -943,22 +892,20 @@
     "name": "Type 98",
     "image": "Reference Cards/China/Extracted Images/China_Type-98_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 4,
-    "altName": "ZTZ-98"
+    "altName": "ZTZ-98",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type99a",
     "deck": "China",
     "name": "Type 99A",
     "image": "images_china/Type 99A.png",
-    "tags": [
-      "tank"
-    ],
     "pov": "standard",
-    "altName": "ZTZ-99A"
+    "altName": "ZTZ-99A",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type99a-view1",
@@ -966,11 +913,10 @@
     "name": "Type 99A",
     "image": "Reference Cards/China/Extracted Images/China_Type-99A_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 1,
-    "altName": "ZTZ-99A"
+    "altName": "ZTZ-99A",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type99a-view2",
@@ -978,11 +924,10 @@
     "name": "Type 99A",
     "image": "Reference Cards/China/Extracted Images/China_Type-99A_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 2,
-    "altName": "ZTZ-99A"
+    "altName": "ZTZ-99A",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type99a-view3",
@@ -990,11 +935,10 @@
     "name": "Type 99A",
     "image": "Reference Cards/China/Extracted Images/China_Type-99A_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 3,
-    "altName": "ZTZ-99A"
+    "altName": "ZTZ-99A",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type99a-view4",
@@ -1002,11 +946,10 @@
     "name": "Type 99A",
     "image": "Reference Cards/China/Extracted Images/China_Type-99A_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 4,
-    "altName": "ZTZ-99A"
+    "altName": "ZTZ-99A",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-type99a-view5",
@@ -1014,19 +957,19 @@
     "name": "Type 99A",
     "image": "Reference Cards/China/Extracted Images/China_Type-99A_View5.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 5,
-    "altName": "ZTZ-99A"
+    "altName": "ZTZ-99A",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "china-vn17",
     "deck": "China",
     "name": "VN 17",
     "image": "images_china/VN 17.png",
-    "tags": [],
-    "pov": "standard"
+    "pov": "standard",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-vn17-view1",
@@ -1034,8 +977,9 @@
     "name": "VN 17",
     "image": "Reference Cards/China/Extracted Images/China_VN-17_View1.jpg",
     "pov": "alt",
-    "tags": [],
-    "view": 1
+    "view": 1,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-vn17-view2",
@@ -1043,8 +987,9 @@
     "name": "VN 17",
     "image": "Reference Cards/China/Extracted Images/China_VN-17_View2.jpg",
     "pov": "alt",
-    "tags": [],
-    "view": 2
+    "view": 2,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-vn17-view3",
@@ -1052,8 +997,9 @@
     "name": "VN 17",
     "image": "Reference Cards/China/Extracted Images/China_VN-17_View3.jpg",
     "pov": "alt",
-    "tags": [],
-    "view": 3
+    "view": 3,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-vn17-view4",
@@ -1061,17 +1007,19 @@
     "name": "VN 17",
     "image": "Reference Cards/China/Extracted Images/China_VN-17_View4.jpg",
     "pov": "alt",
-    "tags": [],
-    "view": 4
+    "view": 4,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-vn18",
     "deck": "China",
     "name": "VN 18",
     "image": "images_china/VN 18.png",
-    "tags": [],
     "pov": "standard",
-    "altName": "ZBD-05"
+    "altName": "ZBD-05",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-vn18-view1",
@@ -1079,9 +1027,10 @@
     "name": "VN 18",
     "image": "Reference Cards/China/Extracted Images/China_VN-18_View1.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 1,
-    "altName": "ZBD-05"
+    "altName": "ZBD-05",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-vn18-view2",
@@ -1089,9 +1038,10 @@
     "name": "VN 18",
     "image": "Reference Cards/China/Extracted Images/China_VN-18_View2.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 2,
-    "altName": "ZBD-05"
+    "altName": "ZBD-05",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-vn18-view3",
@@ -1099,9 +1049,10 @@
     "name": "VN 18",
     "image": "Reference Cards/China/Extracted Images/China_VN-18_View3.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 3,
-    "altName": "ZBD-05"
+    "altName": "ZBD-05",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-vn18-view4",
@@ -1109,20 +1060,20 @@
     "name": "VN 18",
     "image": "Reference Cards/China/Extracted Images/China_VN-18_View4.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 4,
-    "altName": "ZBD-05"
+    "altName": "ZBD-05",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-wz10",
     "deck": "China",
     "name": "WZ 10",
     "image": "images_china/WZ 10.png",
-    "tags": [
-      "helicopter"
-    ],
     "pov": "standard",
-    "altName": "Z-10"
+    "altName": "Z-10",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "china-wz10-view1",
@@ -1130,11 +1081,10 @@
     "name": "WZ 10",
     "image": "Reference Cards/China/Extracted Images/China_Z-10_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
     "view": 1,
-    "altName": "Z-10"
+    "altName": "Z-10",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "china-wz10-view2",
@@ -1142,11 +1092,10 @@
     "name": "WZ 10",
     "image": "Reference Cards/China/Extracted Images/China_Z-10_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
     "view": 2,
-    "altName": "Z-10"
+    "altName": "Z-10",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "china-wz10-view3",
@@ -1154,11 +1103,10 @@
     "name": "WZ 10",
     "image": "Reference Cards/China/Extracted Images/China_Z-10_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
     "view": 3,
-    "altName": "Z-10"
+    "altName": "Z-10",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "china-wz10-view4",
@@ -1166,22 +1114,20 @@
     "name": "WZ 10",
     "image": "Reference Cards/China/Extracted Images/China_Z-10_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
     "view": 4,
-    "altName": "Z-10"
+    "altName": "Z-10",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "china-wz19",
     "deck": "China",
     "name": "WZ 19",
     "image": "images_china/WZ 19.png",
-    "tags": [
-      "helicopter"
-    ],
     "pov": "standard",
-    "altName": "Z-19"
+    "altName": "Z-19",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "china-wz19-view1",
@@ -1189,11 +1135,10 @@
     "name": "WZ 19",
     "image": "Reference Cards/China/Extracted Images/China_Z-19_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
     "view": 1,
-    "altName": "Z-19"
+    "altName": "Z-19",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "china-wz19-view2",
@@ -1201,11 +1146,10 @@
     "name": "WZ 19",
     "image": "Reference Cards/China/Extracted Images/China_Z-19_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
     "view": 2,
-    "altName": "Z-19"
+    "altName": "Z-19",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "china-wz19-view3",
@@ -1213,11 +1157,10 @@
     "name": "WZ 19",
     "image": "Reference Cards/China/Extracted Images/China_Z-19_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
     "view": 3,
-    "altName": "Z-19"
+    "altName": "Z-19",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "china-wz19-view4",
@@ -1225,20 +1168,20 @@
     "name": "WZ 19",
     "image": "Reference Cards/China/Extracted Images/China_Z-19_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
     "view": 4,
-    "altName": "Z-19"
+    "altName": "Z-19",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "china-wz501",
     "deck": "China",
     "name": "WZ 501",
     "image": "images_china/WZ 501.png",
-    "tags": [],
     "pov": "standard",
-    "altName": "Type 86"
+    "altName": "Type 86",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-wz501-view1",
@@ -1246,9 +1189,10 @@
     "name": "WZ 501",
     "image": "Reference Cards/China/Extracted Images/China_Type 86_View1.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 1,
-    "altName": "Type 86"
+    "altName": "Type 86",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-wz501-view2",
@@ -1256,9 +1200,10 @@
     "name": "WZ 501",
     "image": "Reference Cards/China/Extracted Images/China_Type 86_View2.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 2,
-    "altName": "Type 86"
+    "altName": "Type 86",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-wz501-view3",
@@ -1266,9 +1211,10 @@
     "name": "WZ 501",
     "image": "Reference Cards/China/Extracted Images/China_Type 86_View3.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 3,
-    "altName": "Type 86"
+    "altName": "Type 86",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-wz501-view4",
@@ -1276,9 +1222,10 @@
     "name": "WZ 501",
     "image": "Reference Cards/China/Extracted Images/China_Type 86_View4.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 4,
-    "altName": "Type 86"
+    "altName": "Type 86",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-wz501-view5",
@@ -1286,17 +1233,19 @@
     "name": "WZ 501",
     "image": "Reference Cards/China/Extracted Images/China_Type 86_View5.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 5,
-    "altName": "Type 86"
+    "altName": "Type 86",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-zsl92",
     "deck": "China",
     "name": "ZSL 92",
     "image": "images_china/ZSL 92.png",
-    "tags": [],
-    "pov": "standard"
+    "pov": "standard",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-zsl92-view1",
@@ -1304,8 +1253,9 @@
     "name": "ZSL 92",
     "image": "Reference Cards/China/Extracted Images/China_ZSL-92_View1.jpg",
     "pov": "alt",
-    "tags": [],
-    "view": 1
+    "view": 1,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-zsl92-view2",
@@ -1313,8 +1263,9 @@
     "name": "ZSL 92",
     "image": "Reference Cards/China/Extracted Images/China_ZSL-92_View2.jpg",
     "pov": "alt",
-    "tags": [],
-    "view": 2
+    "view": 2,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-zsl92-view3",
@@ -1322,8 +1273,9 @@
     "name": "ZSL 92",
     "image": "Reference Cards/China/Extracted Images/China_ZSL-92_View3.jpg",
     "pov": "alt",
-    "tags": [],
-    "view": 3
+    "view": 3,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "china-zsl92-view4",
@@ -1331,19 +1283,19 @@
     "name": "ZSL 92",
     "image": "Reference Cards/China/Extracted Images/China_ZSL-92_View4.jpg",
     "pov": "alt",
-    "tags": [],
-    "view": 4
+    "view": 4,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "nato-abrams",
     "deck": "NATO",
     "name": "Abrams",
     "image": "images_NATO/Abrams.png",
-    "tags": [
-      "tank"
-    ],
     "pov": "standard",
-    "altName": "M1A2 SEPv2"
+    "altName": "M1A2 SEPv2",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "nato-abrams-view1",
@@ -1351,11 +1303,10 @@
     "name": "Abrams",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Abrams_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 1,
-    "altName": "M1A2 SEPv2"
+    "altName": "M1A2 SEPv2",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "nato-abrams-view2",
@@ -1363,11 +1314,10 @@
     "name": "Abrams",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Abrams_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 2,
-    "altName": "M1A2 SEPv2"
+    "altName": "M1A2 SEPv2",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "nato-abrams-view3",
@@ -1375,11 +1325,10 @@
     "name": "Abrams",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Abrams_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 3,
-    "altName": "M1A2 SEPv2"
+    "altName": "M1A2 SEPv2",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "nato-abrams-view4",
@@ -1387,22 +1336,20 @@
     "name": "Abrams",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Abrams_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 4,
-    "altName": "M1A2 SEPv2"
+    "altName": "M1A2 SEPv2",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "nato-apache",
     "deck": "NATO",
     "name": "Apache",
     "image": "images_NATO/Apache.png",
-    "tags": [
-      "helicopter"
-    ],
     "pov": "standard",
-    "altName": "AH-64E"
+    "altName": "AH-64E",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "nato-apache-view1",
@@ -1410,11 +1357,10 @@
     "name": "Apache",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Apache_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
     "view": 1,
-    "altName": "AH-64E"
+    "altName": "AH-64E",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "nato-apache-view2",
@@ -1422,11 +1368,10 @@
     "name": "Apache",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Apache_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
     "view": 2,
-    "altName": "AH-64E"
+    "altName": "AH-64E",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "nato-apache-view3",
@@ -1434,11 +1379,10 @@
     "name": "Apache",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Apache_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
     "view": 3,
-    "altName": "AH-64E"
+    "altName": "AH-64E",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "nato-apache-view4",
@@ -1446,11 +1390,10 @@
     "name": "Apache",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Apache_View4.png",
     "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
     "view": 4,
-    "altName": "AH-64E"
+    "altName": "AH-64E",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "nato-apache-view5",
@@ -1458,22 +1401,20 @@
     "name": "Apache",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Apache_View5.jpg",
     "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
     "view": 5,
-    "altName": "AH-64E"
+    "altName": "AH-64E",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "nato-bradley",
     "deck": "NATO",
     "name": "Bradley",
     "image": "images_NATO/Bradley.png",
-    "tags": [
-      "IFV"
-    ],
     "pov": "standard",
-    "altName": "M3A3"
+    "altName": "M3A3",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "nato-bradley-view1",
@@ -1481,11 +1422,10 @@
     "name": "Bradley",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Bradley_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 1,
-    "altName": "M3A3"
+    "altName": "M3A3",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "nato-bradley-view2",
@@ -1493,11 +1433,10 @@
     "name": "Bradley",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Bradley_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 2,
-    "altName": "M3A3"
+    "altName": "M3A3",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "nato-bradley-view3",
@@ -1505,11 +1444,10 @@
     "name": "Bradley",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Bradley_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 3,
-    "altName": "M3A3"
+    "altName": "M3A3",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "nato-bradley-view4",
@@ -1517,22 +1455,20 @@
     "name": "Bradley",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Bradley_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 4,
-    "altName": "M3A3"
+    "altName": "M3A3",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "nato-challenger2",
     "deck": "NATO",
     "name": "Challenger 2",
     "image": "images_NATO/Challenger 2.png",
-    "tags": [
-      "tank"
-    ],
     "pov": "standard",
-    "altName": "FV4043"
+    "altName": "FV4043",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "nato-challenger2-view1",
@@ -1540,11 +1476,10 @@
     "name": "Challenger 2",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Challenger 2_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 1,
-    "altName": "FV4043"
+    "altName": "FV4043",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "nato-challenger2-view2",
@@ -1552,11 +1487,10 @@
     "name": "Challenger 2",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Challenger 2_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 2,
-    "altName": "FV4043"
+    "altName": "FV4043",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "nato-challenger2-view3",
@@ -1564,11 +1498,10 @@
     "name": "Challenger 2",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Challenger 2_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 3,
-    "altName": "FV4043"
+    "altName": "FV4043",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "nato-challenger2-view4",
@@ -1576,22 +1509,20 @@
     "name": "Challenger 2",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Challenger 2_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
     "view": 4,
-    "altName": "FV4043"
+    "altName": "FV4043",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "nato-coyote",
     "deck": "NATO",
     "name": "Coyote",
     "image": "images_NATO/Coyote.png",
-    "tags": [
-      "IFV"
-    ],
     "pov": "standard",
-    "altName": "LAV-25"
+    "altName": "LAV-25",
+    "category": "Reconnaissance Vehicle",
+    "class": "Armor"
   },
   {
     "id": "nato-coyote-view1",
@@ -1599,11 +1530,10 @@
     "name": "Coyote",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Coyote_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 1,
-    "altName": "LAV-25"
+    "altName": "LAV-25",
+    "category": "Reconnaissance Vehicle",
+    "class": "Armor"
   },
   {
     "id": "nato-coyote-view2",
@@ -1611,11 +1541,10 @@
     "name": "Coyote",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Coyote_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 2,
-    "altName": "LAV-25"
+    "altName": "LAV-25",
+    "category": "Reconnaissance Vehicle",
+    "class": "Armor"
   },
   {
     "id": "nato-coyote-view3",
@@ -1623,11 +1552,10 @@
     "name": "Coyote",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Coyote_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 3,
-    "altName": "LAV-25"
+    "altName": "LAV-25",
+    "category": "Reconnaissance Vehicle",
+    "class": "Armor"
   },
   {
     "id": "nato-coyote-view4",
@@ -1635,20 +1563,20 @@
     "name": "Coyote",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Coyote_View4.png",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 4,
-    "altName": "LAV-25"
+    "altName": "LAV-25",
+    "category": "Reconnaissance Vehicle",
+    "class": "Armor"
   },
   {
     "id": "nato-himars",
     "deck": "NATO",
     "name": "HIMARS",
     "image": "images_NATO/HIMARS.png",
-    "tags": [],
     "pov": "standard",
-    "altName": "M142"
+    "altName": "M142",
+    "category": "Rocket Artillery",
+    "class": "Artillery"
   },
   {
     "id": "nato-himars-view1",
@@ -1656,9 +1584,10 @@
     "name": "HIMARS",
     "image": "Reference Cards/NATO/Extracted Images/NATO_HIMARS_View1.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 1,
-    "altName": "M142"
+    "altName": "M142",
+    "category": "Rocket Artillery",
+    "class": "Artillery"
   },
   {
     "id": "nato-himars-view2",
@@ -1666,9 +1595,10 @@
     "name": "HIMARS",
     "image": "Reference Cards/NATO/Extracted Images/NATO_HIMARS_View2.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 2,
-    "altName": "M142"
+    "altName": "M142",
+    "category": "Rocket Artillery",
+    "class": "Artillery"
   },
   {
     "id": "nato-himars-view3",
@@ -1676,9 +1606,10 @@
     "name": "HIMARS",
     "image": "Reference Cards/NATO/Extracted Images/NATO_HIMARS_View3.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 3,
-    "altName": "M142"
+    "altName": "M142",
+    "category": "Rocket Artillery",
+    "class": "Artillery"
   },
   {
     "id": "nato-himars-view4",
@@ -1686,19 +1617,19 @@
     "name": "HIMARS",
     "image": "Reference Cards/NATO/Extracted Images/NATO_HIMARS_View4.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 4,
-    "altName": "M142"
+    "altName": "M142",
+    "category": "Rocket Artillery",
+    "class": "Artillery"
   },
   {
     "id": "nato-k1a1",
     "deck": "NATO",
     "name": "K1A1",
     "image": "images_NATO/K1A1.png",
-    "tags": [
-      "tank"
-    ],
-    "pov": "standard"
+    "pov": "standard",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "nato-k1a1-view1",
@@ -1706,10 +1637,9 @@
     "name": "K1A1",
     "image": "Reference Cards/NATO/Extracted Images/NATO_K1A1_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
-    "view": 1
+    "view": 1,
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "nato-k1a1-view2",
@@ -1717,10 +1647,9 @@
     "name": "K1A1",
     "image": "Reference Cards/NATO/Extracted Images/NATO_K1A1_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
-    "view": 2
+    "view": 2,
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "nato-k1a1-view3",
@@ -1728,10 +1657,9 @@
     "name": "K1A1",
     "image": "Reference Cards/NATO/Extracted Images/NATO_K1A1_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
-    "view": 3
+    "view": 3,
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "nato-k1a1-view4",
@@ -1739,20 +1667,18 @@
     "name": "K1A1",
     "image": "Reference Cards/NATO/Extracted Images/NATO_K1A1_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
-    "view": 4
+    "view": 4,
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "nato-leopard2a4",
     "deck": "NATO",
     "name": "Leopard 2A4",
     "image": "images_NATO/Leopard 2A4.png",
-    "tags": [
-      "tank"
-    ],
-    "pov": "standard"
+    "pov": "standard",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "nato-leopard2a4-view1",
@@ -1760,10 +1686,9 @@
     "name": "Leopard 2A4",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Leopard 2A4_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
-    "view": 1
+    "view": 1,
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "nato-leopard2a4-view2",
@@ -1771,10 +1696,9 @@
     "name": "Leopard 2A4",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Leopard 2A4_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
-    "view": 2
+    "view": 2,
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "nato-leopard2a4-view3",
@@ -1782,10 +1706,9 @@
     "name": "Leopard 2A4",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Leopard 2A4_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
-    "view": 3
+    "view": 3,
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "nato-leopard2a4-view4",
@@ -1793,20 +1716,18 @@
     "name": "Leopard 2A4",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Leopard 2A4_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
-    "view": 4
+    "view": 4,
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "nato-leopard2a6",
     "deck": "NATO",
     "name": "Leopard 2A6",
     "image": "images_NATO/Leopard 2A6.png",
-    "tags": [
-      "tank"
-    ],
-    "pov": "standard"
+    "pov": "standard",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "nato-leopard2a6-view1",
@@ -1814,10 +1735,9 @@
     "name": "Leopard 2A6",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Leopard 2A6_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
-    "view": 1
+    "view": 1,
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "nato-leopard2a6-view2",
@@ -1825,10 +1745,9 @@
     "name": "Leopard 2A6",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Leopard 2A6_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
-    "view": 2
+    "view": 2,
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "nato-leopard2a6-view3",
@@ -1836,10 +1755,9 @@
     "name": "Leopard 2A6",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Leopard 2A6_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
-    "view": 3
+    "view": 3,
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "nato-leopard2a6-view4",
@@ -1847,21 +1765,19 @@
     "name": "Leopard 2A6",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Leopard 2A6_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
-    "view": 4
+    "view": 4,
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "nato-mlrs",
     "deck": "NATO",
     "name": "MLRS",
     "image": "images_NATO/MLRS.png",
-    "tags": [
-      "radar"
-    ],
     "pov": "standard",
-    "altName": "M270"
+    "altName": "M270",
+    "category": "Rocket Artillery",
+    "class": "Artillery"
   },
   {
     "id": "nato-mlrs-view1",
@@ -1869,11 +1785,10 @@
     "name": "MLRS",
     "image": "Reference Cards/NATO/Extracted Images/NATO_MLRS_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "radar"
-    ],
     "view": 1,
-    "altName": "M270"
+    "altName": "M270",
+    "category": "Rocket Artillery",
+    "class": "Artillery"
   },
   {
     "id": "nato-mlrs-view2",
@@ -1881,11 +1796,10 @@
     "name": "MLRS",
     "image": "Reference Cards/NATO/Extracted Images/NATO_MLRS_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "radar"
-    ],
     "view": 2,
-    "altName": "M270"
+    "altName": "M270",
+    "category": "Rocket Artillery",
+    "class": "Artillery"
   },
   {
     "id": "nato-mlrs-view3",
@@ -1893,11 +1807,10 @@
     "name": "MLRS",
     "image": "Reference Cards/NATO/Extracted Images/NATO_MLRS_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "radar"
-    ],
     "view": 3,
-    "altName": "M270"
+    "altName": "M270",
+    "category": "Rocket Artillery",
+    "class": "Artillery"
   },
   {
     "id": "nato-mlrs-view4",
@@ -1905,20 +1818,20 @@
     "name": "MLRS",
     "image": "Reference Cards/NATO/Extracted Images/NATO_MLRS_View4.png",
     "pov": "alt",
-    "tags": [
-      "radar"
-    ],
     "view": 4,
-    "altName": "M270"
+    "altName": "M270",
+    "category": "Rocket Artillery",
+    "class": "Artillery"
   },
   {
     "id": "nato-paladin",
     "deck": "NATO",
     "name": "Paladin",
     "image": "images_NATO/Paladin.png",
-    "tags": [],
     "pov": "standard",
-    "altName": "M109"
+    "altName": "M109",
+    "category": "Self-Propelled Artillery",
+    "class": "Artillery"
   },
   {
     "id": "nato-paladin-view1",
@@ -1926,9 +1839,10 @@
     "name": "Paladin",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Paladin_View1.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 1,
-    "altName": "M109"
+    "altName": "M109",
+    "category": "Self-Propelled Artillery",
+    "class": "Artillery"
   },
   {
     "id": "nato-paladin-view2",
@@ -1936,9 +1850,10 @@
     "name": "Paladin",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Paladin_View2.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 2,
-    "altName": "M109"
+    "altName": "M109",
+    "category": "Self-Propelled Artillery",
+    "class": "Artillery"
   },
   {
     "id": "nato-paladin-view3",
@@ -1946,9 +1861,10 @@
     "name": "Paladin",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Paladin_View3.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 3,
-    "altName": "M109"
+    "altName": "M109",
+    "category": "Self-Propelled Artillery",
+    "class": "Artillery"
   },
   {
     "id": "nato-paladin-view4",
@@ -1956,20 +1872,20 @@
     "name": "Paladin",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Paladin_View4.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 4,
-    "altName": "M109"
+    "altName": "M109",
+    "category": "Self-Propelled Artillery",
+    "class": "Artillery"
   },
   {
     "id": "nato-stryker",
     "deck": "NATO",
     "name": "Stryker",
     "image": "images_NATO/Stryker.png",
-    "tags": [
-      "IFV"
-    ],
     "pov": "standard",
-    "altName": "M1135"
+    "altName": "M1135",
+    "category": "Armored Personnel Carrier",
+    "class": "Armor"
   },
   {
     "id": "nato-stryker-view1",
@@ -1977,11 +1893,10 @@
     "name": "Stryker",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Stryker_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 1,
-    "altName": "M1135"
+    "altName": "M1135",
+    "category": "Armored Personnel Carrier",
+    "class": "Armor"
   },
   {
     "id": "nato-stryker-view2",
@@ -1989,11 +1904,10 @@
     "name": "Stryker",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Stryker_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 2,
-    "altName": "M1135"
+    "altName": "M1135",
+    "category": "Armored Personnel Carrier",
+    "class": "Armor"
   },
   {
     "id": "nato-stryker-view3",
@@ -2001,11 +1915,10 @@
     "name": "Stryker",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Stryker_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 3,
-    "altName": "M1135"
+    "altName": "M1135",
+    "category": "Armored Personnel Carrier",
+    "class": "Armor"
   },
   {
     "id": "nato-stryker-view4",
@@ -2013,22 +1926,20 @@
     "name": "Stryker",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Stryker_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 4,
-    "altName": "M1135"
+    "altName": "M1135",
+    "category": "Armored Personnel Carrier",
+    "class": "Armor"
   },
   {
     "id": "nato-warrior",
     "deck": "NATO",
     "name": "Warrior",
     "image": "images_NATO/Warrior.png",
-    "tags": [
-      "IFV"
-    ],
     "pov": "standard",
-    "altName": "FV-511 or FV-510"
+    "altName": "FV-511 or FV-510",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "nato-warrior-view1",
@@ -2036,11 +1947,10 @@
     "name": "Warrior",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Warrior_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 1,
-    "altName": "FV-511 or FV-510"
+    "altName": "FV-511 or FV-510",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "nato-warrior-view2",
@@ -2048,11 +1958,10 @@
     "name": "Warrior",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Warrior_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 2,
-    "altName": "FV-511 or FV-510"
+    "altName": "FV-511 or FV-510",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "nato-warrior-view3",
@@ -2060,11 +1969,10 @@
     "name": "Warrior",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Warrior_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 3,
-    "altName": "FV-511 or FV-510"
+    "altName": "FV-511 or FV-510",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "nato-warrior-view4",
@@ -2072,20 +1980,20 @@
     "name": "Warrior",
     "image": "Reference Cards/NATO/Extracted Images/NATO_Warrior_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
     "view": 4,
-    "altName": "FV-511 or FV-510"
+    "altName": "FV-511 or FV-510",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "russia-2s19",
     "deck": "Russia",
     "name": "2S19",
     "image": "images_russia/2S19.png",
-    "tags": [],
     "pov": "standard",
-    "altName": "MSTA-S"
+    "altName": "MSTA-S",
+    "category": "Self-Propelled Artillery",
+    "class": "Artillery"
   },
   {
     "id": "russia-2s19-view1",
@@ -2093,9 +2001,10 @@
     "name": "2S19",
     "image": "Reference Cards/Russia/Extracted Images/Russia_MSTA-S_View1.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 1,
-    "altName": "MSTA-S"
+    "altName": "MSTA-S",
+    "category": "Self-Propelled Artillery",
+    "class": "Artillery"
   },
   {
     "id": "russia-2s19-view2",
@@ -2103,9 +2012,10 @@
     "name": "2S19",
     "image": "Reference Cards/Russia/Extracted Images/Russia_MSTA-S_View2.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 2,
-    "altName": "MSTA-S"
+    "altName": "MSTA-S",
+    "category": "Self-Propelled Artillery",
+    "class": "Artillery"
   },
   {
     "id": "russia-2s19-view3",
@@ -2113,9 +2023,10 @@
     "name": "2S19",
     "image": "Reference Cards/Russia/Extracted Images/Russia_MSTA-S_View3.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 3,
-    "altName": "MSTA-S"
+    "altName": "MSTA-S",
+    "category": "Self-Propelled Artillery",
+    "class": "Artillery"
   },
   {
     "id": "russia-2s19-view4",
@@ -2123,18 +2034,20 @@
     "name": "2S19",
     "image": "Reference Cards/Russia/Extracted Images/Russia_MSTA-S_View4.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 4,
-    "altName": "MSTA-S"
+    "altName": "MSTA-S",
+    "category": "Self-Propelled Artillery",
+    "class": "Artillery"
   },
   {
     "id": "russia-2s35",
     "deck": "Russia",
     "name": "2S35",
     "image": "images_russia/2S35.png",
-    "tags": [],
     "pov": "standard",
-    "altName": "Koalitsiya"
+    "altName": "Koalitsiya",
+    "category": "Self-Propelled Artillery",
+    "class": "Artillery"
   },
   {
     "id": "russia-2s35-view1",
@@ -2142,9 +2055,10 @@
     "name": "2S35",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Koalitsiya_View1.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 1,
-    "altName": "Koalitsiya"
+    "altName": "Koalitsiya",
+    "category": "Self-Propelled Artillery",
+    "class": "Artillery"
   },
   {
     "id": "russia-2s35-view2",
@@ -2152,9 +2066,10 @@
     "name": "2S35",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Koalitsiya_View2.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 2,
-    "altName": "Koalitsiya"
+    "altName": "Koalitsiya",
+    "category": "Self-Propelled Artillery",
+    "class": "Artillery"
   },
   {
     "id": "russia-2s35-view3",
@@ -2162,18 +2077,20 @@
     "name": "2S35",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Koalitsiya_View3.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 3,
-    "altName": "Koalitsiya"
+    "altName": "Koalitsiya",
+    "category": "Self-Propelled Artillery",
+    "class": "Artillery"
   },
   {
     "id": "russia-2s5",
     "deck": "Russia",
     "name": "2S5",
     "image": "images_russia/2S5.png",
-    "tags": [],
     "pov": "standard",
-    "altName": "Giatsnit"
+    "altName": "Giatsnit",
+    "category": "Self-Propelled Artillery",
+    "class": "Artillery"
   },
   {
     "id": "russia-2s5-view1",
@@ -2181,9 +2098,10 @@
     "name": "2S5",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Giatsnit_View1.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 1,
-    "altName": "Giatsnit"
+    "altName": "Giatsnit",
+    "category": "Self-Propelled Artillery",
+    "class": "Artillery"
   },
   {
     "id": "russia-2s5-view2",
@@ -2191,9 +2109,10 @@
     "name": "2S5",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Giatsnit_View2.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 2,
-    "altName": "Giatsnit"
+    "altName": "Giatsnit",
+    "category": "Self-Propelled Artillery",
+    "class": "Artillery"
   },
   {
     "id": "russia-2s5-view3",
@@ -2201,9 +2120,10 @@
     "name": "2S5",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Giatsnit_View3.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 3,
-    "altName": "Giatsnit"
+    "altName": "Giatsnit",
+    "category": "Self-Propelled Artillery",
+    "class": "Artillery"
   },
   {
     "id": "russia-2s5-view4",
@@ -2211,20 +2131,20 @@
     "name": "2S5",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Giatsnit_View4.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 4,
-    "altName": "Giatsnit"
+    "altName": "Giatsnit",
+    "category": "Self-Propelled Artillery",
+    "class": "Artillery"
   },
   {
     "id": "russia-2s6",
     "deck": "Russia",
     "name": "2S6",
     "image": "images_russia/2S6.png",
-    "tags": [
-      "radar"
-    ],
     "pov": "standard",
-    "altName": "Tunguska-M"
+    "altName": "Tunguska-M",
+    "category": "Self-Propelled Air Defense",
+    "class": "Air Defense"
   },
   {
     "id": "russia-2s6-view1",
@@ -2232,11 +2152,10 @@
     "name": "2S6",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Tunguska-M_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "radar"
-    ],
     "view": 1,
-    "altName": "Tunguska-M"
+    "altName": "Tunguska-M",
+    "category": "Self-Propelled Air Defense",
+    "class": "Air Defense"
   },
   {
     "id": "russia-2s6-view2",
@@ -2244,11 +2163,10 @@
     "name": "2S6",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Tunguska-M_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "radar"
-    ],
     "view": 2,
-    "altName": "Tunguska-M"
+    "altName": "Tunguska-M",
+    "category": "Self-Propelled Air Defense",
+    "class": "Air Defense"
   },
   {
     "id": "russia-2s6-view3",
@@ -2256,11 +2174,10 @@
     "name": "2S6",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Tunguska-M_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "radar"
-    ],
     "view": 3,
-    "altName": "Tunguska-M"
+    "altName": "Tunguska-M",
+    "category": "Self-Propelled Air Defense",
+    "class": "Air Defense"
   },
   {
     "id": "russia-2s6-view4",
@@ -2268,20 +2185,20 @@
     "name": "2S6",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Tunguska-M_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "radar"
-    ],
     "view": 4,
-    "altName": "Tunguska-M"
+    "altName": "Tunguska-M",
+    "category": "Self-Propelled Air Defense",
+    "class": "Air Defense"
   },
   {
     "id": "russia-bm27",
     "deck": "Russia",
     "name": "BM 27",
     "image": "images_russia/BM 27.png",
-    "tags": [],
     "pov": "standard",
-    "altName": "Uragan"
+    "altName": "Uragan",
+    "category": "Rocket Artillery",
+    "class": "Artillery"
   },
   {
     "id": "russia-bm27-view1",
@@ -2289,9 +2206,10 @@
     "name": "BM 27",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Uragan_View1.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 1,
-    "altName": "Uragan"
+    "altName": "Uragan",
+    "category": "Rocket Artillery",
+    "class": "Artillery"
   },
   {
     "id": "russia-bm27-view2",
@@ -2299,9 +2217,10 @@
     "name": "BM 27",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Uragan_View2.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 2,
-    "altName": "Uragan"
+    "altName": "Uragan",
+    "category": "Rocket Artillery",
+    "class": "Artillery"
   },
   {
     "id": "russia-bm27-view3",
@@ -2309,9 +2228,10 @@
     "name": "BM 27",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Uragan_View3.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 3,
-    "altName": "Uragan"
+    "altName": "Uragan",
+    "category": "Rocket Artillery",
+    "class": "Artillery"
   },
   {
     "id": "russia-bm27-view4",
@@ -2319,19 +2239,19 @@
     "name": "BM 27",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Uragan_View4.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 4,
-    "altName": "Uragan"
+    "altName": "Uragan",
+    "category": "Rocket Artillery",
+    "class": "Artillery"
   },
   {
     "id": "russia-bmd3",
     "deck": "Russia",
     "name": "BMD 3",
     "image": "images_russia/BMD 3.png",
-    "tags": [
-      "IFV"
-    ],
-    "pov": "standard"
+    "pov": "standard",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "russia-bmd3-view1",
@@ -2339,10 +2259,9 @@
     "name": "BMD 3",
     "image": "Reference Cards/Russia/Extracted Images/Russia_BMD-3_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 1
+    "view": 1,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "russia-bmd3-view2",
@@ -2350,10 +2269,9 @@
     "name": "BMD 3",
     "image": "Reference Cards/Russia/Extracted Images/Russia_BMD-3_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 2
+    "view": 2,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "russia-bmd3-view3",
@@ -2361,10 +2279,9 @@
     "name": "BMD 3",
     "image": "Reference Cards/Russia/Extracted Images/Russia_BMD-3_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 3
+    "view": 3,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "russia-bmd3-view4",
@@ -2372,20 +2289,18 @@
     "name": "BMD 3",
     "image": "Reference Cards/Russia/Extracted Images/Russia_BMD-3_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 4
+    "view": 4,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "russia-bmd4",
     "deck": "Russia",
     "name": "BMD 4",
     "image": "images_russia/BMD 4.png",
-    "tags": [
-      "IFV"
-    ],
-    "pov": "standard"
+    "pov": "standard",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "russia-bmd4-view1",
@@ -2393,10 +2308,9 @@
     "name": "BMD 4",
     "image": "Reference Cards/Russia/Extracted Images/Russia_BMD-4_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 1
+    "view": 1,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "russia-bmd4-view2",
@@ -2404,10 +2318,9 @@
     "name": "BMD 4",
     "image": "Reference Cards/Russia/Extracted Images/Russia_BMD-4_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 2
+    "view": 2,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "russia-bmd4-view3",
@@ -2415,10 +2328,9 @@
     "name": "BMD 4",
     "image": "Reference Cards/Russia/Extracted Images/Russia_BMD-4_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 3
+    "view": 3,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "russia-bmd4-view4",
@@ -2426,20 +2338,18 @@
     "name": "BMD 4",
     "image": "Reference Cards/Russia/Extracted Images/Russia_BMD-4_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 4
+    "view": 4,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "russia-bmp2",
     "deck": "Russia",
     "name": "BMP 2",
     "image": "images_russia/BMP 2.png",
-    "tags": [
-      "IFV"
-    ],
-    "pov": "standard"
+    "pov": "standard",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "russia-bmp2-view1",
@@ -2447,10 +2357,9 @@
     "name": "BMP 2",
     "image": "Reference Cards/Russia/Extracted Images/Russia_BMP-2_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 1
+    "view": 1,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "russia-bmp2-view2",
@@ -2458,10 +2367,9 @@
     "name": "BMP 2",
     "image": "Reference Cards/Russia/Extracted Images/Russia_BMP-2_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 2
+    "view": 2,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "russia-bmp2-view3",
@@ -2469,10 +2377,9 @@
     "name": "BMP 2",
     "image": "Reference Cards/Russia/Extracted Images/Russia_BMP-2_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 3
+    "view": 3,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "russia-bmp2-view4",
@@ -2480,20 +2387,18 @@
     "name": "BMP 2",
     "image": "Reference Cards/Russia/Extracted Images/Russia_BMP-2_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 4
+    "view": 4,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "russia-bmp3",
     "deck": "Russia",
     "name": "BMP 3",
     "image": "images_russia/BMP 3.png",
-    "tags": [
-      "IFV"
-    ],
-    "pov": "standard"
+    "pov": "standard",
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "russia-bmp3-view1",
@@ -2501,10 +2406,9 @@
     "name": "BMP 3",
     "image": "Reference Cards/Russia/Extracted Images/Russia_BMP-3_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 1
+    "view": 1,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "russia-bmp3-view2",
@@ -2512,10 +2416,9 @@
     "name": "BMP 3",
     "image": "Reference Cards/Russia/Extracted Images/Russia_BMP-3_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 2
+    "view": 2,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "russia-bmp3-view3",
@@ -2523,10 +2426,9 @@
     "name": "BMP 3",
     "image": "Reference Cards/Russia/Extracted Images/Russia_BMP-3_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 3
+    "view": 3,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "russia-bmp3-view4",
@@ -2534,19 +2436,19 @@
     "name": "BMP 3",
     "image": "Reference Cards/Russia/Extracted Images/Russia_BMP-3_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 4
+    "view": 4,
+    "category": "Infantry Fighting Vehicle",
+    "class": "Armor"
   },
   {
     "id": "russia-boar",
     "deck": "Russia",
     "name": "BOAR",
     "image": "images_russia/BOAR.png",
-    "tags": [],
     "pov": "standard",
-    "altName": "BMR-3M"
+    "altName": "BMR-3M",
+    "category": "Engineering Vehicle",
+    "class": "Support"
   },
   {
     "id": "russia-boar-view1",
@@ -2554,9 +2456,10 @@
     "name": "BOAR",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Boar_View1.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 1,
-    "altName": "BMR-3M"
+    "altName": "BMR-3M",
+    "category": "Engineering Vehicle",
+    "class": "Support"
   },
   {
     "id": "russia-boar-view2",
@@ -2564,9 +2467,10 @@
     "name": "BOAR",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Boar_View2.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 2,
-    "altName": "BMR-3M"
+    "altName": "BMR-3M",
+    "category": "Engineering Vehicle",
+    "class": "Support"
   },
   {
     "id": "russia-boar-view3",
@@ -2574,9 +2478,10 @@
     "name": "BOAR",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Boar_View3.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 3,
-    "altName": "BMR-3M"
+    "altName": "BMR-3M",
+    "category": "Engineering Vehicle",
+    "class": "Support"
   },
   {
     "id": "russia-boar-view4",
@@ -2584,19 +2489,19 @@
     "name": "BOAR",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Boar_View4.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 4,
-    "altName": "BMR-3M"
+    "altName": "BMR-3M",
+    "category": "Engineering Vehicle",
+    "class": "Support"
   },
   {
     "id": "russia-btr70",
     "deck": "Russia",
     "name": "BTR 70",
     "image": "images_russia/BTR 70.png",
-    "tags": [
-      "IFV"
-    ],
-    "pov": "standard"
+    "pov": "standard",
+    "category": "Armored Personnel Carrier",
+    "class": "Armor"
   },
   {
     "id": "russia-btr70-view1",
@@ -2604,10 +2509,9 @@
     "name": "BTR 70",
     "image": "Reference Cards/Russia/Extracted Images/Russia_BTR-70_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 1
+    "view": 1,
+    "category": "Armored Personnel Carrier",
+    "class": "Armor"
   },
   {
     "id": "russia-btr70-view2",
@@ -2615,10 +2519,9 @@
     "name": "BTR 70",
     "image": "Reference Cards/Russia/Extracted Images/Russia_BTR-70_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 2
+    "view": 2,
+    "category": "Armored Personnel Carrier",
+    "class": "Armor"
   },
   {
     "id": "russia-btr70-view3",
@@ -2626,10 +2529,9 @@
     "name": "BTR 70",
     "image": "Reference Cards/Russia/Extracted Images/Russia_BTR-70_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 3
+    "view": 3,
+    "category": "Armored Personnel Carrier",
+    "class": "Armor"
   },
   {
     "id": "russia-btr70-view4",
@@ -2637,20 +2539,18 @@
     "name": "BTR 70",
     "image": "Reference Cards/Russia/Extracted Images/Russia_BTR-70_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 4
+    "view": 4,
+    "category": "Armored Personnel Carrier",
+    "class": "Armor"
   },
   {
     "id": "russia-btr80",
     "deck": "Russia",
     "name": "BTR 80",
     "image": "images_russia/BTR 80.png",
-    "tags": [
-      "IFV"
-    ],
-    "pov": "standard"
+    "pov": "standard",
+    "category": "Armored Personnel Carrier",
+    "class": "Armor"
   },
   {
     "id": "russia-btr80-view1",
@@ -2658,10 +2558,9 @@
     "name": "BTR 80",
     "image": "Reference Cards/Russia/Extracted Images/Russia_BTR-80_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 1
+    "view": 1,
+    "category": "Armored Personnel Carrier",
+    "class": "Armor"
   },
   {
     "id": "russia-btr80-view2",
@@ -2669,10 +2568,9 @@
     "name": "BTR 80",
     "image": "Reference Cards/Russia/Extracted Images/Russia_BTR-80_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 2
+    "view": 2,
+    "category": "Armored Personnel Carrier",
+    "class": "Armor"
   },
   {
     "id": "russia-btr80-view3",
@@ -2680,10 +2578,9 @@
     "name": "BTR 80",
     "image": "Reference Cards/Russia/Extracted Images/Russia_BTR-80_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 3
+    "view": 3,
+    "category": "Armored Personnel Carrier",
+    "class": "Armor"
   },
   {
     "id": "russia-btr80-view4",
@@ -2691,19 +2588,19 @@
     "name": "BTR 80",
     "image": "Reference Cards/Russia/Extracted Images/Russia_BTR-80_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "IFV"
-    ],
-    "view": 4
+    "view": 4,
+    "category": "Armored Personnel Carrier",
+    "class": "Armor"
   },
   {
     "id": "russia-foxhound",
     "deck": "Russia",
     "name": "FOXHOUND",
     "image": "images_russia/FOXHOUND.png",
-    "tags": [],
     "pov": "standard",
-    "altName": "MiG-31"
+    "altName": "MiG-31",
+    "category": "Fighter Aircraft",
+    "class": "Aviation"
   },
   {
     "id": "russia-foxhound-view1",
@@ -2711,9 +2608,10 @@
     "name": "FOXHOUND",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Foxhound_View1.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 1,
-    "altName": "MiG-31"
+    "altName": "MiG-31",
+    "category": "Fighter Aircraft",
+    "class": "Aviation"
   },
   {
     "id": "russia-foxhound-view2",
@@ -2721,9 +2619,10 @@
     "name": "FOXHOUND",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Foxhound_View2.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 2,
-    "altName": "MiG-31"
+    "altName": "MiG-31",
+    "category": "Fighter Aircraft",
+    "class": "Aviation"
   },
   {
     "id": "russia-foxhound-view3",
@@ -2731,9 +2630,10 @@
     "name": "FOXHOUND",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Foxhound_View3.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 3,
-    "altName": "MiG-31"
+    "altName": "MiG-31",
+    "category": "Fighter Aircraft",
+    "class": "Aviation"
   },
   {
     "id": "russia-foxhound-view4",
@@ -2741,9 +2641,10 @@
     "name": "FOXHOUND",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Foxhound_View4.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 4,
-    "altName": "MiG-31"
+    "altName": "MiG-31",
+    "category": "Fighter Aircraft",
+    "class": "Aviation"
   },
   {
     "id": "russia-foxhound-view5",
@@ -2751,20 +2652,20 @@
     "name": "FOXHOUND",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Foxhound_View5.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 5,
-    "altName": "MiG-31"
+    "altName": "MiG-31",
+    "category": "Fighter Aircraft",
+    "class": "Aviation"
   },
   {
     "id": "russia-gauntlet",
     "deck": "Russia",
     "name": "GAUNTLET",
     "image": "images_russia/GAUNTLET.png",
-    "tags": [
-      "radar"
-    ],
     "pov": "standard",
-    "altName": "SA-15"
+    "altName": "SA-15",
+    "category": "Surface-to-Air Missile System",
+    "class": "Air Defense"
   },
   {
     "id": "russia-gauntlet-view1",
@@ -2772,11 +2673,10 @@
     "name": "GAUNTLET",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Gauntlet_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "radar"
-    ],
     "view": 1,
-    "altName": "SA-15"
+    "altName": "SA-15",
+    "category": "Surface-to-Air Missile System",
+    "class": "Air Defense"
   },
   {
     "id": "russia-gauntlet-view2",
@@ -2784,11 +2684,10 @@
     "name": "GAUNTLET",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Gauntlet_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "radar"
-    ],
     "view": 2,
-    "altName": "SA-15"
+    "altName": "SA-15",
+    "category": "Surface-to-Air Missile System",
+    "class": "Air Defense"
   },
   {
     "id": "russia-gauntlet-view3",
@@ -2796,11 +2695,10 @@
     "name": "GAUNTLET",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Gauntlet_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "radar"
-    ],
     "view": 3,
-    "altName": "SA-15"
+    "altName": "SA-15",
+    "category": "Surface-to-Air Missile System",
+    "class": "Air Defense"
   },
   {
     "id": "russia-gauntlet-view4",
@@ -2808,20 +2706,20 @@
     "name": "GAUNTLET",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Gauntlet_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "radar"
-    ],
     "view": 4,
-    "altName": "SA-15"
+    "altName": "SA-15",
+    "category": "Surface-to-Air Missile System",
+    "class": "Air Defense"
   },
   {
     "id": "russia-gopher",
     "deck": "Russia",
     "name": "GOPHER",
     "image": "images_russia/GOPHER.png",
-    "tags": [],
     "pov": "standard",
-    "altName": "SA-13"
+    "altName": "SA-13",
+    "category": "Surface-to-Air Missile System",
+    "class": "Air Defense"
   },
   {
     "id": "russia-gopher-view1",
@@ -2829,9 +2727,10 @@
     "name": "GOPHER",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Gopher_View1.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 1,
-    "altName": "SA-13"
+    "altName": "SA-13",
+    "category": "Surface-to-Air Missile System",
+    "class": "Air Defense"
   },
   {
     "id": "russia-gopher-view2",
@@ -2839,9 +2738,10 @@
     "name": "GOPHER",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Gopher_View2.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 2,
-    "altName": "SA-13"
+    "altName": "SA-13",
+    "category": "Surface-to-Air Missile System",
+    "class": "Air Defense"
   },
   {
     "id": "russia-gopher-view3",
@@ -2849,9 +2749,10 @@
     "name": "GOPHER",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Gopher_View3.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 3,
-    "altName": "SA-13"
+    "altName": "SA-13",
+    "category": "Surface-to-Air Missile System",
+    "class": "Air Defense"
   },
   {
     "id": "russia-gopher-view4",
@@ -2859,18 +2760,20 @@
     "name": "GOPHER",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Gopher_View4.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 4,
-    "altName": "SA-13"
+    "altName": "SA-13",
+    "category": "Surface-to-Air Missile System",
+    "class": "Air Defense"
   },
   {
     "id": "russia-grizzly",
     "deck": "Russia",
     "name": "GRIZZLY",
     "image": "images_russia/GRIZZLY.png",
-    "tags": [],
     "pov": "standard",
-    "altName": "SA-17"
+    "altName": "SA-17",
+    "category": "Surface-to-Air Missile System",
+    "class": "Air Defense"
   },
   {
     "id": "russia-grizzly-view1",
@@ -2878,9 +2781,10 @@
     "name": "GRIZZLY",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Grizzly_View1.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 1,
-    "altName": "SA-17"
+    "altName": "SA-17",
+    "category": "Surface-to-Air Missile System",
+    "class": "Air Defense"
   },
   {
     "id": "russia-grizzly-view2",
@@ -2888,9 +2792,10 @@
     "name": "GRIZZLY",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Grizzly_View2.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 2,
-    "altName": "SA-17"
+    "altName": "SA-17",
+    "category": "Surface-to-Air Missile System",
+    "class": "Air Defense"
   },
   {
     "id": "russia-grizzly-view3",
@@ -2898,9 +2803,10 @@
     "name": "GRIZZLY",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Grizzly_View3.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 3,
-    "altName": "SA-17"
+    "altName": "SA-17",
+    "category": "Surface-to-Air Missile System",
+    "class": "Air Defense"
   },
   {
     "id": "russia-grizzly-view4",
@@ -2908,20 +2814,20 @@
     "name": "GRIZZLY",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Grizzly_View4.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 4,
-    "altName": "SA-17"
+    "altName": "SA-17",
+    "category": "Surface-to-Air Missile System",
+    "class": "Air Defense"
   },
   {
     "id": "russia-havoc",
     "deck": "Russia",
     "name": "HAVOC",
     "image": "images_russia/HAVOC.png",
-    "tags": [
-      "helicopter"
-    ],
     "pov": "standard",
-    "altName": "MI-28"
+    "altName": "MI-28",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "russia-havoc-view1",
@@ -2929,11 +2835,10 @@
     "name": "HAVOC",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Havoc_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
     "view": 1,
-    "altName": "MI-28"
+    "altName": "MI-28",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "russia-havoc-view2",
@@ -2941,11 +2846,10 @@
     "name": "HAVOC",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Havoc_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
     "view": 2,
-    "altName": "MI-28"
+    "altName": "MI-28",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "russia-havoc-view3",
@@ -2953,11 +2857,10 @@
     "name": "HAVOC",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Havoc_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
     "view": 3,
-    "altName": "MI-28"
+    "altName": "MI-28",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "russia-havoc-view4",
@@ -2965,22 +2868,20 @@
     "name": "HAVOC",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Havoc_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
     "view": 4,
-    "altName": "MI-28"
+    "altName": "MI-28",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "russia-hind",
     "deck": "Russia",
     "name": "HIND",
     "image": "images_russia/HIND.png",
-    "tags": [
-      "helicopter"
-    ],
     "pov": "standard",
-    "altName": "MI-24"
+    "altName": "MI-24",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "russia-hind-view1",
@@ -2988,11 +2889,10 @@
     "name": "HIND",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Hind_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
     "view": 1,
-    "altName": "MI-24"
+    "altName": "MI-24",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "russia-hind-view2",
@@ -3000,11 +2900,10 @@
     "name": "HIND",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Hind_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
     "view": 2,
-    "altName": "MI-24"
+    "altName": "MI-24",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "russia-hind-view3",
@@ -3012,11 +2911,10 @@
     "name": "HIND",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Hind_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
     "view": 3,
-    "altName": "MI-24"
+    "altName": "MI-24",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "russia-hind-view4",
@@ -3024,11 +2922,10 @@
     "name": "HIND",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Hind_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
     "view": 4,
-    "altName": "MI-24"
+    "altName": "MI-24",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "russia-hind-view5",
@@ -3036,22 +2933,20 @@
     "name": "HIND",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Hind_View5.jpg",
     "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
     "view": 5,
-    "altName": "MI-24"
+    "altName": "MI-24",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "russia-ka52",
     "deck": "Russia",
     "name": "KA 52",
     "image": "images_russia/KA 52.png",
-    "tags": [
-      "helicopter"
-    ],
     "pov": "standard",
-    "altName": "Hokum-B"
+    "altName": "Hokum-B",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "russia-ka52-view1",
@@ -3059,11 +2954,10 @@
     "name": "KA 52",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Hokum-B_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
     "view": 1,
-    "altName": "Hokum-B"
+    "altName": "Hokum-B",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "russia-ka52-view2",
@@ -3071,11 +2965,10 @@
     "name": "KA 52",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Hokum-B_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
     "view": 2,
-    "altName": "Hokum-B"
+    "altName": "Hokum-B",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "russia-ka52-view3",
@@ -3083,11 +2976,10 @@
     "name": "KA 52",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Hokum-B_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
     "view": 3,
-    "altName": "Hokum-B"
+    "altName": "Hokum-B",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "russia-ka52-view4",
@@ -3095,21 +2987,19 @@
     "name": "KA 52",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Hokum-B_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "helicopter"
-    ],
     "view": 4,
-    "altName": "Hokum-B"
+    "altName": "Hokum-B",
+    "category": "Attack Helicopter",
+    "class": "Aviation"
   },
   {
     "id": "russia-t72b3",
     "deck": "Russia",
     "name": "T-72B3",
     "image": "images_russia/T-72B3.png",
-    "tags": [
-      "tank"
-    ],
-    "pov": "standard"
+    "pov": "standard",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "russia-t72b3-view1",
@@ -3117,10 +3007,9 @@
     "name": "T-72B3",
     "image": "Reference Cards/Russia/Extracted Images/Russia_T-72B3_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
-    "view": 1
+    "view": 1,
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "russia-t72b3-view2",
@@ -3128,10 +3017,9 @@
     "name": "T-72B3",
     "image": "Reference Cards/Russia/Extracted Images/Russia_T-72B3_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
-    "view": 2
+    "view": 2,
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "russia-t72b3-view3",
@@ -3139,10 +3027,9 @@
     "name": "T-72B3",
     "image": "Reference Cards/Russia/Extracted Images/Russia_T-72B3_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
-    "view": 3
+    "view": 3,
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "russia-t72b3-view4",
@@ -3150,20 +3037,18 @@
     "name": "T-72B3",
     "image": "Reference Cards/Russia/Extracted Images/Russia_T-72B3_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
-    "view": 4
+    "view": 4,
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "russia-t80u",
     "deck": "Russia",
     "name": "T-80U",
     "image": "images_russia/T-80U.png",
-    "tags": [
-      "tank"
-    ],
-    "pov": "standard"
+    "pov": "standard",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "russia-t80u-view1",
@@ -3171,10 +3056,9 @@
     "name": "T-80U",
     "image": "Reference Cards/Russia/Extracted Images/Russia_T-80U_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
-    "view": 1
+    "view": 1,
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "russia-t80u-view2",
@@ -3182,10 +3066,9 @@
     "name": "T-80U",
     "image": "Reference Cards/Russia/Extracted Images/Russia_T-80U_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
-    "view": 2
+    "view": 2,
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "russia-t80u-view3",
@@ -3193,10 +3076,9 @@
     "name": "T-80U",
     "image": "Reference Cards/Russia/Extracted Images/Russia_T-80U_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
-    "view": 3
+    "view": 3,
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "russia-t80u-view4",
@@ -3204,20 +3086,18 @@
     "name": "T-80U",
     "image": "Reference Cards/Russia/Extracted Images/Russia_T-80U_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
-    "view": 4
+    "view": 4,
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "russia-t90a",
     "deck": "Russia",
     "name": "T-90A",
     "image": "images_russia/T-90A.png",
-    "tags": [
-      "tank"
-    ],
-    "pov": "standard"
+    "pov": "standard",
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "russia-t90a-view1",
@@ -3225,10 +3105,9 @@
     "name": "T-90A",
     "image": "Reference Cards/Russia/Extracted Images/Russia_T-90A_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
-    "view": 1
+    "view": 1,
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "russia-t90a-view2",
@@ -3236,10 +3115,9 @@
     "name": "T-90A",
     "image": "Reference Cards/Russia/Extracted Images/Russia_T-90A_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
-    "view": 2
+    "view": 2,
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "russia-t90a-view3",
@@ -3247,10 +3125,9 @@
     "name": "T-90A",
     "image": "Reference Cards/Russia/Extracted Images/Russia_T-90A_View3.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
-    "view": 3
+    "view": 3,
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "russia-t90a-view4",
@@ -3258,19 +3135,19 @@
     "name": "T-90A",
     "image": "Reference Cards/Russia/Extracted Images/Russia_T-90A_View4.jpg",
     "pov": "alt",
-    "tags": [
-      "tank"
-    ],
-    "view": 4
+    "view": 4,
+    "category": "Main Battle Tank",
+    "class": "Armor"
   },
   {
     "id": "russia-tigr",
     "deck": "Russia",
     "name": "TIGR",
     "image": "images_russia/TIGR.png",
-    "tags": [],
     "pov": "standard",
-    "altName": "GAZ-2975"
+    "altName": "GAZ-2975",
+    "category": "Light Utility Vehicle",
+    "class": "Support"
   },
   {
     "id": "russia-tigr-view1",
@@ -3278,9 +3155,10 @@
     "name": "TIGR",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Tigr_View1.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 1,
-    "altName": "GAZ-2975"
+    "altName": "GAZ-2975",
+    "category": "Light Utility Vehicle",
+    "class": "Support"
   },
   {
     "id": "russia-tigr-view2",
@@ -3288,9 +3166,10 @@
     "name": "TIGR",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Tigr_View2.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 2,
-    "altName": "GAZ-2975"
+    "altName": "GAZ-2975",
+    "category": "Light Utility Vehicle",
+    "class": "Support"
   },
   {
     "id": "russia-tigr-view3",
@@ -3298,9 +3177,10 @@
     "name": "TIGR",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Tigr_View3.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 3,
-    "altName": "GAZ-2975"
+    "altName": "GAZ-2975",
+    "category": "Light Utility Vehicle",
+    "class": "Support"
   },
   {
     "id": "russia-tigr-view4",
@@ -3308,18 +3188,20 @@
     "name": "TIGR",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Tigr_View4.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 4,
-    "altName": "GAZ-2975"
+    "altName": "GAZ-2975",
+    "category": "Light Utility Vehicle",
+    "class": "Support"
   },
   {
     "id": "russia-tos1a",
     "deck": "Russia",
     "name": "TOS 1A",
     "image": "images_russia/TOS 1A.png",
-    "tags": [],
     "pov": "standard",
-    "altName": "Solntsepek"
+    "altName": "Solntsepek",
+    "category": "Rocket Artillery",
+    "class": "Artillery"
   },
   {
     "id": "russia-tos1a-view1",
@@ -3327,9 +3209,10 @@
     "name": "TOS 1A",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Solntsepek_View1.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 1,
-    "altName": "Solntsepek"
+    "altName": "Solntsepek",
+    "category": "Rocket Artillery",
+    "class": "Artillery"
   },
   {
     "id": "russia-tos1a-view2",
@@ -3337,9 +3220,10 @@
     "name": "TOS 1A",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Solntsepek_View2.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 2,
-    "altName": "Solntsepek"
+    "altName": "Solntsepek",
+    "category": "Rocket Artillery",
+    "class": "Artillery"
   },
   {
     "id": "russia-tos1a-view3",
@@ -3347,9 +3231,10 @@
     "name": "TOS 1A",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Solntsepek_View3.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 3,
-    "altName": "Solntsepek"
+    "altName": "Solntsepek",
+    "category": "Rocket Artillery",
+    "class": "Artillery"
   },
   {
     "id": "russia-tos1a-view4",
@@ -3357,20 +3242,20 @@
     "name": "TOS 1A",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Solntsepek_View4.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 4,
-    "altName": "Solntsepek"
+    "altName": "Solntsepek",
+    "category": "Rocket Artillery",
+    "class": "Artillery"
   },
   {
     "id": "russia-zsu234",
     "deck": "Russia",
     "name": "ZSU 234",
     "image": "images_russia/ZSU 234.png",
-    "tags": [
-      "radar"
-    ],
     "pov": "standard",
-    "altName": "Shilka"
+    "altName": "Shilka",
+    "category": "Self-Propelled Air Defense",
+    "class": "Air Defense"
   },
   {
     "id": "russia-zsu234-view1",
@@ -3378,11 +3263,10 @@
     "name": "ZSU 234",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Shilka_View1.jpg",
     "pov": "alt",
-    "tags": [
-      "radar"
-    ],
     "view": 1,
-    "altName": "Shilka"
+    "altName": "Shilka",
+    "category": "Self-Propelled Air Defense",
+    "class": "Air Defense"
   },
   {
     "id": "russia-zsu234-view2",
@@ -3390,11 +3274,10 @@
     "name": "ZSU 234",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Shilka_View2.jpg",
     "pov": "alt",
-    "tags": [
-      "radar"
-    ],
     "view": 2,
-    "altName": "Shilka"
+    "altName": "Shilka",
+    "category": "Self-Propelled Air Defense",
+    "class": "Air Defense"
   },
   {
     "id": "russia-2s35-view4",
@@ -3402,8 +3285,9 @@
     "name": "ZSU 234",
     "image": "Reference Cards/Russia/Extracted Images/Russia_Koalitsiya_View4.jpg",
     "pov": "alt",
-    "tags": [],
     "view": 4,
-    "altName": "Shilka"
+    "altName": "Shilka",
+    "category": "Self-Propelled Air Defense",
+    "class": "Air Defense"
   }
 ]

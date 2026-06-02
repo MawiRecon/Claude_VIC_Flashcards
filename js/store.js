@@ -118,27 +118,6 @@ async function fileToBase64(file) {
 
 // --- mutations (each commits back) ------------------------------------------
 
-// Add a tag to a card (no-op if already present).
-export async function addTag(id, tag, token) {
-  const card = findById(id);
-  if (!card) throw new Error('card not found');
-  const clean = String(tag).trim();
-  if (!clean) return card;
-  card.tags = card.tags || [];
-  if (!card.tags.includes(clean)) card.tags.push(clean);
-  await saveManifest(token, `cards: add tag "${clean}" to ${card.name}`);
-  return card;
-}
-
-// Remove a tag from a card.
-export async function removeTag(id, tag, token) {
-  const card = findById(id);
-  if (!card) throw new Error('card not found');
-  card.tags = (card.tags || []).filter((t) => t !== tag);
-  await saveManifest(token, `cards: remove tag "${tag}" from ${card.name}`);
-  return card;
-}
-
 // Edit a card's name plus its optional alternative name (both committed at once).
 // An empty altName removes the field. The alt name is an accepted answer on the
 // test but is never shown on the card's answer side.
@@ -177,7 +156,7 @@ export async function replaceImage(id, file, token) {
   return card;
 }
 
-// Duplicate a card: new independent id/name/tags, SAME image (no upload).
+// Duplicate a card: new independent id/name, SAME image (no upload).
 export async function duplicateCard(id, token) {
   const src = findById(id);
   if (!src) throw new Error('card not found');
@@ -187,15 +166,15 @@ export async function duplicateCard(id, token) {
     deck: src.deck,
     name,
     image: src.image, // shared; build script won't flag it (image is on disk)
-    tags: [...(src.tags || [])],
   };
+  if (src.altName) dup.altName = src.altName;
   cards.push(dup);
   await saveManifest(token, `cards: duplicate ${src.name}`);
   return dup;
 }
 
 // Create a new card from scratch: upload the image, then add the card.
-export async function createCard({ deck, name, file, tags }, token) {
+export async function createCard({ deck, name, file }, token) {
   const clean = sanitizeFilename(name);
   if (!clean) throw new Error('name cannot be empty');
   const path = imagePathFor(deck, clean);
@@ -211,7 +190,7 @@ export async function createCard({ deck, name, file, tags }, token) {
     token,
   });
 
-  const card = { id, deck, name: clean, image: path, tags: tags || [] };
+  const card = { id, deck, name: clean, image: path };
   cards.push(card);
   await saveManifest(token, `cards: create ${deck}/${clean}`);
   return card;

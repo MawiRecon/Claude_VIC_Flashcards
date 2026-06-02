@@ -4,7 +4,7 @@
 
 import { DECKS, TOKEN_KEY, PRACTICE_KEY } from './config.js';
 import * as store from './store.js';
-import { allTags, filterCards } from './filters.js';
+import { allClasses, allCategories, filterCards } from './filters.js';
 import { shuffle } from './util.js';
 import { initTest, startTest, isTestActive } from './test-mode.js';
 
@@ -14,7 +14,8 @@ import { initTest, startTest, isTestActive } from './test-mode.js';
 
 const state = {
   deck: 'All',
-  tags: new Set(),
+  klass: 'All',
+  category: 'All',
   filtered: [], // array of card objects, post-filter
   index: 0,
   flipped: false,
@@ -136,30 +137,38 @@ function renderDeckFilter() {
   }
 }
 
-function renderTagFilter() {
-  const wrap = $('tag-filter');
+// Single-select chip row helper (Class / Category share this shape).
+function renderSelectFilter(wrapId, options, selected, onPick) {
+  const wrap = $(wrapId);
   wrap.innerHTML = '';
-  const tags = allTags(store.getCards());
-  if (!tags.length) {
-    wrap.innerHTML = '<span class="muted">no tags yet</span>';
-    return;
-  }
-  for (const tag of tags) {
+  for (const opt of ['All', ...options]) {
     const b = document.createElement('button');
-    b.className = 'chip chip-tag' + (state.tags.has(tag) ? ' active' : '');
-    b.textContent = tag;
-    b.onclick = () => {
-      if (state.tags.has(tag)) state.tags.delete(tag);
-      else state.tags.add(tag);
-      applyFilters(true, true);
-    };
+    b.className = 'chip' + (selected === opt ? ' active' : '');
+    b.textContent = opt;
+    b.onclick = () => onPick(opt);
     wrap.appendChild(b);
   }
 }
 
+function renderClassFilter() {
+  renderSelectFilter('class-filter', allClasses(store.getCards()), state.klass, (k) => {
+    state.klass = k;
+    state.category = 'All'; // changing class resets the (drill-down) category
+    applyFilters(true, true);
+  });
+}
+
+function renderCategoryFilter() {
+  // categories drill down from the selected class
+  renderSelectFilter('category-filter', allCategories(store.getCards(), state.klass), state.category, (c) => {
+    state.category = c;
+    applyFilters(true, true);
+  });
+}
+
 function applyFilters(resetIndex, reshuffle) {
   const base = filterCards(store.getCards(), {
-    deck: state.deck, tags: state.tags,
+    deck: state.deck, klass: state.klass, category: state.category,
     practiceOnly: state.practiceOnly, practiceSet: state.practice,
     pov: state.pov,
   });
@@ -169,7 +178,8 @@ function applyFilters(resetIndex, reshuffle) {
   if (resetIndex) state.editorOpen = false; // re-hide answer on filter changes, keep open across edits
   renderPovFilter();
   renderDeckFilter();
-  renderTagFilter();
+  renderClassFilter();
+  renderCategoryFilter();
   renderView();
 }
 
@@ -192,16 +202,13 @@ function renderView() {
   }
 }
 
-// Build the list of cards (within the current deck+tag filter) whose name OR a
-// tag contains the query (case-insensitive substring).
+// Build the list of cards (within the current filter) whose name, second name,
+// category, or class contains the query (case-insensitive substring).
 function searchMatches() {
   const q = state.search.trim().toLowerCase();
   if (!q) return [];
-  return state.filtered.filter(
-    (c) =>
-      c.name.toLowerCase().includes(q) ||
-      (c.altName || '').toLowerCase().includes(q) ||
-      (c.tags || []).some((t) => t.toLowerCase().includes(q))
+  return state.filtered.filter((c) =>
+    [c.name, c.altName, c.category, c.class].some((v) => (v || '').toLowerCase().includes(q))
   );
 }
 
@@ -230,14 +237,13 @@ function renderSearchResults() {
     // clickable area opens the card in the viewer
     const open = document.createElement('button');
     open.className = 'search-open';
-    const tags = (card.tags || []).map((t) => `<span class="search-tag">${escapeHtml(t)}</span>`).join('');
+    const meta = [card.deck, card.category].filter(Boolean).join(' · ');
     open.innerHTML = `
       <img class="search-thumb" src="${escapeHtml(card.image)}" alt=""
            onerror="this.style.visibility='hidden'">
       <span class="search-info">
         <span class="search-name">${escapeHtml(card.name)}</span>
-        <span class="search-deck">${escapeHtml(card.deck)}</span>
-        <span class="search-tags">${tags}</span>
+        <span class="search-deck">${escapeHtml(meta)}</span>
       </span>`;
     open.onclick = () => openCardFromSearch(card.id);
 
@@ -324,7 +330,8 @@ function renderCard() {
   $('card-altname').textContent = card.altName || '';
   $('card-altname').hidden = !card.altName;
   const povNote = card.pov === 'alt' ? ` · alt view${card.view ? ' ' + card.view : ''}` : '';
-  $('card-deck').textContent = card.deck + povNote + (card.missingImage ? ' · (image missing)' : '');
+  const cat = card.category ? ` · ${card.category}` : '';
+  $('card-deck').textContent = card.deck + cat + povNote + (card.missingImage ? ' · (image missing)' : '');
 
   renderEditor(card);
   updatePracticeUI();
@@ -373,31 +380,6 @@ function renderEditor(card) {
   $('edit-name').value = card.name;
   $('edit-alt').value = card.altName || '';
   $('edit-deck').value = card.deck;
-
-  // current tags as removable chips
-  const tagsWrap = $('edit-tags');
-  tagsWrap.innerHTML = '';
-  for (const t of card.tags || []) {
-    const chip = document.createElement('span');
-    chip.className = 'tag-chip';
-    chip.innerHTML = `${escapeHtml(t)} <button title="remove" aria-label="remove ${escapeHtml(t)}">×</button>`;
-    chip.querySelector('button').onclick = () =>
-      withFeedback(null, `Remove tag "${t}"`, async () => {
-        if (!requireToken()) throw new Error('no token');
-        await store.removeTag(card.id, t, state.token);
-        afterMutation();
-      });
-    tagsWrap.appendChild(chip);
-  }
-
-  // datalist suggestions = all existing tags
-  const dl = $('tag-suggestions');
-  dl.innerHTML = '';
-  for (const t of allTags(store.getCards())) {
-    const o = document.createElement('option');
-    o.value = t;
-    dl.appendChild(o);
-  }
 }
 
 function escapeHtml(s) {
@@ -420,11 +402,11 @@ function afterMutation(keepId) {
 }
 
 // ---------------------------------------------------------------------------
-// Practice Test setup (choose country / POV / tags / count before starting)
+// Practice Test setup (choose country / POV / class / category / count first)
 // ---------------------------------------------------------------------------
 
 const COUNTS = [10, 25, 50];
-const testSetup = { deck: 'All', pov: 'standard', tags: new Set(), count: 0, practiceOnly: false };
+const testSetup = { deck: 'All', pov: 'standard', klass: 'All', category: 'All', count: 0, practiceOnly: false };
 
 function makeChip(label, active, onclick, extra) {
   const b = document.createElement('button');
@@ -438,7 +420,8 @@ function makeChip(label, active, onclick, extra) {
 function openTestSetup() {
   testSetup.deck = state.deck;
   testSetup.pov = state.pov;
-  testSetup.tags = new Set(state.tags);
+  testSetup.klass = state.klass;
+  testSetup.category = state.category;
   testSetup.count = 0;
   testSetup.practiceOnly = state.practiceOnly && state.practice.size > 0;
   renderTestSetup();
@@ -447,7 +430,7 @@ function openTestSetup() {
 
 function setupBase() {
   return filterCards(store.getCards(), {
-    deck: testSetup.deck, tags: testSetup.tags, pov: testSetup.pov,
+    deck: testSetup.deck, klass: testSetup.klass, category: testSetup.category, pov: testSetup.pov,
     practiceOnly: testSetup.practiceOnly, practiceSet: state.practice,
   });
 }
@@ -464,15 +447,20 @@ function renderTestSetup() {
     b.onclick = () => { testSetup.pov = b.dataset.pov; renderTestSetup(); };
   }
 
-  const tagWrap = $('setup-tags');
-  tagWrap.innerHTML = '';
-  const tags = allTags(store.getCards());
-  if (!tags.length) tagWrap.innerHTML = '<span class="muted">no tags</span>';
-  for (const t of tags) {
-    tagWrap.appendChild(makeChip(t, testSetup.tags.has(t), () => {
-      if (testSetup.tags.has(t)) testSetup.tags.delete(t); else testSetup.tags.add(t);
-      renderTestSetup();
-    }, 'chip-tag'));
+  const classWrap = $('setup-class');
+  classWrap.innerHTML = '';
+  for (const k of ['All', ...allClasses(store.getCards())]) {
+    classWrap.appendChild(makeChip(k, testSetup.klass === k, () => {
+      testSetup.klass = k; testSetup.category = 'All'; renderTestSetup();
+    }));
+  }
+
+  const catWrap = $('setup-category');
+  catWrap.innerHTML = '';
+  for (const c of ['All', ...allCategories(store.getCards(), testSetup.klass)]) {
+    catWrap.appendChild(makeChip(c, testSetup.category === c, () => {
+      testSetup.category = c; renderTestSetup();
+    }));
   }
 
   // Practice-set option only when the user has a non-empty set.
@@ -560,7 +548,8 @@ function jumpToVehicle(id) {
   const card = store.findById(id);
   if (!card) return;
   state.deck = card.deck;
-  state.tags.clear();
+  state.klass = 'All';
+  state.category = 'All';
   state.practiceOnly = false;
   state.search = '';
   $('search-input').value = '';
@@ -617,7 +606,8 @@ function wireEvents() {
   // filters
   $('btn-clear-filters').addEventListener('click', () => {
     state.deck = 'All';
-    state.tags.clear();
+    state.klass = 'All';
+    state.category = 'All';
     applyFilters(true, true);
   });
 
@@ -692,21 +682,6 @@ function wireEvents() {
     toast('Signed out — read-only.', 'ok');
   });
 
-  // editor: add tag
-  $('btn-add-tag').addEventListener('click', (e) => {
-    const card = currentCard();
-    const tag = $('tag-input').value.trim();
-    if (!card || !tag) return;
-    withFeedback(e.currentTarget, `Add tag "${tag}"`, async () => {
-      if (!requireToken()) throw new Error('no token');
-      await store.addTag(card.id, tag, state.token);
-      $('tag-input').value = '';
-      afterMutation(card.id);
-    });
-  });
-  $('tag-input').addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') { e.preventDefault(); $('btn-add-tag').click(); }
-  });
 
   // editor: save name + alternative name (one commit)
   $('btn-save-name').addEventListener('click', (e) => {
@@ -769,7 +744,6 @@ function wireEvents() {
     sel.innerHTML = DECKS.map((d) => `<option>${d}</option>`).join('');
     if (state.deck !== 'All') sel.value = state.deck;
     $('new-name').value = '';
-    $('new-tags').value = '';
     $('new-file').value = '';
     $('new-card-dialog').showModal();
   });
@@ -779,10 +753,9 @@ function wireEvents() {
     const deck = $('new-deck').value;
     const name = $('new-name').value.trim();
     const file = $('new-file').files[0];
-    const tags = $('new-tags').value.split(',').map((t) => t.trim()).filter(Boolean);
     if (!name || !file) { toast('Name and image are required.', 'error'); return; }
     withFeedback($('btn-new-card'), 'Create card', async () => {
-      const card = await store.createCard({ deck, name, file, tags }, state.token);
+      const card = await store.createCard({ deck, name, file }, state.token);
       // make sure the new deck/card is visible
       if (state.deck !== 'All' && state.deck !== deck) state.deck = 'All';
       afterMutation(card.id);

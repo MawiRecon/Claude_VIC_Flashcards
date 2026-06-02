@@ -16,11 +16,11 @@
     </div>
   </header>
 
-  <!-- Filters: Country (primary) > POV > Tags -->
+  <!-- Filters: Country (primary) > POV > Class > Category -->
   <nav class="filters">
     <div class="filter-row search-row">
       <input id="search-input" class="search-input" type="search"
-             placeholder="&#128269; Search by name or tag…" autocomplete="off" />
+             placeholder="&#128269; Search by name, designation, or type…" autocomplete="off" />
       <button id="btn-jump" class="btn">&#9776; Jump to</button>
       <button id="search-clear" class="btn btn-ghost" hidden>Clear search</button>
     </div>
@@ -37,8 +37,12 @@
       </div>
     </div>
     <div class="filter-group">
-      <span class="group-label">Tags</span>
-      <div class="group-chips" id="tag-filter" aria-label="Tag filter"></div>
+      <span class="group-label">Class</span>
+      <div class="group-chips" id="class-filter" aria-label="Class filter"></div>
+    </div>
+    <div class="filter-group">
+      <span class="group-label">Category</span>
+      <div class="group-chips" id="category-filter" aria-label="Category filter"></div>
     </div>
 
     <div class="filter-row actions-row">
@@ -100,18 +104,9 @@
         <input type="text" id="edit-deck" readonly />
       </label>
     </div>
-    <label class="alt-name-label">Alternative name (optional) — also accepted on the test; never shown on the card
-      <input type="text" id="edit-alt" placeholder="e.g. an alias or NATO reporting name" />
+    <label class="alt-name-label">Second name (optional) — shown on the card and accepted on the test
+      <input type="text" id="edit-alt" placeholder="e.g. a designation or reporting name" />
     </label>
-
-    <div class="tags-editor">
-      <div class="tags-current" id="edit-tags"></div>
-      <div class="tags-add">
-        <input list="tag-suggestions" id="tag-input" placeholder="add tag (type or pick)" />
-        <datalist id="tag-suggestions"></datalist>
-        <button id="btn-add-tag" class="btn">Add tag</button>
-      </div>
-    </div>
 
     <div class="editor-actions">
       <button id="btn-save-name" class="btn btn-primary">Save name(s)</button>
@@ -135,9 +130,6 @@
       </label>
       <label>Image (.png)
         <input type="file" id="new-file" accept="image/png,image/*" required />
-      </label>
-      <label>Tags (comma separated, optional)
-        <input type="text" id="new-tags" placeholder="Tank, Modern" />
       </label>
       <div class="dialog-actions">
         <button value="cancel" class="btn btn-ghost">Cancel</button>
@@ -183,8 +175,12 @@
         </div>
       </div>
       <div class="setup-group">
-        <span class="group-label">Tags</span>
-        <div class="group-chips" id="setup-tags"></div>
+        <span class="group-label">Class</span>
+        <div class="group-chips" id="setup-class"></div>
+      </div>
+      <div class="setup-group">
+        <span class="group-label">Category</span>
+        <div class="group-chips" id="setup-category"></div>
       </div>
       <div class="setup-group" id="setup-practice-group" hidden>
         <span class="group-label">Practice set</span>

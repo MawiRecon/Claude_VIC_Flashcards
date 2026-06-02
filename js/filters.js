@@ -1,29 +1,43 @@
-// Pure filtering helpers — no DOM, no state. Reused by the viewer today and by
-// quiz/test modes later (they just consume the same filtered set).
+// Pure filtering helpers — no DOM, no state. Reused by the viewer and the
+// Practice Test (they consume the same filtered set).
 
-// All distinct tags across the cards, sorted (the union shown as toggle buttons).
-export function allTags(cards) {
+// Preferred display order for the broad Class filter; unknown classes appended.
+const CLASS_ORDER = ['Armor', 'Artillery', 'Air Defense', 'Aviation', 'Support'];
+
+// Distinct classes present, in preferred order.
+export function allClasses(cards) {
   const set = new Set();
-  for (const c of cards) for (const t of c.tags || []) set.add(t);
+  for (const c of cards) if (c.class) set.add(c.class);
+  const present = [...set];
+  return [
+    ...CLASS_ORDER.filter((k) => set.has(k)),
+    ...present.filter((k) => !CLASS_ORDER.includes(k)).sort((a, b) => a.localeCompare(b)),
+  ];
+}
+
+// Distinct categories present, alphabetical. If `klass` is given (not 'All'),
+// only categories belonging to that class are returned (drill-down).
+export function allCategories(cards, klass) {
+  const set = new Set();
+  for (const c of cards) {
+    if (!c.category) continue;
+    if (klass && klass !== 'All' && c.class !== klass) continue;
+    set.add(c.category);
+  }
   return [...set].sort((a, b) => a.localeCompare(b));
 }
 
 // deck: 'All' | 'NATO' | 'China' | 'Russia'
-// tags: Set of active tags. A card must match the deck AND contain EVERY active
-//       tag (intersection — selecting more tags narrows the set).
-// practiceOnly + practiceSet: when practiceOnly is true, keep only cards whose id
-//       is in practiceSet (the locally-saved selection).
-// pov: 'standard' (default) shows only standard-POV cards; 'all' includes the
-//       alternate-viewpoint cards too.
-export function filterCards(cards, { deck, tags, practiceOnly, practiceSet, pov }) {
+// klass / category: 'All' or a specific value (single-select, AND together).
+// practiceOnly + practiceSet: when practiceOnly, keep only ids in practiceSet.
+// pov: 'standard' (default) shows only standard cards; 'all' includes alt views.
+export function filterCards(cards, { deck, klass, category, practiceOnly, practiceSet, pov }) {
   return cards.filter((c) => {
     if ((pov || 'standard') === 'standard' && c.pov === 'alt') return false;
     if (deck && deck !== 'All' && c.deck !== deck) return false;
+    if (klass && klass !== 'All' && c.class !== klass) return false;
+    if (category && category !== 'All' && c.category !== category) return false;
     if (practiceOnly && !(practiceSet && practiceSet.has(c.id))) return false;
-    if (tags && tags.size) {
-      const have = new Set(c.tags || []);
-      for (const t of tags) if (!have.has(t)) return false;
-    }
     return true;
   });
 }
