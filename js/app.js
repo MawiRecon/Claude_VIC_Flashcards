@@ -21,6 +21,7 @@ const state = {
   editorOpen: false, // editor collapsed by default so the answer stays hidden
   shuffle: false,    // shuffle the working set in the viewer
   shuffleOrder: null,// the stable shuffled list, preserved across edits
+  pov: 'standard',   // 'standard' (default) | 'all' (include alternate viewpoints)
   search: '',        // search query; when non-empty, the list view replaces the card
   practice: loadPracticeSet(), // Set of card ids selected locally for practice
   practiceOnly: false,         // when true, restrict the working set to the practice set
@@ -160,14 +161,22 @@ function applyFilters(resetIndex, reshuffle) {
   const base = filterCards(store.getCards(), {
     deck: state.deck, tags: state.tags,
     practiceOnly: state.practiceOnly, practiceSet: state.practice,
+    pov: state.pov,
   });
   state.filtered = orderSet(base, reshuffle);
   if (resetIndex || state.index >= state.filtered.length) state.index = 0;
   state.flipped = false;
   if (resetIndex) state.editorOpen = false; // re-hide answer on filter changes, keep open across edits
+  renderPovFilter();
   renderDeckFilter();
   renderTagFilter();
   renderView();
+}
+
+function renderPovFilter() {
+  for (const b of document.querySelectorAll('#pov-filter [data-pov]')) {
+    b.classList.toggle('active', b.dataset.pov === state.pov);
+  }
 }
 
 // Switch between the single-card viewer and the search list view.
@@ -312,7 +321,8 @@ function renderCard() {
   front.hidden = state.flipped;
   back.hidden = !state.flipped;
   $('card-name').textContent = card.name;
-  $('card-deck').textContent = card.deck + (card.missingImage ? ' · (image missing)' : '');
+  const povNote = card.pov === 'alt' ? ` · alt view${card.view ? ' ' + card.view : ''}` : '';
+  $('card-deck').textContent = card.deck + povNote + (card.missingImage ? ' · (image missing)' : '');
 
   renderEditor(card);
   updatePracticeUI();
@@ -449,6 +459,15 @@ function wireEvents() {
     state.tags.clear();
     applyFilters(true, true);
   });
+
+  // POV selector (Standard / All POVs)
+  for (const b of document.querySelectorAll('#pov-filter [data-pov]')) {
+    b.addEventListener('click', () => {
+      if (state.pov === b.dataset.pov) return;
+      state.pov = b.dataset.pov;
+      applyFilters(true, true);
+    });
+  }
 
   // shuffle toggle + reshuffle
   $('btn-shuffle').addEventListener('click', () => {

@@ -6,7 +6,49 @@
     "image": "images_china/MBT 2000.png",
     "tags": [
       "tank"
-    ]
+    ],
+    "pov": "standard",
+    "altName": "Type-90-II"
+  },
+  {
+    "id": "china-mbt2000-view1",
+    "deck": "China",
+    "name": "MBT 2000",
+    "image": "Reference Cards/China/Extracted Images/China_Type-90-II_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1,
+    "altName": "Type-90-II"
+  },
+  {
+    "id": "china-mbt2000-view2",
+    "deck": "China",
+    "name": "MBT 2000",
+    "image": "Reference Cards/China/Extracted Images/China_Type-90-II_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2,
+    "altName": "Type-90-II"
+  },
+  {
+    "id": "china-mbt2000-view3",
+    "deck": "China",
+    "name": "MBT 2000",
+    "image": "Reference Cards/China/Extracted Images/China_Type-90-II_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3,
+    "altName": "Type-90-II"
+  },
+  {
+    "id": "china-mbt2000-view4",
+    "deck": "China",
+    "name": "MBT 2000",
+    "image": "Reference Cards/China/Extracted Images/China_Type-90-II_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4,
+    "altName": "Type-90-II"
   },
   {
     "id": "china-mbt3000",
@@ -15,28 +57,206 @@
     "image": "images_china/MBT 3000.png",
     "tags": [
       "tank"
-    ]
+    ],
+    "pov": "standard",
+    "altName": "VT-4"
+  },
+  {
+    "id": "china-mbt3000-view1",
+    "deck": "China",
+    "name": "MBT 3000",
+    "image": "Reference Cards/China/Extracted Images/China_VT-4_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1,
+    "altName": "VT-4"
+  },
+  {
+    "id": "china-mbt3000-view2",
+    "deck": "China",
+    "name": "MBT 3000",
+    "image": "Reference Cards/China/Extracted Images/China_VT-4_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2,
+    "altName": "VT-4"
+  },
+  {
+    "id": "china-mbt3000-view3",
+    "deck": "China",
+    "name": "MBT 3000",
+    "image": "Reference Cards/China/Extracted Images/China_VT-4_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3,
+    "altName": "VT-4"
+  },
+  {
+    "id": "china-mbt3000-view4",
+    "deck": "China",
+    "name": "MBT 3000",
+    "image": "Reference Cards/China/Extracted Images/China_VT-4_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4,
+    "altName": "VT-4"
+  },
+  {
+    "id": "china-mbt3000-view5",
+    "deck": "China",
+    "name": "MBT 3000",
+    "image": "Reference Cards/China/Extracted Images/China_VT-4_View5.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 5,
+    "altName": "VT-4"
   },
   {
     "id": "china-plz05",
     "deck": "China",
     "name": "PLZ 05",
     "image": "images_china/PLZ 05.png",
-    "tags": []
+    "tags": [],
+    "pov": "standard",
+    "altName": "Type-05"
+  },
+  {
+    "id": "china-plz05-view1",
+    "deck": "China",
+    "name": "PLZ 05",
+    "image": "Reference Cards/China/Extracted Images/China_Type-05_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1,
+    "altName": "Type-05"
+  },
+  {
+    "id": "china-plz05-view2",
+    "deck": "China",
+    "name": "PLZ 05",
+    "image": "Reference Cards/China/Extracted Images/China_Type-05_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2,
+    "altName": "Type-05"
+  },
+  {
+    "id": "china-plz05-view3",
+    "deck": "China",
+    "name": "PLZ 05",
+    "image": "Reference Cards/China/Extracted Images/China_Type-05_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3,
+    "altName": "Type-05"
+  },
+  {
+    "id": "china-plz05-view4",
+    "deck": "China",
+    "name": "PLZ 05",
+    "image": "Reference Cards/China/Extracted Images/China_Type-05_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4,
+    "altName": "Type-05"
+  },
+  {
+    "id": "china-plz05-view5",
+    "deck": "China",
+    "name": "PLZ 05",
+    "image": "Reference Cards/China/Extracted Images/China_Type-05_View5.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 5,
+    "altName": "Type-05"
   },
   {
     "id": "china-ptl02",
     "deck": "China",
     "name": "PTL 02",
     "image": "images_china/PTL 02.png",
-    "tags": []
+    "tags": [],
+    "pov": "standard"
+  },
+  {
+    "id": "china-ptl02-view1",
+    "deck": "China",
+    "name": "PTL 02",
+    "image": "Reference Cards/China/Extracted Images/China_PTL-02_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "china-ptl02-view2",
+    "deck": "China",
+    "name": "PTL 02",
+    "image": "Reference Cards/China/Extracted Images/China_PTL-02_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "china-ptl02-view3",
+    "deck": "China",
+    "name": "PTL 02",
+    "image": "Reference Cards/China/Extracted Images/China_PTL-02_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "china-ptl02-view4",
+    "deck": "China",
+    "name": "PTL 02",
+    "image": "Reference Cards/China/Extracted Images/China_PTL-02_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "china-qn506",
     "deck": "China",
     "name": "QN 506",
     "image": "images_china/QN 506.png",
-    "tags": []
+    "tags": [],
+    "pov": "standard"
+  },
+  {
+    "id": "china-qn506-view1",
+    "deck": "China",
+    "name": "QN 506",
+    "image": "Reference Cards/China/Extracted Images/China_QN-506_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "china-qn506-view2",
+    "deck": "China",
+    "name": "QN 506",
+    "image": "Reference Cards/China/Extracted Images/China_QN-506_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "china-qn506-view3",
+    "deck": "China",
+    "name": "QN 506",
+    "image": "Reference Cards/China/Extracted Images/China_QN-506_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "china-qn506-view4",
+    "deck": "China",
+    "name": "QN 506",
+    "image": "Reference Cards/China/Extracted Images/China_QN-506_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "china-type03",
@@ -45,7 +265,44 @@
     "image": "images_china/Type 03.png",
     "tags": [
       "IFV"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "china-type03-view1",
+    "deck": "China",
+    "name": "Type 03",
+    "image": "Reference Cards/China/Extracted Images/China_Type 03_View1.png",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "china-type03-view2",
+    "deck": "China",
+    "name": "Type 03",
+    "image": "Reference Cards/China/Extracted Images/China_Type 03_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "china-type03-view3",
+    "deck": "China",
+    "name": "Type 03",
+    "image": "Reference Cards/China/Extracted Images/China_Type 03_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "china-type03-view4",
+    "deck": "China",
+    "name": "Type 03",
+    "image": "Reference Cards/China/Extracted Images/China_Type 03_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "china-type04",
@@ -54,7 +311,44 @@
     "image": "images_china/Type 04.png",
     "tags": [
       "IFV"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "china-type04-view1",
+    "deck": "China",
+    "name": "Type 04",
+    "image": "Reference Cards/China/Extracted Images/China_Type-04_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "china-type04-view2",
+    "deck": "China",
+    "name": "Type 04",
+    "image": "Reference Cards/China/Extracted Images/China_Type-04_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "china-type04-view3",
+    "deck": "China",
+    "name": "Type 04",
+    "image": "Reference Cards/China/Extracted Images/China_Type-04_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "china-type04-view4",
+    "deck": "China",
+    "name": "Type 04",
+    "image": "Reference Cards/China/Extracted Images/China_Type-04_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "china-type04a",
@@ -63,7 +357,44 @@
     "image": "images_china/Type 04A.png",
     "tags": [
       "IFV"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "china-type04a-view1",
+    "deck": "China",
+    "name": "Type 04A",
+    "image": "Reference Cards/China/Extracted Images/China_Type-04A_View1.png",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "china-type04a-view2",
+    "deck": "China",
+    "name": "Type 04A",
+    "image": "Reference Cards/China/Extracted Images/China_Type-04A_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "china-type04a-view3",
+    "deck": "China",
+    "name": "Type 04A",
+    "image": "Reference Cards/China/Extracted Images/China_Type-04A_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "china-type04a-view4",
+    "deck": "China",
+    "name": "Type 04A",
+    "image": "Reference Cards/China/Extracted Images/China_Type-04A_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "china-type07",
@@ -72,7 +403,44 @@
     "image": "images_china/Type 07.png",
     "tags": [
       "radar"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "china-type07-view1",
+    "deck": "China",
+    "name": "Type 07",
+    "image": "Reference Cards/China/Extracted Images/China_Type-07_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "china-type07-view2",
+    "deck": "China",
+    "name": "Type 07",
+    "image": "Reference Cards/China/Extracted Images/China_Type-07_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "china-type07-view3",
+    "deck": "China",
+    "name": "Type 07",
+    "image": "Reference Cards/China/Extracted Images/China_Type-07_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "china-type07-view4",
+    "deck": "China",
+    "name": "Type 07",
+    "image": "Reference Cards/China/Extracted Images/China_Type-07_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "china-type09",
@@ -81,7 +449,44 @@
     "image": "images_china/Type 09.png",
     "tags": [
       "IFV"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "china-type09-view1",
+    "deck": "China",
+    "name": "Type 09",
+    "image": "Reference Cards/China/Extracted Images/China_Type 09_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "china-type09-view2",
+    "deck": "China",
+    "name": "Type 09",
+    "image": "Reference Cards/China/Extracted Images/China_Type 09_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "china-type09-view3",
+    "deck": "China",
+    "name": "Type 09",
+    "image": "Reference Cards/China/Extracted Images/China_Type 09_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "china-type09-view4",
+    "deck": "China",
+    "name": "Type 09",
+    "image": "Reference Cards/China/Extracted Images/China_Type 09_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "china-type15",
@@ -90,7 +495,53 @@
     "image": "images_china/Type 15.png",
     "tags": [
       "tank"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "china-type15-view1",
+    "deck": "China",
+    "name": "Type 15",
+    "image": "Reference Cards/China/Extracted Images/China_Type 15_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "china-type15-view2",
+    "deck": "China",
+    "name": "Type 15",
+    "image": "Reference Cards/China/Extracted Images/China_Type 15_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "china-type15-view3",
+    "deck": "China",
+    "name": "Type 15",
+    "image": "Reference Cards/China/Extracted Images/China_Type 15_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "china-type15-view4",
+    "deck": "China",
+    "name": "Type 15",
+    "image": "Reference Cards/China/Extracted Images/China_Type 15_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
+  },
+  {
+    "id": "china-type15-view5",
+    "deck": "China",
+    "name": "Type 15",
+    "image": "Reference Cards/China/Extracted Images/China_Type 15_View5.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 5
   },
   {
     "id": "china-type59",
@@ -99,7 +550,53 @@
     "image": "images_china/Type 59.png",
     "tags": [
       "tank"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "china-type59-view1",
+    "deck": "China",
+    "name": "Type 59",
+    "image": "Reference Cards/China/Extracted Images/China_Type-59_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "china-type59-view2",
+    "deck": "China",
+    "name": "Type 59",
+    "image": "Reference Cards/China/Extracted Images/China_Type-59_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "china-type59-view3",
+    "deck": "China",
+    "name": "Type 59",
+    "image": "Reference Cards/China/Extracted Images/China_Type-59_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "china-type59-view4",
+    "deck": "China",
+    "name": "Type 59",
+    "image": "Reference Cards/China/Extracted Images/China_Type-59_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
+  },
+  {
+    "id": "china-type59-view5",
+    "deck": "China",
+    "name": "Type 59",
+    "image": "Reference Cards/China/Extracted Images/China_Type-59_View5.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 5
   },
   {
     "id": "china-type63a",
@@ -108,7 +605,44 @@
     "image": "images_china/Type 63A.png",
     "tags": [
       "tank"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "china-type63a-view1",
+    "deck": "China",
+    "name": "Type 63A",
+    "image": "Reference Cards/China/Extracted Images/China_Type-63A_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "china-type63a-view2",
+    "deck": "China",
+    "name": "Type 63A",
+    "image": "Reference Cards/China/Extracted Images/China_Type-63A_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "china-type63a-view3",
+    "deck": "China",
+    "name": "Type 63A",
+    "image": "Reference Cards/China/Extracted Images/China_Type-63A_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "china-type63a-view4",
+    "deck": "China",
+    "name": "Type 63A",
+    "image": "Reference Cards/China/Extracted Images/China_Type-63A_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "china-type95",
@@ -117,7 +651,44 @@
     "image": "images_china/Type 95.png",
     "tags": [
       "radar"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "china-type95-view1",
+    "deck": "China",
+    "name": "Type 95",
+    "image": "Reference Cards/China/Extracted Images/China_Type-95_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "china-type95-view2",
+    "deck": "China",
+    "name": "Type 95",
+    "image": "Reference Cards/China/Extracted Images/China_Type-95_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "china-type95-view3",
+    "deck": "China",
+    "name": "Type 95",
+    "image": "Reference Cards/China/Extracted Images/China_Type-95_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "china-type95-view4",
+    "deck": "China",
+    "name": "Type 95",
+    "image": "Reference Cards/China/Extracted Images/China_Type-95_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "china-type96a",
@@ -126,7 +697,44 @@
     "image": "images_china/Type 96A.png",
     "tags": [
       "tank"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "china-type96a-view1",
+    "deck": "China",
+    "name": "Type 96A",
+    "image": "Reference Cards/China/Extracted Images/China_Type-96A_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "china-type96a-view2",
+    "deck": "China",
+    "name": "Type 96A",
+    "image": "Reference Cards/China/Extracted Images/China_Type-96A_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "china-type96a-view3",
+    "deck": "China",
+    "name": "Type 96A",
+    "image": "Reference Cards/China/Extracted Images/China_Type-96A_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "china-type96a-view4",
+    "deck": "China",
+    "name": "Type 96A",
+    "image": "Reference Cards/China/Extracted Images/China_Type-96A_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "china-type98",
@@ -135,7 +743,44 @@
     "image": "images_china/Type 98.png",
     "tags": [
       "tank"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "china-type98-view1",
+    "deck": "China",
+    "name": "Type 98",
+    "image": "Reference Cards/China/Extracted Images/China_Type-98_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "china-type98-view2",
+    "deck": "China",
+    "name": "Type 98",
+    "image": "Reference Cards/China/Extracted Images/China_Type-98_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "china-type98-view3",
+    "deck": "China",
+    "name": "Type 98",
+    "image": "Reference Cards/China/Extracted Images/China_Type-98_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "china-type98-view4",
+    "deck": "China",
+    "name": "Type 98",
+    "image": "Reference Cards/China/Extracted Images/China_Type-98_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "china-type99a",
@@ -144,21 +789,141 @@
     "image": "images_china/Type 99A.png",
     "tags": [
       "tank"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "china-type99a-view1",
+    "deck": "China",
+    "name": "Type 99A",
+    "image": "Reference Cards/China/Extracted Images/China_Type-99A_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "china-type99a-view2",
+    "deck": "China",
+    "name": "Type 99A",
+    "image": "Reference Cards/China/Extracted Images/China_Type-99A_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "china-type99a-view3",
+    "deck": "China",
+    "name": "Type 99A",
+    "image": "Reference Cards/China/Extracted Images/China_Type-99A_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "china-type99a-view4",
+    "deck": "China",
+    "name": "Type 99A",
+    "image": "Reference Cards/China/Extracted Images/China_Type-99A_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
+  },
+  {
+    "id": "china-type99a-view5",
+    "deck": "China",
+    "name": "Type 99A",
+    "image": "Reference Cards/China/Extracted Images/China_Type-99A_View5.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 5
   },
   {
     "id": "china-vn17",
     "deck": "China",
     "name": "VN 17",
     "image": "images_china/VN 17.png",
-    "tags": []
+    "tags": [],
+    "pov": "standard"
+  },
+  {
+    "id": "china-vn17-view1",
+    "deck": "China",
+    "name": "VN 17",
+    "image": "Reference Cards/China/Extracted Images/China_VN-17_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "china-vn17-view2",
+    "deck": "China",
+    "name": "VN 17",
+    "image": "Reference Cards/China/Extracted Images/China_VN-17_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "china-vn17-view3",
+    "deck": "China",
+    "name": "VN 17",
+    "image": "Reference Cards/China/Extracted Images/China_VN-17_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "china-vn17-view4",
+    "deck": "China",
+    "name": "VN 17",
+    "image": "Reference Cards/China/Extracted Images/China_VN-17_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "china-vn18",
     "deck": "China",
     "name": "VN 18",
     "image": "images_china/VN 18.png",
-    "tags": []
+    "tags": [],
+    "pov": "standard"
+  },
+  {
+    "id": "china-vn18-view1",
+    "deck": "China",
+    "name": "VN 18",
+    "image": "Reference Cards/China/Extracted Images/China_VN-18_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "china-vn18-view2",
+    "deck": "China",
+    "name": "VN 18",
+    "image": "Reference Cards/China/Extracted Images/China_VN-18_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "china-vn18-view3",
+    "deck": "China",
+    "name": "VN 18",
+    "image": "Reference Cards/China/Extracted Images/China_VN-18_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "china-vn18-view4",
+    "deck": "China",
+    "name": "VN 18",
+    "image": "Reference Cards/China/Extracted Images/China_VN-18_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "china-wz10",
@@ -167,7 +932,49 @@
     "image": "images_china/WZ 10.png",
     "tags": [
       "helicopter"
-    ]
+    ],
+    "pov": "standard",
+    "altName": "Z-10"
+  },
+  {
+    "id": "china-wz10-view1",
+    "deck": "China",
+    "name": "WZ 10",
+    "image": "Reference Cards/China/Extracted Images/China_Z-10_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1,
+    "altName": "Z-10"
+  },
+  {
+    "id": "china-wz10-view2",
+    "deck": "China",
+    "name": "WZ 10",
+    "image": "Reference Cards/China/Extracted Images/China_Z-10_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2,
+    "altName": "Z-10"
+  },
+  {
+    "id": "china-wz10-view3",
+    "deck": "China",
+    "name": "WZ 10",
+    "image": "Reference Cards/China/Extracted Images/China_Z-10_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3,
+    "altName": "Z-10"
+  },
+  {
+    "id": "china-wz10-view4",
+    "deck": "China",
+    "name": "WZ 10",
+    "image": "Reference Cards/China/Extracted Images/China_Z-10_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4,
+    "altName": "Z-10"
   },
   {
     "id": "china-wz19",
@@ -176,21 +983,152 @@
     "image": "images_china/WZ 19.png",
     "tags": [
       "helicopter"
-    ]
+    ],
+    "pov": "standard",
+    "altName": "Z-19"
+  },
+  {
+    "id": "china-wz19-view1",
+    "deck": "China",
+    "name": "WZ 19",
+    "image": "Reference Cards/China/Extracted Images/China_Z-19_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1,
+    "altName": "Z-19"
+  },
+  {
+    "id": "china-wz19-view2",
+    "deck": "China",
+    "name": "WZ 19",
+    "image": "Reference Cards/China/Extracted Images/China_Z-19_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2,
+    "altName": "Z-19"
+  },
+  {
+    "id": "china-wz19-view3",
+    "deck": "China",
+    "name": "WZ 19",
+    "image": "Reference Cards/China/Extracted Images/China_Z-19_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3,
+    "altName": "Z-19"
+  },
+  {
+    "id": "china-wz19-view4",
+    "deck": "China",
+    "name": "WZ 19",
+    "image": "Reference Cards/China/Extracted Images/China_Z-19_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4,
+    "altName": "Z-19"
   },
   {
     "id": "china-wz501",
     "deck": "China",
     "name": "WZ 501",
     "image": "images_china/WZ 501.png",
-    "tags": []
+    "tags": [],
+    "pov": "standard",
+    "altName": "Type 86"
+  },
+  {
+    "id": "china-wz501-view1",
+    "deck": "China",
+    "name": "WZ 501",
+    "image": "Reference Cards/China/Extracted Images/China_Type 86_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1,
+    "altName": "Type 86"
+  },
+  {
+    "id": "china-wz501-view2",
+    "deck": "China",
+    "name": "WZ 501",
+    "image": "Reference Cards/China/Extracted Images/China_Type 86_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2,
+    "altName": "Type 86"
+  },
+  {
+    "id": "china-wz501-view3",
+    "deck": "China",
+    "name": "WZ 501",
+    "image": "Reference Cards/China/Extracted Images/China_Type 86_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3,
+    "altName": "Type 86"
+  },
+  {
+    "id": "china-wz501-view4",
+    "deck": "China",
+    "name": "WZ 501",
+    "image": "Reference Cards/China/Extracted Images/China_Type 86_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4,
+    "altName": "Type 86"
+  },
+  {
+    "id": "china-wz501-view5",
+    "deck": "China",
+    "name": "WZ 501",
+    "image": "Reference Cards/China/Extracted Images/China_Type 86_View5.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 5,
+    "altName": "Type 86"
   },
   {
     "id": "china-zsl92",
     "deck": "China",
     "name": "ZSL 92",
     "image": "images_china/ZSL 92.png",
-    "tags": []
+    "tags": [],
+    "pov": "standard"
+  },
+  {
+    "id": "china-zsl92-view1",
+    "deck": "China",
+    "name": "ZSL 92",
+    "image": "Reference Cards/China/Extracted Images/China_ZSL-92_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "china-zsl92-view2",
+    "deck": "China",
+    "name": "ZSL 92",
+    "image": "Reference Cards/China/Extracted Images/China_ZSL-92_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "china-zsl92-view3",
+    "deck": "China",
+    "name": "ZSL 92",
+    "image": "Reference Cards/China/Extracted Images/China_ZSL-92_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "china-zsl92-view4",
+    "deck": "China",
+    "name": "ZSL 92",
+    "image": "Reference Cards/China/Extracted Images/China_ZSL-92_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "nato-abrams",
@@ -199,7 +1137,44 @@
     "image": "images_NATO/Abrams.png",
     "tags": [
       "tank"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "nato-abrams-view1",
+    "deck": "NATO",
+    "name": "Abrams",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Abrams_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "nato-abrams-view2",
+    "deck": "NATO",
+    "name": "Abrams",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Abrams_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "nato-abrams-view3",
+    "deck": "NATO",
+    "name": "Abrams",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Abrams_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "nato-abrams-view4",
+    "deck": "NATO",
+    "name": "Abrams",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Abrams_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "nato-apache",
@@ -208,7 +1183,53 @@
     "image": "images_NATO/Apache.png",
     "tags": [
       "helicopter"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "nato-apache-view1",
+    "deck": "NATO",
+    "name": "Apache",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Apache_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "nato-apache-view2",
+    "deck": "NATO",
+    "name": "Apache",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Apache_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "nato-apache-view3",
+    "deck": "NATO",
+    "name": "Apache",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Apache_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "nato-apache-view4",
+    "deck": "NATO",
+    "name": "Apache",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Apache_View4.png",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
+  },
+  {
+    "id": "nato-apache-view5",
+    "deck": "NATO",
+    "name": "Apache",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Apache_View5.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 5
   },
   {
     "id": "nato-bradley",
@@ -217,7 +1238,44 @@
     "image": "images_NATO/Bradley.png",
     "tags": [
       "IFV"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "nato-bradley-view1",
+    "deck": "NATO",
+    "name": "Bradley",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Bradley_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "nato-bradley-view2",
+    "deck": "NATO",
+    "name": "Bradley",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Bradley_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "nato-bradley-view3",
+    "deck": "NATO",
+    "name": "Bradley",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Bradley_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "nato-bradley-view4",
+    "deck": "NATO",
+    "name": "Bradley",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Bradley_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "nato-challenger2",
@@ -226,7 +1284,44 @@
     "image": "images_NATO/Challenger 2.png",
     "tags": [
       "tank"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "nato-challenger2-view1",
+    "deck": "NATO",
+    "name": "Challenger 2",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Challenger 2_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "nato-challenger2-view2",
+    "deck": "NATO",
+    "name": "Challenger 2",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Challenger 2_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "nato-challenger2-view3",
+    "deck": "NATO",
+    "name": "Challenger 2",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Challenger 2_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "nato-challenger2-view4",
+    "deck": "NATO",
+    "name": "Challenger 2",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Challenger 2_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "nato-coyote",
@@ -235,14 +1330,115 @@
     "image": "images_NATO/Coyote.png",
     "tags": [
       "IFV"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "nato-coyote-view1",
+    "deck": "NATO",
+    "name": "Coyote",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Coyote_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "nato-coyote-view2",
+    "deck": "NATO",
+    "name": "Coyote",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Coyote_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "nato-coyote-view3",
+    "deck": "NATO",
+    "name": "Coyote",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Coyote_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "nato-coyote-view4",
+    "deck": "NATO",
+    "name": "Coyote",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Coyote_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
+  },
+  {
+    "id": "nato-coyote-view5",
+    "deck": "NATO",
+    "name": "Coyote",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Coyote_View5.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 5
+  },
+  {
+    "id": "nato-coyote-view6",
+    "deck": "NATO",
+    "name": "Coyote",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Coyote_View6.png",
+    "pov": "alt",
+    "tags": [],
+    "view": 6
   },
   {
     "id": "nato-himars",
     "deck": "NATO",
     "name": "HIMARS",
     "image": "images_NATO/HIMARS.png",
-    "tags": []
+    "tags": [],
+    "pov": "standard"
+  },
+  {
+    "id": "nato-himars-view1",
+    "deck": "NATO",
+    "name": "HIMARS",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_HIMARS_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "nato-himars-view2",
+    "deck": "NATO",
+    "name": "HIMARS",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_HIMARS_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "nato-himars-view3",
+    "deck": "NATO",
+    "name": "HIMARS",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_HIMARS_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "nato-himars-view4",
+    "deck": "NATO",
+    "name": "HIMARS",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_HIMARS_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
+  },
+  {
+    "id": "nato-himars-view5",
+    "deck": "NATO",
+    "name": "HIMARS",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_HIMARS_View5.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 5
   },
   {
     "id": "nato-k1a1",
@@ -251,7 +1447,44 @@
     "image": "images_NATO/K1A1.png",
     "tags": [
       "tank"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "nato-k1a1-view1",
+    "deck": "NATO",
+    "name": "K1A1",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_K1A1_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "nato-k1a1-view2",
+    "deck": "NATO",
+    "name": "K1A1",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_K1A1_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "nato-k1a1-view3",
+    "deck": "NATO",
+    "name": "K1A1",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_K1A1_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "nato-k1a1-view4",
+    "deck": "NATO",
+    "name": "K1A1",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_K1A1_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "nato-leopard2a4",
@@ -260,7 +1493,44 @@
     "image": "images_NATO/Leopard 2A4.png",
     "tags": [
       "tank"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "nato-leopard2a4-view1",
+    "deck": "NATO",
+    "name": "Leopard 2A4",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Leopard 2A4_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "nato-leopard2a4-view2",
+    "deck": "NATO",
+    "name": "Leopard 2A4",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Leopard 2A4_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "nato-leopard2a4-view3",
+    "deck": "NATO",
+    "name": "Leopard 2A4",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Leopard 2A4_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "nato-leopard2a4-view4",
+    "deck": "NATO",
+    "name": "Leopard 2A4",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Leopard 2A4_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "nato-leopard2a6",
@@ -269,7 +1539,44 @@
     "image": "images_NATO/Leopard 2A6.png",
     "tags": [
       "tank"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "nato-leopard2a6-view1",
+    "deck": "NATO",
+    "name": "Leopard 2A6",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Leopard 2A6_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "nato-leopard2a6-view2",
+    "deck": "NATO",
+    "name": "Leopard 2A6",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Leopard 2A6_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "nato-leopard2a6-view3",
+    "deck": "NATO",
+    "name": "Leopard 2A6",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Leopard 2A6_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "nato-leopard2a6-view4",
+    "deck": "NATO",
+    "name": "Leopard 2A6",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Leopard 2A6_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "nato-mlrs",
@@ -278,14 +1585,97 @@
     "image": "images_NATO/MLRS.png",
     "tags": [
       "radar"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "nato-mlrs-view1",
+    "deck": "NATO",
+    "name": "MLRS",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_MLRS_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "nato-mlrs-view2",
+    "deck": "NATO",
+    "name": "MLRS",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_MLRS_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "nato-mlrs-view3",
+    "deck": "NATO",
+    "name": "MLRS",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_MLRS_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "nato-mlrs-view4",
+    "deck": "NATO",
+    "name": "MLRS",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_MLRS_View4.png",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "nato-paladin",
     "deck": "NATO",
     "name": "Paladin",
     "image": "images_NATO/Paladin.png",
-    "tags": []
+    "tags": [],
+    "pov": "standard"
+  },
+  {
+    "id": "nato-paladin-view1",
+    "deck": "NATO",
+    "name": "Paladin",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Paladin_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "nato-paladin-view2",
+    "deck": "NATO",
+    "name": "Paladin",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Paladin_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "nato-paladin-view3",
+    "deck": "NATO",
+    "name": "Paladin",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Paladin_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "nato-paladin-view4",
+    "deck": "NATO",
+    "name": "Paladin",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Paladin_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
+  },
+  {
+    "id": "nato-paladin-view5",
+    "deck": "NATO",
+    "name": "Paladin",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Paladin_View5.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 5
   },
   {
     "id": "nato-stryker",
@@ -294,7 +1684,44 @@
     "image": "images_NATO/Stryker.png",
     "tags": [
       "IFV"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "nato-stryker-view1",
+    "deck": "NATO",
+    "name": "Stryker",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Stryker_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "nato-stryker-view2",
+    "deck": "NATO",
+    "name": "Stryker",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Stryker_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "nato-stryker-view3",
+    "deck": "NATO",
+    "name": "Stryker",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Stryker_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "nato-stryker-view4",
+    "deck": "NATO",
+    "name": "Stryker",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Stryker_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "nato-warrior",
@@ -303,28 +1730,191 @@
     "image": "images_NATO/Warrior.png",
     "tags": [
       "IFV"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "nato-warrior-view1",
+    "deck": "NATO",
+    "name": "Warrior",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Warrior_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "nato-warrior-view2",
+    "deck": "NATO",
+    "name": "Warrior",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Warrior_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "nato-warrior-view3",
+    "deck": "NATO",
+    "name": "Warrior",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Warrior_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "nato-warrior-view4",
+    "deck": "NATO",
+    "name": "Warrior",
+    "image": "Reference Cards/NATO/Extracted Images/NATO_Warrior_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "russia-2s19",
     "deck": "Russia",
     "name": "2S19",
     "image": "images_russia/2S19.png",
-    "tags": []
+    "tags": [],
+    "pov": "standard",
+    "altName": "MSTA-S"
+  },
+  {
+    "id": "russia-2s19-view1",
+    "deck": "Russia",
+    "name": "2S19",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_MSTA-S_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1,
+    "altName": "MSTA-S"
+  },
+  {
+    "id": "russia-2s19-view2",
+    "deck": "Russia",
+    "name": "2S19",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_MSTA-S_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2,
+    "altName": "MSTA-S"
+  },
+  {
+    "id": "russia-2s19-view3",
+    "deck": "Russia",
+    "name": "2S19",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_MSTA-S_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3,
+    "altName": "MSTA-S"
+  },
+  {
+    "id": "russia-2s19-view4",
+    "deck": "Russia",
+    "name": "2S19",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_MSTA-S_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4,
+    "altName": "MSTA-S"
   },
   {
     "id": "russia-2s35",
     "deck": "Russia",
     "name": "2S35",
     "image": "images_russia/2S35.png",
-    "tags": []
+    "tags": [],
+    "pov": "standard",
+    "altName": "Koalitsiya"
+  },
+  {
+    "id": "russia-2s35-view1",
+    "deck": "Russia",
+    "name": "2S35",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Koalitsiya_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1,
+    "altName": "Koalitsiya"
+  },
+  {
+    "id": "russia-2s35-view2",
+    "deck": "Russia",
+    "name": "2S35",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Koalitsiya_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2,
+    "altName": "Koalitsiya"
+  },
+  {
+    "id": "russia-2s35-view3",
+    "deck": "Russia",
+    "name": "2S35",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Koalitsiya_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3,
+    "altName": "Koalitsiya"
+  },
+  {
+    "id": "russia-2s35-view4",
+    "deck": "Russia",
+    "name": "2S35",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Koalitsiya_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4,
+    "altName": "Koalitsiya"
   },
   {
     "id": "russia-2s5",
     "deck": "Russia",
     "name": "2S5",
     "image": "images_russia/2S5.png",
-    "tags": []
+    "tags": [],
+    "pov": "standard",
+    "altName": "Giatsnit"
+  },
+  {
+    "id": "russia-2s5-view1",
+    "deck": "Russia",
+    "name": "2S5",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Giatsnit_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1,
+    "altName": "Giatsnit"
+  },
+  {
+    "id": "russia-2s5-view2",
+    "deck": "Russia",
+    "name": "2S5",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Giatsnit_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2,
+    "altName": "Giatsnit"
+  },
+  {
+    "id": "russia-2s5-view3",
+    "deck": "Russia",
+    "name": "2S5",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Giatsnit_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3,
+    "altName": "Giatsnit"
+  },
+  {
+    "id": "russia-2s5-view4",
+    "deck": "Russia",
+    "name": "2S5",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Giatsnit_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4,
+    "altName": "Giatsnit"
   },
   {
     "id": "russia-2s6",
@@ -333,14 +1923,98 @@
     "image": "images_russia/2S6.png",
     "tags": [
       "radar"
-    ]
+    ],
+    "pov": "standard",
+    "altName": "Tunguska-M"
+  },
+  {
+    "id": "russia-2s6-view1",
+    "deck": "Russia",
+    "name": "2S6",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Tunguska-M_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1,
+    "altName": "Tunguska-M"
+  },
+  {
+    "id": "russia-2s6-view2",
+    "deck": "Russia",
+    "name": "2S6",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Tunguska-M_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2,
+    "altName": "Tunguska-M"
+  },
+  {
+    "id": "russia-2s6-view3",
+    "deck": "Russia",
+    "name": "2S6",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Tunguska-M_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3,
+    "altName": "Tunguska-M"
+  },
+  {
+    "id": "russia-2s6-view4",
+    "deck": "Russia",
+    "name": "2S6",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Tunguska-M_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4,
+    "altName": "Tunguska-M"
   },
   {
     "id": "russia-bm27",
     "deck": "Russia",
     "name": "BM 27",
     "image": "images_russia/BM 27.png",
-    "tags": []
+    "tags": [],
+    "pov": "standard",
+    "altName": "Uragan"
+  },
+  {
+    "id": "russia-bm27-view1",
+    "deck": "Russia",
+    "name": "BM 27",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Uragan_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1,
+    "altName": "Uragan"
+  },
+  {
+    "id": "russia-bm27-view2",
+    "deck": "Russia",
+    "name": "BM 27",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Uragan_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2,
+    "altName": "Uragan"
+  },
+  {
+    "id": "russia-bm27-view3",
+    "deck": "Russia",
+    "name": "BM 27",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Uragan_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3,
+    "altName": "Uragan"
+  },
+  {
+    "id": "russia-bm27-view4",
+    "deck": "Russia",
+    "name": "BM 27",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Uragan_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4,
+    "altName": "Uragan"
   },
   {
     "id": "russia-bmd3",
@@ -349,7 +2023,44 @@
     "image": "images_russia/BMD 3.png",
     "tags": [
       "IFV"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "russia-bmd3-view1",
+    "deck": "Russia",
+    "name": "BMD 3",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_BMD-3_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "russia-bmd3-view2",
+    "deck": "Russia",
+    "name": "BMD 3",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_BMD-3_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "russia-bmd3-view3",
+    "deck": "Russia",
+    "name": "BMD 3",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_BMD-3_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "russia-bmd3-view4",
+    "deck": "Russia",
+    "name": "BMD 3",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_BMD-3_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "russia-bmd4",
@@ -358,7 +2069,44 @@
     "image": "images_russia/BMD 4.png",
     "tags": [
       "IFV"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "russia-bmd4-view1",
+    "deck": "Russia",
+    "name": "BMD 4",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_BMD-4_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "russia-bmd4-view2",
+    "deck": "Russia",
+    "name": "BMD 4",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_BMD-4_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "russia-bmd4-view3",
+    "deck": "Russia",
+    "name": "BMD 4",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_BMD-4_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "russia-bmd4-view4",
+    "deck": "Russia",
+    "name": "BMD 4",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_BMD-4_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "russia-bmp2",
@@ -367,7 +2115,53 @@
     "image": "images_russia/BMP 2.png",
     "tags": [
       "IFV"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "russia-bmp2-view1",
+    "deck": "Russia",
+    "name": "BMP 2",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_BMP-2_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "russia-bmp2-view2",
+    "deck": "Russia",
+    "name": "BMP 2",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_BMP-2_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "russia-bmp2-view3",
+    "deck": "Russia",
+    "name": "BMP 2",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_BMP-2_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "russia-bmp2-view4",
+    "deck": "Russia",
+    "name": "BMP 2",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_BMP-2_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
+  },
+  {
+    "id": "russia-bmp2-view5",
+    "deck": "Russia",
+    "name": "BMP 2",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_BMP-2_View5.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 5
   },
   {
     "id": "russia-bmp3",
@@ -376,14 +2170,88 @@
     "image": "images_russia/BMP 3.png",
     "tags": [
       "IFV"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "russia-bmp3-view1",
+    "deck": "Russia",
+    "name": "BMP 3",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_BMP-3_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "russia-bmp3-view2",
+    "deck": "Russia",
+    "name": "BMP 3",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_BMP-3_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "russia-bmp3-view3",
+    "deck": "Russia",
+    "name": "BMP 3",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_BMP-3_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "russia-bmp3-view4",
+    "deck": "Russia",
+    "name": "BMP 3",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_BMP-3_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "russia-boar",
     "deck": "Russia",
     "name": "BOAR",
     "image": "images_russia/BOAR.png",
-    "tags": []
+    "tags": [],
+    "pov": "standard"
+  },
+  {
+    "id": "russia-boar-view1",
+    "deck": "Russia",
+    "name": "BOAR",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Boar_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "russia-boar-view2",
+    "deck": "Russia",
+    "name": "BOAR",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Boar_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "russia-boar-view3",
+    "deck": "Russia",
+    "name": "BOAR",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Boar_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "russia-boar-view4",
+    "deck": "Russia",
+    "name": "BOAR",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Boar_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "russia-btr70",
@@ -392,7 +2260,44 @@
     "image": "images_russia/BTR 70.png",
     "tags": [
       "IFV"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "russia-btr70-view1",
+    "deck": "Russia",
+    "name": "BTR 70",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_BTR-70_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "russia-btr70-view2",
+    "deck": "Russia",
+    "name": "BTR 70",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_BTR-70_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "russia-btr70-view3",
+    "deck": "Russia",
+    "name": "BTR 70",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_BTR-70_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "russia-btr70-view4",
+    "deck": "Russia",
+    "name": "BTR 70",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_BTR-70_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "russia-btr80",
@@ -401,14 +2306,97 @@
     "image": "images_russia/BTR 80.png",
     "tags": [
       "IFV"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "russia-btr80-view1",
+    "deck": "Russia",
+    "name": "BTR 80",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_BTR-80_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "russia-btr80-view2",
+    "deck": "Russia",
+    "name": "BTR 80",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_BTR-80_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "russia-btr80-view3",
+    "deck": "Russia",
+    "name": "BTR 80",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_BTR-80_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "russia-btr80-view4",
+    "deck": "Russia",
+    "name": "BTR 80",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_BTR-80_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "russia-foxhound",
     "deck": "Russia",
     "name": "FOXHOUND",
     "image": "images_russia/FOXHOUND.png",
-    "tags": []
+    "tags": [],
+    "pov": "standard"
+  },
+  {
+    "id": "russia-foxhound-view1",
+    "deck": "Russia",
+    "name": "FOXHOUND",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Foxhound_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "russia-foxhound-view2",
+    "deck": "Russia",
+    "name": "FOXHOUND",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Foxhound_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "russia-foxhound-view3",
+    "deck": "Russia",
+    "name": "FOXHOUND",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Foxhound_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "russia-foxhound-view4",
+    "deck": "Russia",
+    "name": "FOXHOUND",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Foxhound_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
+  },
+  {
+    "id": "russia-foxhound-view5",
+    "deck": "Russia",
+    "name": "FOXHOUND",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Foxhound_View5.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 5
   },
   {
     "id": "russia-gauntlet",
@@ -417,21 +2405,132 @@
     "image": "images_russia/GAUNTLET.png",
     "tags": [
       "radar"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "russia-gauntlet-view1",
+    "deck": "Russia",
+    "name": "GAUNTLET",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Gauntlet_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "russia-gauntlet-view2",
+    "deck": "Russia",
+    "name": "GAUNTLET",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Gauntlet_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "russia-gauntlet-view3",
+    "deck": "Russia",
+    "name": "GAUNTLET",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Gauntlet_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "russia-gauntlet-view4",
+    "deck": "Russia",
+    "name": "GAUNTLET",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Gauntlet_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "russia-gopher",
     "deck": "Russia",
     "name": "GOPHER",
     "image": "images_russia/GOPHER.png",
-    "tags": []
+    "tags": [],
+    "pov": "standard"
+  },
+  {
+    "id": "russia-gopher-view1",
+    "deck": "Russia",
+    "name": "GOPHER",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Gopher_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "russia-gopher-view2",
+    "deck": "Russia",
+    "name": "GOPHER",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Gopher_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "russia-gopher-view3",
+    "deck": "Russia",
+    "name": "GOPHER",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Gopher_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "russia-gopher-view4",
+    "deck": "Russia",
+    "name": "GOPHER",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Gopher_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "russia-grizzly",
     "deck": "Russia",
     "name": "GRIZZLY",
     "image": "images_russia/GRIZZLY.png",
-    "tags": []
+    "tags": [],
+    "pov": "standard"
+  },
+  {
+    "id": "russia-grizzly-view1",
+    "deck": "Russia",
+    "name": "GRIZZLY",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Grizzly_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "russia-grizzly-view2",
+    "deck": "Russia",
+    "name": "GRIZZLY",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Grizzly_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "russia-grizzly-view3",
+    "deck": "Russia",
+    "name": "GRIZZLY",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Grizzly_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "russia-grizzly-view4",
+    "deck": "Russia",
+    "name": "GRIZZLY",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Grizzly_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "russia-havoc",
@@ -440,7 +2539,53 @@
     "image": "images_russia/HAVOC.png",
     "tags": [
       "helicopter"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "russia-havoc-view1",
+    "deck": "Russia",
+    "name": "HAVOC",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Havoc_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "russia-havoc-view2",
+    "deck": "Russia",
+    "name": "HAVOC",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Havoc_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "russia-havoc-view3",
+    "deck": "Russia",
+    "name": "HAVOC",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Havoc_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "russia-havoc-view4",
+    "deck": "Russia",
+    "name": "HAVOC",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Havoc_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
+  },
+  {
+    "id": "russia-havoc-view5",
+    "deck": "Russia",
+    "name": "HAVOC",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Havoc_View5.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 5
   },
   {
     "id": "russia-hind",
@@ -449,7 +2594,53 @@
     "image": "images_russia/HIND.png",
     "tags": [
       "helicopter"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "russia-hind-view1",
+    "deck": "Russia",
+    "name": "HIND",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Hind_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "russia-hind-view2",
+    "deck": "Russia",
+    "name": "HIND",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Hind_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "russia-hind-view3",
+    "deck": "Russia",
+    "name": "HIND",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Hind_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "russia-hind-view4",
+    "deck": "Russia",
+    "name": "HIND",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Hind_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
+  },
+  {
+    "id": "russia-hind-view5",
+    "deck": "Russia",
+    "name": "HIND",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Hind_View5.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 5
   },
   {
     "id": "russia-ka52",
@@ -458,7 +2649,49 @@
     "image": "images_russia/KA 52.png",
     "tags": [
       "helicopter"
-    ]
+    ],
+    "pov": "standard",
+    "altName": "Hokum-B"
+  },
+  {
+    "id": "russia-ka52-view1",
+    "deck": "Russia",
+    "name": "KA 52",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Hokum-B_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1,
+    "altName": "Hokum-B"
+  },
+  {
+    "id": "russia-ka52-view2",
+    "deck": "Russia",
+    "name": "KA 52",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Hokum-B_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2,
+    "altName": "Hokum-B"
+  },
+  {
+    "id": "russia-ka52-view3",
+    "deck": "Russia",
+    "name": "KA 52",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Hokum-B_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3,
+    "altName": "Hokum-B"
+  },
+  {
+    "id": "russia-ka52-view4",
+    "deck": "Russia",
+    "name": "KA 52",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Hokum-B_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4,
+    "altName": "Hokum-B"
   },
   {
     "id": "russia-t72b3",
@@ -467,7 +2700,53 @@
     "image": "images_russia/T-72B3.png",
     "tags": [
       "tank"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "russia-t72b3-view1",
+    "deck": "Russia",
+    "name": "T-72B3",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_T-72B3_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "russia-t72b3-view2",
+    "deck": "Russia",
+    "name": "T-72B3",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_T-72B3_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "russia-t72b3-view3",
+    "deck": "Russia",
+    "name": "T-72B3",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_T-72B3_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "russia-t72b3-view4",
+    "deck": "Russia",
+    "name": "T-72B3",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_T-72B3_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
+  },
+  {
+    "id": "russia-t72b3-view5",
+    "deck": "Russia",
+    "name": "T-72B3",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_T-72B3_View5.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 5
   },
   {
     "id": "russia-t80u",
@@ -476,7 +2755,53 @@
     "image": "images_russia/T-80U.png",
     "tags": [
       "tank"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "russia-t80u-view1",
+    "deck": "Russia",
+    "name": "T-80U",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_T-80U_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "russia-t80u-view2",
+    "deck": "Russia",
+    "name": "T-80U",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_T-80U_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "russia-t80u-view3",
+    "deck": "Russia",
+    "name": "T-80U",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_T-80U_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "russia-t80u-view4",
+    "deck": "Russia",
+    "name": "T-80U",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_T-80U_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
+  },
+  {
+    "id": "russia-t80u-view5",
+    "deck": "Russia",
+    "name": "T-80U",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_T-80U_View5.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 5
   },
   {
     "id": "russia-t90a",
@@ -485,21 +2810,137 @@
     "image": "images_russia/T-90A.png",
     "tags": [
       "tank"
-    ]
+    ],
+    "pov": "standard"
+  },
+  {
+    "id": "russia-t90a-view1",
+    "deck": "Russia",
+    "name": "T-90A",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_T-90A_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "russia-t90a-view2",
+    "deck": "Russia",
+    "name": "T-90A",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_T-90A_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "russia-t90a-view3",
+    "deck": "Russia",
+    "name": "T-90A",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_T-90A_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "russia-t90a-view4",
+    "deck": "Russia",
+    "name": "T-90A",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_T-90A_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "russia-tigr",
     "deck": "Russia",
     "name": "TIGR",
     "image": "images_russia/TIGR.png",
-    "tags": []
+    "tags": [],
+    "pov": "standard"
+  },
+  {
+    "id": "russia-tigr-view1",
+    "deck": "Russia",
+    "name": "TIGR",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Tigr_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1
+  },
+  {
+    "id": "russia-tigr-view2",
+    "deck": "Russia",
+    "name": "TIGR",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Tigr_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2
+  },
+  {
+    "id": "russia-tigr-view3",
+    "deck": "Russia",
+    "name": "TIGR",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Tigr_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3
+  },
+  {
+    "id": "russia-tigr-view4",
+    "deck": "Russia",
+    "name": "TIGR",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Tigr_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4
   },
   {
     "id": "russia-tos1a",
     "deck": "Russia",
     "name": "TOS 1A",
     "image": "images_russia/TOS 1A.png",
-    "tags": []
+    "tags": [],
+    "pov": "standard",
+    "altName": "Solntsepek"
+  },
+  {
+    "id": "russia-tos1a-view1",
+    "deck": "Russia",
+    "name": "TOS 1A",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Solntsepek_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1,
+    "altName": "Solntsepek"
+  },
+  {
+    "id": "russia-tos1a-view2",
+    "deck": "Russia",
+    "name": "TOS 1A",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Solntsepek_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2,
+    "altName": "Solntsepek"
+  },
+  {
+    "id": "russia-tos1a-view3",
+    "deck": "Russia",
+    "name": "TOS 1A",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Solntsepek_View3.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 3,
+    "altName": "Solntsepek"
+  },
+  {
+    "id": "russia-tos1a-view4",
+    "deck": "Russia",
+    "name": "TOS 1A",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Solntsepek_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4,
+    "altName": "Solntsepek"
   },
   {
     "id": "russia-zsu234",
@@ -508,6 +2949,28 @@
     "image": "images_russia/ZSU 234.png",
     "tags": [
       "radar"
-    ]
+    ],
+    "pov": "standard",
+    "altName": "Shilka"
+  },
+  {
+    "id": "russia-zsu234-view1",
+    "deck": "Russia",
+    "name": "ZSU 234",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Shilka_View1.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 1,
+    "altName": "Shilka"
+  },
+  {
+    "id": "russia-zsu234-view2",
+    "deck": "Russia",
+    "name": "ZSU 234",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Shilka_View2.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 2,
+    "altName": "Shilka"
   }
 ]

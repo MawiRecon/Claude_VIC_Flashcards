@@ -6,24 +6,25 @@
  * existing manifest. The repo is the source of truth; this script never wipes
  * user edits (names, tags, etc.) — it only reconciles the image inventory.
  *
- * Rules (kept identical in spirit to the in-app logic in github.js/store.js):
- *   - deck  = folder name mapped via DECK_BY_FOLDER (images_NATO -> NATO, ...)
- *   - name  = filename without extension (the card answer)
- *   - image = repo-relative path, forward slashes (e.g. images_NATO/Abrams.png)
- *   - id    = slug(deck) + '-' + slug(name)  (lowercased, punctuation stripped)
+ * Two kinds of cards:
+ *   - STANDARD POV cards: one per image in images_<deck>/ (the original deck).
+ *       pov: "standard", name = filename without extension.
+ *   - ALTERNATE POV cards: one per image in
+ *       "Reference Cards/<Country>/Extracted Images/<Country>_<Vehicle>_ViewN.ext"
+ *       pov: "alt", name = the matching STANDARD card's name (so every view of a
+ *       vehicle answers the same thing). Where the reference vehicle is named
+ *       differently from the standard card, ALT_VEHICLE_TO_CARD maps it and the
+ *       reference designation is recorded as `altName` (also added to the
+ *       standard card) so the test accepts either name.
  *
- * Merge behaviour:
- *   - New image  (its canonical id is not in cards.json) -> add card, tags: []
- *   - Existing card -> preserved EXACTLY (name, tags, every edited field);
- *                      only its `image` path is refreshed if the file moved.
- *   - missingImage  is a derived flag: true when the card's `image` file is
- *                   NOT present on disk. This is image-path based (not id based)
- *                   so duplicate cards that share an existing image are never
- *                   wrongly flagged, and a card whose file reappears is healed.
- *   - Cards are NEVER deleted here; absence is recorded with missingImage.
+ *   id (standard) = slug(deck) + '-' + slug(name)
+ *   id (alt)      = slug(deck) + '-' + slug(name) + '-view' + N
  *
- * No dependencies — plain Node (fs/path). Output is deterministic (sorted,
- * 2-space pretty-printed, trailing newline) so commits stay clean.
+ * Merge behaviour (unchanged): new image -> add card (tags: []); existing card
+ * preserved exactly (only image path refreshed); missing file -> missingImage
+ * flag (image-path based); cards are never deleted here. Deterministic output.
+ *
+ * No dependencies — plain Node (fs/path).
  */
 
 'use strict';
@@ -31,31 +32,59 @@
 const fs = require('fs');
 const path = require('path');
 
-// Repo root is the parent of this script's folder.
 const ROOT = path.resolve(__dirname, '..');
 const MANIFEST = path.join(ROOT, 'cards.json');
 
-// Folder -> deck label. The only place the mapping lives on the build side.
+// Standard image folder -> deck label.
 const DECK_BY_FOLDER = {
   images_NATO: 'NATO',
   images_china: 'China',
   images_russia: 'Russia',
 };
 
-const IMAGE_EXT = /\.png$/i;
+// Alternate-POV source: "Reference Cards/<Country>/Extracted Images".
+const REF_ROOT = 'Reference Cards';
+const REF_SUBDIR = 'Extracted Images';
+const REF_DECKS = { Russia: 'Russia', China: 'China', NATO: 'NATO' };
 
-/** Lowercase + strip everything that isn't a-z0-9. */
+// Reference vehicles whose name differs from the standard card. Keyed by deck,
+// then slug(vehicle-token-from-filename) -> exact standard card name. The
+// reference token itself becomes the card's altName.
+const ALT_VEHICLE_TO_CARD = {
+  Russia: {
+    giatsnit: '2S5',
+    hokumb: 'KA 52',
+    koalitsiya: '2S35',
+    mstas: '2S19',
+    shilka: 'ZSU 234',
+    solntsepek: 'TOS 1A',
+    tunguskam: '2S6',
+    uragan: 'BM 27',
+  },
+  China: {
+    z10: 'WZ 10',
+    z19: 'WZ 19',
+    vt4: 'MBT 3000',
+    type86: 'WZ 501',
+    type90ii: 'MBT 2000',
+    type05: 'PLZ 05',
+  },
+  NATO: {},
+};
+
+const IMAGE_EXT = /\.(png|jpe?g)$/i;
+
 function slug(s) {
   return String(s).toLowerCase().replace(/[^a-z0-9]+/g, '');
 }
-
-/** Stable card id from deck + name. */
 function cardId(deck, name) {
   return `${slug(deck)}-${slug(name)}`;
 }
 
-/** Scan the known folders, return [{ deck, name, image, id }]. */
-function scanDisk() {
+// --- scanning ---------------------------------------------------------------
+
+/** Standard cards from images_<deck>/. */
+function scanStandard() {
   const found = [];
   for (const folder of Object.keys(DECK_BY_FOLDER)) {
     const dir = path.join(ROOT, folder);
@@ -64,14 +93,72 @@ function scanDisk() {
     for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
       if (!entry.isFile() || !IMAGE_EXT.test(entry.name)) continue;
       const name = entry.name.replace(IMAGE_EXT, '');
-      const image = `${folder}/${entry.name}`; // forward slashes for the web
-      found.push({ deck, name, image, id: cardId(deck, name) });
+      found.push({
+        pov: 'standard',
+        deck,
+        name,
+        image: `${folder}/${entry.name}`,
+        id: cardId(deck, name),
+      });
     }
   }
   return found;
 }
 
-/** Load existing manifest (tolerant of missing/empty/legacy-object shapes). */
+const REF_FILE = /^(.+?)_(.+)_View(\d+)$/i; // <Country>_<Vehicle>_ViewN
+
+/**
+ * Alternate-POV cards from the Reference Cards tree. Needs the standard names
+ * (per deck) to resolve each reference vehicle to the right answer.
+ * Returns { items, altNameForStandard, unresolved }.
+ */
+function scanAlt(standardNamesByDeck) {
+  const items = [];
+  const unresolved = [];
+  // deck -> (standardName -> altName) to backfill onto standard cards.
+  const altNameForStandard = {};
+
+  for (const country of Object.keys(REF_DECKS)) {
+    const deck = REF_DECKS[country];
+    const dir = path.join(ROOT, REF_ROOT, country, REF_SUBDIR);
+    if (!fs.existsSync(dir)) continue;
+
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (!entry.isFile() || !IMAGE_EXT.test(entry.name)) continue;
+      const ext = path.extname(entry.name);
+      const base = entry.name.slice(0, -ext.length);
+      const m = base.match(REF_FILE);
+      if (!m) { unresolved.push(`${country}/${entry.name} (unparsed)`); continue; }
+
+      const vehicleToken = m[2];
+      const view = parseInt(m[3], 10);
+      const vslug = slug(vehicleToken);
+
+      // Resolve the answer name + optional alt name.
+      const override = ALT_VEHICLE_TO_CARD[deck] && ALT_VEHICLE_TO_CARD[deck][vslug];
+      let name;
+      let altName;
+      if (override) {
+        name = override;            // e.g. "2S5"
+        altName = vehicleToken;     // e.g. "Giatsnit" (faithful to the source)
+        (altNameForStandard[deck] = altNameForStandard[deck] || {})[name] = altName;
+      } else if (standardNamesByDeck[deck] && standardNamesByDeck[deck].has(vslug)) {
+        name = standardNamesByDeck[deck].get(vslug); // same vehicle, exact card name
+      } else {
+        name = vehicleToken.replace(/[_-]+/g, ' ').trim(); // fallback (no match)
+        unresolved.push(`${country}/${vehicleToken} (no standard card)`);
+      }
+
+      const image = `${REF_ROOT}/${country}/${REF_SUBDIR}/${entry.name}`;
+      const id = `${cardId(deck, name)}-view${view}`;
+      const card = { pov: 'alt', deck, name, image, view, id };
+      if (altName) card.altName = altName;
+      items.push(card);
+    }
+  }
+  return { items, altNameForStandard, unresolved };
+}
+
 function loadManifest() {
   if (!fs.existsSync(MANIFEST)) return [];
   const raw = fs.readFileSync(MANIFEST, 'utf8').trim();
@@ -84,14 +171,21 @@ function loadManifest() {
     process.exit(1);
   }
   if (Array.isArray(data)) return data;
-  if (data && Array.isArray(data.cards)) return data.cards; // {cards:[...]} shape
+  if (data && Array.isArray(data.cards)) return data.cards;
   return [];
 }
 
 function main() {
-  const disk = scanDisk();
+  const standard = scanStandard();
+  const standardNamesByDeck = {};
+  for (const s of standard) {
+    (standardNamesByDeck[s.deck] = standardNamesByDeck[s.deck] || new Map()).set(slug(s.name), s.name);
+  }
+
+  const { items: alt, altNameForStandard, unresolved } = scanAlt(standardNamesByDeck);
+
+  const disk = [...standard, ...alt];
   const diskPaths = new Set(disk.map((d) => d.image));
-  const diskById = new Map(disk.map((d) => [d.id, d]));
 
   const existing = loadManifest();
   const byId = new Map();
@@ -99,25 +193,39 @@ function main() {
     if (card && card.id) byId.set(card.id, { ...card });
   }
 
-  let newCount = 0;
+  let newStd = 0, newAlt = 0;
   const newNames = [];
 
   // 1) Reconcile each disk image into the manifest.
   for (const d of disk) {
     const prior = byId.get(d.id);
     if (!prior) {
-      byId.set(d.id, { id: d.id, deck: d.deck, name: d.name, image: d.image, tags: [] });
-      newCount += 1;
-      newNames.push(`${d.deck}/${d.name}`);
+      const card = { id: d.id, deck: d.deck, name: d.name, image: d.image, pov: d.pov, tags: [] };
+      if (d.pov === 'alt') card.view = d.view;
+      if (d.altName) card.altName = d.altName;
+      byId.set(d.id, card);
+      if (d.pov === 'alt') newAlt += 1; else { newStd += 1; newNames.push(`${d.deck}/${d.name}`); }
     } else {
-      // Preserve everything; only refresh the image path if the file moved.
+      // Preserve everything; only refresh derived/structural bits.
       if (prior.image !== d.image) prior.image = d.image;
       if (!prior.deck) prior.deck = d.deck;
       if (prior.name == null) prior.name = d.name;
+      if (!prior.pov) prior.pov = d.pov;                     // backfill pov on legacy cards
+      if (d.pov === 'alt' && prior.view == null) prior.view = d.view;
     }
   }
 
-  // 2) Derive missingImage for every card from actual file presence.
+  // 2) Backfill altName onto STANDARD cards for the differently-named vehicles
+  //    (only when the card doesn't already have one — never overwrite an edit).
+  for (const deck of Object.keys(altNameForStandard)) {
+    for (const [name, altName] of Object.entries(altNameForStandard[deck])) {
+      const id = cardId(deck, name);
+      const card = byId.get(id);
+      if (card && !card.altName) card.altName = altName;
+    }
+  }
+
+  // 3) Derive missingImage from actual file presence.
   let missingCount = 0;
   const missingNames = [];
   for (const card of byId.values()) {
@@ -131,11 +239,13 @@ function main() {
     }
   }
 
-  // 3) Deterministic order: deck, then name, then id.
+  // 4) Deterministic order: deck, name, standard-before-alt, view, id.
   const cards = [...byId.values()].sort((a, b) => {
     return (
       String(a.deck).localeCompare(String(b.deck)) ||
       String(a.name).localeCompare(String(b.name)) ||
+      ((a.pov === 'alt') - (b.pov === 'alt')) ||
+      ((a.view || 0) - (b.view || 0)) ||
       String(a.id).localeCompare(String(b.id))
     );
   });
@@ -145,22 +255,25 @@ function main() {
   const changed = prevRaw !== output;
   if (changed) fs.writeFileSync(MANIFEST, output);
 
-  // Per-deck totals.
+  // Per-deck totals split by pov.
   const perDeck = {};
-  for (const c of cards) perDeck[c.deck] = (perDeck[c.deck] || 0) + 1;
-
-  // Summary.
-  console.log('--- build-manifest summary ---');
-  console.log(`total cards:   ${cards.length}`);
-  console.log(`new cards:     ${newCount}${newNames.length ? '  (' + newNames.join(', ') + ')' : ''}`);
-  console.log('per-deck totals:');
-  for (const deck of Object.keys(perDeck).sort()) {
-    console.log(`  ${deck}: ${perDeck[deck]}`);
+  for (const c of cards) {
+    const d = (perDeck[c.deck] = perDeck[c.deck] || { standard: 0, alt: 0 });
+    if (c.pov === 'alt') d.alt += 1; else d.standard += 1;
   }
-  console.log(`missing images: ${missingCount}${missingNames.length ? '  (' + missingNames.join(', ') + ')' : ''}`);
+
+  console.log('--- build-manifest summary ---');
+  console.log(`total cards:    ${cards.length}`);
+  console.log(`new standard:   ${newStd}${newNames.length ? '  (' + newNames.join(', ') + ')' : ''}`);
+  console.log(`new alt POVs:   ${newAlt}`);
+  console.log('per-deck totals (standard / alt):');
+  for (const deck of Object.keys(perDeck).sort()) {
+    console.log(`  ${deck}: ${perDeck[deck].standard} / ${perDeck[deck].alt}`);
+  }
+  console.log(`missing images: ${missingCount}${missingNames.length ? '  (' + missingNames.slice(0, 20).join(', ') + (missingNames.length > 20 ? ', …' : '') + ')' : ''}`);
+  if (unresolved.length) console.log(`UNRESOLVED alt images (${unresolved.length}): ${unresolved.join(', ')}`);
   console.log(`cards.json ${changed ? 'UPDATED' : 'unchanged'}`);
 
-  // Expose "changed" to the workflow via stdout marker + exit code stays 0.
   if (process.env.GITHUB_OUTPUT) {
     fs.appendFileSync(process.env.GITHUB_OUTPUT, `changed=${changed ? 'true' : 'false'}\n`);
   }
