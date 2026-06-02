@@ -450,7 +450,9 @@
     "deck": "Russia",
     "name": "T-72B3",
     "image": "images_russia/T-72B3.png",
-    "tags": []
+    "tags": [
+      "tank"
+    ]
   },
   {
     "id": "russia-t80u",
