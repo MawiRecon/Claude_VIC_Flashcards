@@ -332,7 +332,9 @@
     "deck": "Russia",
     "name": "BMD 3",
     "image": "images_russia/BMD 3.png",
-    "tags": []
+    "tags": [
+      "IFV"
+    ]
   },
   {
     "id": "russia-bmd4",
