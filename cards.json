@@ -350,7 +350,9 @@
     "deck": "Russia",
     "name": "BMP 2",
     "image": "images_russia/BMP 2.png",
-    "tags": []
+    "tags": [
+      "IFV"
+    ]
   },
   {
     "id": "russia-bmp3",
