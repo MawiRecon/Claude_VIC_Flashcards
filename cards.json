@@ -235,7 +235,9 @@
     "deck": "NATO",
     "name": "Challenger 2",
     "image": "images_NATO/Challenger 2.png",
-    "tags": []
+    "tags": [
+      "tank"
+    ]
   },
   {
     "id": "nato-coyote",
