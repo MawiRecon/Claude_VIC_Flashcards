@@ -146,7 +146,13 @@ function finish() {
   let correct = 0;
   const rows = deck.map((card, i) => {
     const ua = (answers[i] || '').trim();
-    const accepted = [card.name, card.altName].filter(Boolean).map(normalizeAnswer);
+    // Accept the name and the alternate name; also split multi-designation
+    // strings like "FV-511 or FV-510" so either is accepted.
+    const accepted = [card.name, card.altName]
+      .filter(Boolean)
+      .flatMap((n) => n.split(/\s+or\s+|[\/,]/))
+      .map(normalizeAnswer)
+      .filter(Boolean);
     const ok = !!ua && accepted.includes(normalizeAnswer(ua));
     if (ok) correct += 1;
     return { card, ua, ok };

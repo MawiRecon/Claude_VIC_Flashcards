@@ -107,6 +107,7 @@ h2 { font-size: 1rem; margin: 0 0 0.75rem; }
 }
 .card-back { display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; text-align: center; }
 .card-name { font-size: 2rem; font-weight: 700; }
+.card-altname { font-size: 1.15rem; font-weight: 600; color: var(--accent); margin-top: -0.15rem; }
 .card-deck-label { color: var(--muted); font-size: 0.95rem; }
 
 .counter { font-variant-numeric: tabular-nums; font-size: 1.05rem; }

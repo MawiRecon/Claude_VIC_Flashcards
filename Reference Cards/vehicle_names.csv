@@ -1,0 +1,62 @@
+Country,Designation,Name
+NATO,FV4043,Challenger 2
+NATO,FV-511 or FV-510,Warrior
+NATO,Leopard 2A4,-
+NATO,Leopard 2A6,-
+NATO,K1A1,-
+NATO,M1A2 SEPv2,Abrams
+NATO,M3A3,Bradley
+NATO,M1135,Stryker
+NATO,LAV-25,Coyote
+NATO,M109,Paladin
+NATO,M142,HIMARS
+NATO,M270,MLRS
+NATO,AH-64E,Apache
+China,ZTZ-59,Type-59
+China,ZTS-63A,Type-63A
+China,ZTZ-96A,Type-96A
+China,ZTZ-98,Type-98
+China,ZTZ-99A,Type-99A
+China,MBT-2000,Type-90-II
+China,MBT-3000,VT-4
+China,ZTQ-15,Type 15
+China,WZ-501,Type 86
+China,ZBD-03,Type 03
+China,ZBD-04,Type-04
+China,ZBD-04A,Type-04A
+China,ZBD-05,VN-18
+China,VN-17,-
+China,QN-506,-
+China,ZSL-92,-
+China,PTL-02,-
+China,ZBL-09,Type 09
+China,PLZ-05,Type-05
+China,PGZ-95,Type-95
+China,PGZ-09,Type-07
+China,WZ-10,Z-10
+China,WZ-19,Z-19
+Russia,T-72B3,-
+Russia,T-80U,-
+Russia,T-90A,-
+Russia,BMD-3,-
+Russia,BMD-4,-
+Russia,BMP-2,-
+Russia,BMP-3,-
+Russia,BTR-70,-
+Russia,BTR-80,-
+Russia,2S5,Giatsnit
+Russia,2S6,Tunguska-M
+Russia,2S19,MSTA-S
+Russia,2S35,Koalitsiya
+Russia,ZSU-23-4,Shilka
+Russia,TOS-1A,Solntsepek
+Russia,SA-13,Gopher
+Russia,SA-15,Gauntlet
+Russia,SA-17,Grizzly
+Russia,BM-27,Uragan
+Russia,BMR-3M,Boar
+Russia,GAZ-2975,Tigr
+Russia,KA-52,Hokum-B
+Russia,MI-24,Hind
+Russia,MI-28,Havoc
+Russia,MiG-31,Foxhound

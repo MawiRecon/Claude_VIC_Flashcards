@@ -47,6 +47,29 @@ const REF_ROOT = 'Reference Cards';
 const REF_SUBDIR = 'Extracted Images';
 const REF_DECKS = { Russia: 'Russia', China: 'China', NATO: 'NATO' };
 
+// Canonical two-name list (Country,Designation,Name; "-" = no second name).
+const NAMES_CSV = path.join(ROOT, REF_ROOT, 'vehicle_names.csv');
+
+// Build deck -> (normalized-name -> the OTHER name), so a card can look up its
+// alternate name by its own name. Used to backfill altName on every card.
+function loadSecondaryNames() {
+  const map = {}; // deck -> Map(normName -> secondaryName)
+  if (!fs.existsSync(NAMES_CSV)) return map;
+  const lines = fs.readFileSync(NAMES_CSV, 'utf8').trim().split(/\r?\n/).slice(1);
+  for (const line of lines) {
+    const [country, designation, name] = line.split(',').map((s) => (s || '').trim());
+    if (!country || !designation) continue;
+    const names = [designation];
+    if (name && name !== '-') names.push(name);
+    const m = (map[country] = map[country] || new Map());
+    for (const a of names) {
+      const other = names.find((b) => slug(b) !== slug(a)) || null;
+      if (other) m.set(slug(a), other);
+    }
+  }
+  return map;
+}
+
 // Reference vehicles whose name differs from the standard card. Keyed by deck,
 // then slug(vehicle-token-from-filename) -> exact standard card name. The
 // reference token itself becomes the card's altName.
@@ -222,14 +245,15 @@ function main() {
     }
   }
 
-  // 2) Backfill altName onto STANDARD cards for the differently-named vehicles
-  //    (only when the card doesn't already have one — never overwrite an edit).
-  for (const deck of Object.keys(altNameForStandard)) {
-    for (const [name, altName] of Object.entries(altNameForStandard[deck])) {
-      const id = cardId(deck, name);
-      const card = byId.get(id);
-      if (card && !card.altName) card.altName = altName;
-    }
+  // 2) Backfill altName (the second name) onto every card from vehicle_names.csv,
+  //    keyed by the card's own name. Only fills when empty, so in-app edits and
+  //    the per-image reference designations are never overwritten.
+  const secondary = loadSecondaryNames();
+  let namedCount = 0;
+  for (const card of byId.values()) {
+    if (card.altName) continue;
+    const alt = secondary[card.deck] && secondary[card.deck].get(slug(card.name));
+    if (alt) { card.altName = alt; namedCount += 1; }
   }
 
   // 3) Reconcile against file presence.
@@ -289,6 +313,7 @@ function main() {
   }
   console.log(`missing images: ${missingCount}${missingNames.length ? '  (' + missingNames.slice(0, 20).join(', ') + (missingNames.length > 20 ? ', …' : '') + ')' : ''}`);
   console.log(`pruned alt views (file gone): ${prunedAlt}${prunedNames.length ? '  (' + prunedNames.join(', ') + ')' : ''}`);
+  console.log(`second names backfilled from CSV: ${namedCount}`);
   if (unresolved.length) console.log(`UNRESOLVED alt images (${unresolved.length}): ${unresolved.join(', ')}`);
   console.log(`cards.json ${changed ? 'UPDATED' : 'unchanged'}`);
 

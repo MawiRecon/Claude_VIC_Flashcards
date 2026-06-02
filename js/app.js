@@ -321,6 +321,8 @@ function renderCard() {
   front.hidden = state.flipped;
   back.hidden = !state.flipped;
   $('card-name').textContent = card.name;
+  $('card-altname').textContent = card.altName || '';
+  $('card-altname').hidden = !card.altName;
   const povNote = card.pov === 'alt' ? ` · alt view${card.view ? ' ' + card.view : ''}` : '';
   $('card-deck').textContent = card.deck + povNote + (card.missingImage ? ' · (image missing)' : '');
 
