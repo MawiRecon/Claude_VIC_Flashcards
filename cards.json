@@ -468,7 +468,9 @@
     "deck": "Russia",
     "name": "T-90A",
     "image": "images_russia/T-90A.png",
-    "tags": []
+    "tags": [
+      "tank"
+    ]
   },
   {
     "id": "russia-tigr",
