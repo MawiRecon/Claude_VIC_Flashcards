@@ -244,7 +244,9 @@
     "deck": "NATO",
     "name": "Coyote",
     "image": "images_NATO/Coyote.png",
-    "tags": []
+    "tags": [
+      "IFV"
+    ]
   },
   {
     "id": "nato-himars",
