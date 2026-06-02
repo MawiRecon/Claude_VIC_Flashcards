@@ -16,6 +16,7 @@ const state = {
   filtered: [], // array of card objects, post-filter
   index: 0,
   flipped: false,
+  editorOpen: false, // editor collapsed by default so the answer stays hidden
   token: localStorage.getItem(TOKEN_KEY) || '',
 };
 
@@ -112,6 +113,7 @@ function applyFilters(resetIndex) {
   state.filtered = filterCards(store.getCards(), { deck: state.deck, tags: state.tags });
   if (resetIndex || state.index >= state.filtered.length) state.index = 0;
   state.flipped = false;
+  if (resetIndex) state.editorOpen = false; // re-hide answer on filter changes, keep open across edits
   renderDeckFilter();
   renderTagFilter();
   renderCard();
@@ -183,6 +185,7 @@ function go(delta) {
   if (!state.filtered.length) return;
   state.index = (state.index + delta + state.filtered.length) % state.filtered.length;
   state.flipped = false;
+  state.editorOpen = false; // navigating to a new card re-hides the answer
   renderCard();
 }
 
@@ -194,6 +197,14 @@ function renderEditor(card) {
   const editor = $('editor');
   if (!card) { editor.hidden = true; return; }
   editor.hidden = false;
+
+  // Collapsed by default: the body holds the name (answer), so keep it hidden
+  // until the user explicitly expands it.
+  const body = $('editor-body');
+  const toggle = $('editor-toggle');
+  body.hidden = !state.editorOpen;
+  toggle.setAttribute('aria-expanded', String(state.editorOpen));
+  toggle.classList.toggle('open', state.editorOpen);
 
   $('edit-name').value = card.name;
   $('edit-deck').value = card.deck;
@@ -257,6 +268,12 @@ function wireEvents() {
     if (e.code === 'Space') { e.preventDefault(); flip(); }
     else if (e.code === 'ArrowLeft') go(-1);
     else if (e.code === 'ArrowRight') go(1);
+  });
+
+  // editor expand/collapse (hidden by default to avoid spoiling the answer)
+  $('editor-toggle').addEventListener('click', () => {
+    state.editorOpen = !state.editorOpen;
+    renderEditor(currentCard());
   });
 
   // filters

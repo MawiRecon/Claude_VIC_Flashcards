@@ -58,7 +58,12 @@ export async function getContent(path, token) {
   const headers = token
     ? authHeaders(token)
     : { Accept: 'application/vnd.github+json' };
-  const res = await fetch(`${contentsUrl(path)}?ref=${REPO.branch}`, { headers });
+  // no-store is critical: the contents API responds with max-age=60, so a
+  // cached (stale) sha would cause 409 conflicts on PUT. Always fetch live.
+  const res = await fetch(`${contentsUrl(path)}?ref=${REPO.branch}`, {
+    headers,
+    cache: 'no-store',
+  });
   if (res.status === 404) return null;
   if (!res.ok) throw new Error(await describeError('GET', path, res));
   return res.json(); // { sha, content (base64), ... }

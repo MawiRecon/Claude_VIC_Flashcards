@@ -80,12 +80,16 @@ async function saveManifest(token, message) {
     });
   };
 
-  try {
-    return await doPut();
-  } catch (err) {
-    if (String(err).includes('409')) return doPut(); // one retry on sha conflict
-    throw err;
+  let lastErr;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      return await doPut();
+    } catch (err) {
+      lastErr = err;
+      if (!String(err).includes('409')) throw err; // only retry sha conflicts
+    }
   }
+  throw lastErr;
 }
 
 // --- helpers ----------------------------------------------------------------

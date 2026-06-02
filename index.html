@@ -49,9 +49,12 @@
     <button id="btn-next" class="nav-arrow" aria-label="Next">&#8250;</button>
   </main>
 
-  <!-- Editor for the current card -->
+  <!-- Editor for the current card (collapsed by default so the answer stays hidden) -->
   <section class="editor" id="editor" hidden>
-    <h2>Edit card</h2>
+    <button id="editor-toggle" class="editor-toggle" aria-expanded="false" aria-controls="editor-body">
+      <span class="editor-caret">&#9656;</span> Edit card / reveal answer
+    </button>
+    <div class="editor-body" id="editor-body" hidden>
     <div class="editor-grid">
       <label>Name / answer
         <input type="text" id="edit-name" />
@@ -77,6 +80,7 @@
       <button id="btn-delete" class="btn btn-danger">Delete</button>
       <input type="file" id="file-replace" accept="image/png,image/*" hidden />
     </div>
+    </div><!-- /editor-body -->
   </section>
 
   <!-- New-card dialog -->
