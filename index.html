@@ -18,6 +18,11 @@
 
   <!-- Deck + tag filters -->
   <nav class="filters">
+    <div class="filter-row">
+      <input id="search-input" class="search-input" type="search"
+             placeholder="&#128269; Search by name or tag…" autocomplete="off" />
+      <button id="search-clear" class="btn btn-ghost" hidden>Clear search</button>
+    </div>
     <div class="filter-row" id="deck-filter" aria-label="Deck filter"></div>
     <div class="filter-row" id="tag-filter" aria-label="Tag filter"></div>
     <div class="filter-row">
@@ -52,6 +57,12 @@
 
     <button id="btn-next" class="nav-arrow" aria-label="Next">&#8250;</button>
   </main>
+
+  <!-- Search results list (shown only while searching) -->
+  <section id="search-list" class="search-list" hidden>
+    <div class="search-count" id="search-count"></div>
+    <div class="search-results" id="search-results"></div>
+  </section>
 
   <!-- Editor for the current card (collapsed by default so the answer stays hidden) -->
   <section class="editor" id="editor" hidden>

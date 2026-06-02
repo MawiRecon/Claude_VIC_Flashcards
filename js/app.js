@@ -21,6 +21,7 @@ const state = {
   editorOpen: false, // editor collapsed by default so the answer stays hidden
   shuffle: false,    // shuffle the working set in the viewer
   shuffleOrder: null,// the stable shuffled list, preserved across edits
+  search: '',        // search query; when non-empty, the list view replaces the card
   token: localStorage.getItem(TOKEN_KEY) || '',
 };
 
@@ -121,7 +122,67 @@ function applyFilters(resetIndex, reshuffle) {
   if (resetIndex) state.editorOpen = false; // re-hide answer on filter changes, keep open across edits
   renderDeckFilter();
   renderTagFilter();
-  renderCard();
+  renderView();
+}
+
+// Switch between the single-card viewer and the search list view.
+function renderView() {
+  const searching = !!state.search.trim();
+  $('search-list').hidden = !searching;
+  document.querySelector('.stage').hidden = searching;
+  if (searching) {
+    $('editor').hidden = true;
+    renderSearchResults();
+  } else {
+    renderCard();
+  }
+}
+
+// Build the list of cards (within the current deck+tag filter) whose name OR a
+// tag contains the query (case-insensitive substring).
+function searchMatches() {
+  const q = state.search.trim().toLowerCase();
+  if (!q) return [];
+  return state.filtered.filter(
+    (c) =>
+      c.name.toLowerCase().includes(q) ||
+      (c.tags || []).some((t) => t.toLowerCase().includes(q))
+  );
+}
+
+function renderSearchResults() {
+  const matches = searchMatches();
+  $('search-count').textContent =
+    `${matches.length} match${matches.length === 1 ? '' : 'es'} for “${state.search.trim()}”`;
+  const list = $('search-results');
+  list.innerHTML = '';
+  for (const card of matches) {
+    const row = document.createElement('button');
+    row.className = 'search-row';
+    const tags = (card.tags || []).map((t) => `<span class="search-tag">${escapeHtml(t)}</span>`).join('');
+    row.innerHTML = `
+      <img class="search-thumb" src="${escapeHtml(card.image)}" alt=""
+           onerror="this.style.visibility='hidden'">
+      <span class="search-info">
+        <span class="search-name">${escapeHtml(card.name)}</span>
+        <span class="search-deck">${escapeHtml(card.deck)}</span>
+        <span class="search-tags">${tags}</span>
+      </span>`;
+    row.onclick = () => openCardFromSearch(card.id);
+    list.appendChild(row);
+  }
+}
+
+// Click a result: clear the search and jump the viewer to that card.
+function openCardFromSearch(id) {
+  state.search = '';
+  $('search-input').value = '';
+  $('search-clear').hidden = true;
+  const i = state.filtered.findIndex((c) => c.id === id);
+  if (i >= 0) state.index = i;
+  state.flipped = false;
+  state.editorOpen = false;
+  renderView();
 }
 
 // Decide the working order. When shuffle is off, natural (sorted) order. When on,
@@ -199,13 +260,13 @@ function showImageFallback(card) {
 }
 
 function flip() {
-  if (!currentCard()) return;
+  if (state.search.trim() || !currentCard()) return;
   state.flipped = !state.flipped;
   renderCard();
 }
 
 function go(delta) {
-  if (!state.filtered.length) return;
+  if (state.search.trim() || !state.filtered.length) return;
   state.index = (state.index + delta + state.filtered.length) % state.filtered.length;
   state.flipped = false;
   state.editorOpen = false; // navigating to a new card re-hides the answer
@@ -274,7 +335,7 @@ function afterMutation(keepId) {
     if (i >= 0) state.index = i;
   }
   state.flipped = false;
-  renderCard();
+  renderView();
 }
 
 // ---------------------------------------------------------------------------
@@ -298,6 +359,19 @@ function wireEvents() {
   $('editor-toggle').addEventListener('click', () => {
     state.editorOpen = !state.editorOpen;
     renderEditor(currentCard());
+  });
+
+  // search
+  $('search-input').addEventListener('input', (e) => {
+    state.search = e.target.value;
+    $('search-clear').hidden = !state.search.trim();
+    renderView();
+  });
+  $('search-clear').addEventListener('click', () => {
+    state.search = '';
+    $('search-input').value = '';
+    $('search-clear').hidden = true;
+    renderView();
   });
 
   // filters
