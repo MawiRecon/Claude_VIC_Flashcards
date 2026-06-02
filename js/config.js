@@ -3,7 +3,7 @@
 
 export const REPO = {
   owner: 'MawiRecon',
-  repo: 'Claude_VIC_Flashcards',
+  repo: 'MSLC-VID-Flashcards',
   branch: 'main',
 };
 

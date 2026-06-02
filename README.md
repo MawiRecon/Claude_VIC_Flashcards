@@ -24,7 +24,7 @@ Just commit a new `.png` into the right `images_*` folder. The Action rebuilds `
 
 ## Sharing with friends (no account, no token)
 
-Just send them the link: **https://mawirecon.github.io/Claude_VIC_Flashcards/**
+Just send them the link: **https://mawirecon.github.io/MSLC-VID-Flashcards/**
 
 The app reads `cards.json` over plain HTTPS with no authentication, so anyone can **study, search, flip, and take Practice Tests** with zero setup — no GitHub account, no token. When no token is present the app runs in **read-only mode**: all editing UI is hidden.
 
