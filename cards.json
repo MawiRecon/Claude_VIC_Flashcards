@@ -400,7 +400,9 @@
     "deck": "Russia",
     "name": "GAUNTLET",
     "image": "images_russia/GAUNTLET.png",
-    "tags": []
+    "tags": [
+      "radar"
+    ]
   },
   {
     "id": "russia-gopher",
