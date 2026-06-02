@@ -269,7 +269,9 @@
     "deck": "NATO",
     "name": "Leopard 2A4",
     "image": "images_NATO/Leopard 2A4.png",
-    "tags": []
+    "tags": [
+      "tank"
+    ]
   },
   {
     "id": "nato-leopard2a6",
