@@ -3201,16 +3201,6 @@
     "altName": "Solntsepek"
   },
   {
-    "id": "russia-2s35-view4",
-    "deck": "Russia",
-    "name": "ZSU 234",
-    "image": "Reference Cards/Russia/Extracted Images/Russia_Koalitsiya_View4.jpg",
-    "pov": "alt",
-    "tags": [],
-    "view": 4,
-    "altName": "Shilka"
-  },
-  {
     "id": "russia-zsu234",
     "deck": "Russia",
     "name": "ZSU 234",
@@ -3243,6 +3233,16 @@
       "radar"
     ],
     "view": 2,
+    "altName": "Shilka"
+  },
+  {
+    "id": "russia-2s35-view4",
+    "deck": "Russia",
+    "name": "ZSU 234",
+    "image": "Reference Cards/Russia/Extracted Images/Russia_Koalitsiya_View4.jpg",
+    "pov": "alt",
+    "tags": [],
+    "view": 4,
     "altName": "Shilka"
   }
 ]
