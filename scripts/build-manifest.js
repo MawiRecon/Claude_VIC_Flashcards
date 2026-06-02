@@ -201,7 +201,13 @@ function main() {
     const prior = byId.get(d.id);
     if (!prior) {
       const card = { id: d.id, deck: d.deck, name: d.name, image: d.image, pov: d.pov, tags: [] };
-      if (d.pov === 'alt') card.view = d.view;
+      if (d.pov === 'alt') {
+        card.view = d.view;
+        // New alt views inherit the standard card's tags (standard is processed
+        // first, so the parent already exists). Per-card edits stay independent.
+        const parent = byId.get(cardId(d.deck, d.name));
+        if (parent && Array.isArray(parent.tags)) card.tags = [...parent.tags];
+      }
       if (d.altName) card.altName = d.altName;
       byId.set(d.id, card);
       if (d.pov === 'alt') newAlt += 1; else { newStd += 1; newNames.push(`${d.deck}/${d.name}`); }
