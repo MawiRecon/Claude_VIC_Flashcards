@@ -4,7 +4,9 @@
     "deck": "China",
     "name": "MBT 2000",
     "image": "images_china/MBT 2000.png",
-    "tags": []
+    "tags": [
+      "tank"
+    ]
   },
   {
     "id": "china-mbt3000",
