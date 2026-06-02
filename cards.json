@@ -98,7 +98,9 @@
     "deck": "China",
     "name": "Type 59",
     "image": "images_china/Type 59.png",
-    "tags": []
+    "tags": [
+      "tank"
+    ]
   },
   {
     "id": "china-type63a",
