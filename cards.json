@@ -316,7 +316,9 @@
     "deck": "Russia",
     "name": "2S6",
     "image": "images_russia/2S6.png",
-    "tags": []
+    "tags": [
+      "radar"
+    ]
   },
   {
     "id": "russia-bm27",
