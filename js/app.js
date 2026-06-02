@@ -2,7 +2,7 @@
 // Deliberately the only module that touches the DOM, so the model stays reusable
 // for the planned quiz / test modes.
 
-import { DECKS, TOKEN_KEY } from './config.js';
+import { DECKS, TOKEN_KEY, PRACTICE_KEY } from './config.js';
 import * as store from './store.js';
 import { allTags, filterCards } from './filters.js';
 import { shuffle } from './util.js';
@@ -22,8 +22,43 @@ const state = {
   shuffle: false,    // shuffle the working set in the viewer
   shuffleOrder: null,// the stable shuffled list, preserved across edits
   search: '',        // search query; when non-empty, the list view replaces the card
+  practice: loadPracticeSet(), // Set of card ids selected locally for practice
+  practiceOnly: false,         // when true, restrict the working set to the practice set
   token: localStorage.getItem(TOKEN_KEY) || '',
 };
+
+// --- practice set (local, per-browser) -------------------------------------
+
+function loadPracticeSet() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(PRACTICE_KEY) || '[]');
+    return new Set(Array.isArray(raw) ? raw : []);
+  } catch {
+    return new Set();
+  }
+}
+function savePracticeSet() {
+  localStorage.setItem(PRACTICE_KEY, JSON.stringify([...state.practice]));
+}
+// Called after the set changes: persist, refresh chips, and (if filtering by the
+// set) re-apply filters so removed cards drop out.
+function practiceChanged() {
+  savePracticeSet();
+  if (state.practiceOnly) applyFilters(false, false);
+  updatePracticeUI();
+}
+function updatePracticeUI() {
+  const n = state.practice.size;
+  const chip = document.getElementById('btn-practice-filter');
+  chip.textContent = `★ Practice set (${n})`;
+  chip.classList.toggle('active', state.practiceOnly);
+  chip.setAttribute('aria-pressed', String(state.practiceOnly));
+  document.getElementById('btn-practice-clear').hidden = n === 0;
+  const card = currentCard();
+  const cb = document.getElementById('practice-check');
+  cb.checked = !!card && state.practice.has(card.id);
+  cb.disabled = !card;
+}
 
 // ---------------------------------------------------------------------------
 // Tiny DOM helpers
@@ -122,7 +157,10 @@ function renderTagFilter() {
 }
 
 function applyFilters(resetIndex, reshuffle) {
-  const base = filterCards(store.getCards(), { deck: state.deck, tags: state.tags });
+  const base = filterCards(store.getCards(), {
+    deck: state.deck, tags: state.tags,
+    practiceOnly: state.practiceOnly, practiceSet: state.practice,
+  });
   state.filtered = orderSet(base, reshuffle);
   if (resetIndex || state.index >= state.filtered.length) state.index = 0;
   state.flipped = false;
@@ -165,10 +203,26 @@ function renderSearchResults() {
   const list = $('search-results');
   list.innerHTML = '';
   for (const card of matches) {
-    const row = document.createElement('button');
+    const row = document.createElement('div');
     row.className = 'search-row';
+
+    // practice checkbox (toggles the local set without leaving the list)
+    const cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.className = 'search-check';
+    cb.title = 'Add to practice set';
+    cb.checked = state.practice.has(card.id);
+    cb.addEventListener('change', () => {
+      if (cb.checked) state.practice.add(card.id);
+      else state.practice.delete(card.id);
+      practiceChanged();
+    });
+
+    // clickable area opens the card in the viewer
+    const open = document.createElement('button');
+    open.className = 'search-open';
     const tags = (card.tags || []).map((t) => `<span class="search-tag">${escapeHtml(t)}</span>`).join('');
-    row.innerHTML = `
+    open.innerHTML = `
       <img class="search-thumb" src="${escapeHtml(card.image)}" alt=""
            onerror="this.style.visibility='hidden'">
       <span class="search-info">
@@ -176,9 +230,12 @@ function renderSearchResults() {
         <span class="search-deck">${escapeHtml(card.deck)}</span>
         <span class="search-tags">${tags}</span>
       </span>`;
-    row.onclick = () => openCardFromSearch(card.id);
+    open.onclick = () => openCardFromSearch(card.id);
+
+    row.append(cb, open);
     list.appendChild(row);
   }
+  updatePracticeUI();
 }
 
 // Click a result: clear the search and jump the viewer to that card.
@@ -235,6 +292,7 @@ function renderCard() {
     back.hidden = true;
     front.hidden = false;
     renderEditor(null);
+    updatePracticeUI();
     return;
   }
 
@@ -257,6 +315,7 @@ function renderCard() {
   $('card-deck').textContent = card.deck + (card.missingImage ? ' · (image missing)' : '');
 
   renderEditor(card);
+  updatePracticeUI();
 }
 
 function showImageFallback(card) {
@@ -402,10 +461,39 @@ function wireEvents() {
   });
   $('btn-reshuffle').addEventListener('click', () => applyFilters(true, true));
 
-  // practice test (uses the current filter; the test shuffles internally)
+  // practice test (uses the current filter incl. the practice set; shuffles internally)
   $('btn-test').addEventListener('click', () => {
-    const base = filterCards(store.getCards(), { deck: state.deck, tags: state.tags });
-    if (!startTest(base)) toast('No cards in the current filter to test.', 'error');
+    const base = filterCards(store.getCards(), {
+      deck: state.deck, tags: state.tags,
+      practiceOnly: state.practiceOnly, practiceSet: state.practice,
+    });
+    if (!startTest(base)) {
+      toast(state.practiceOnly && !state.practice.size
+        ? 'Your practice set is empty — check some cards first.'
+        : 'No cards in the current filter to test.', 'error');
+    }
+  });
+
+  // practice set: per-card checkbox, filter chip, clear
+  $('practice-check').addEventListener('change', (e) => {
+    const card = currentCard();
+    if (!card) return;
+    if (e.target.checked) state.practice.add(card.id);
+    else state.practice.delete(card.id);
+    practiceChanged();
+  });
+  $('btn-practice-filter').addEventListener('click', () => {
+    state.practiceOnly = !state.practiceOnly;
+    applyFilters(true, true);
+    updatePracticeUI();
+  });
+  $('btn-practice-clear').addEventListener('click', () => {
+    if (!state.practice.size) return;
+    if (!confirm('Clear your practice set?')) return;
+    state.practice.clear();
+    savePracticeSet();
+    applyFilters(true, true);
+    updatePracticeUI();
   });
 
   // token

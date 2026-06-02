@@ -27,6 +27,8 @@
     <div class="filter-row" id="tag-filter" aria-label="Tag filter"></div>
     <div class="filter-row">
       <button id="btn-clear-filters" class="btn btn-ghost">Clear filters</button>
+      <button id="btn-practice-filter" class="chip" aria-pressed="false">&#9733; Practice set (0)</button>
+      <button id="btn-practice-clear" class="btn btn-ghost" hidden>Clear set</button>
       <button id="btn-shuffle" class="chip" aria-pressed="false">&#128256; Shuffle</button>
       <button id="btn-reshuffle" class="btn btn-ghost" hidden>&#8635; Reshuffle</button>
       <span class="filter-spacer"></span>
@@ -52,6 +54,9 @@
         </div>
       </div>
       <div class="counter"><span id="counter">0 / 0</span></div>
+      <label class="practice-toggle">
+        <input type="checkbox" id="practice-check" /> &#9733; Add to practice set
+      </label>
       <div class="hint">click / space to flip &middot; &larr; &rarr; to navigate</div>
     </section>
 

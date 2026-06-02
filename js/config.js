@@ -23,6 +23,10 @@ export const DECKS = ['NATO', 'China', 'Russia'];
 // localStorage key for the cached PAT (the ONLY thing we persist locally).
 export const TOKEN_KEY = 'vic_flashcards_pat';
 
+// localStorage key for the per-browser "practice set" (selected card ids). This
+// is purely client-side, so read-only users (friends) can build their own set.
+export const PRACTICE_KEY = 'vic_flashcards_practice';
+
 // Path to the committed manifest, relative to the served site root.
 export const MANIFEST_PATH = 'cards.json';
 

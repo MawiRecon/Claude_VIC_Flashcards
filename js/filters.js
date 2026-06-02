@@ -11,9 +11,12 @@ export function allTags(cards) {
 // deck: 'All' | 'NATO' | 'China' | 'Russia'
 // tags: Set of active tags. A card must match the deck AND contain EVERY active
 //       tag (intersection — selecting more tags narrows the set).
-export function filterCards(cards, { deck, tags }) {
+// practiceOnly + practiceSet: when practiceOnly is true, keep only cards whose id
+//       is in practiceSet (the locally-saved selection).
+export function filterCards(cards, { deck, tags, practiceOnly, practiceSet }) {
   return cards.filter((c) => {
     if (deck && deck !== 'All' && c.deck !== deck) return false;
+    if (practiceOnly && !(practiceSet && practiceSet.has(c.id))) return false;
     if (tags && tags.size) {
       const have = new Set(c.tags || []);
       for (const t of tags) if (!have.has(t)) return false;
