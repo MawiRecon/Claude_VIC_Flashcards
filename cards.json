@@ -384,7 +384,9 @@
     "deck": "Russia",
     "name": "BTR 80",
     "image": "images_russia/BTR 80.png",
-    "tags": []
+    "tags": [
+      "IFV"
+    ]
   },
   {
     "id": "russia-foxhound",
