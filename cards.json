@@ -459,7 +459,9 @@
     "deck": "Russia",
     "name": "T-80U",
     "image": "images_russia/T-80U.png",
-    "tags": []
+    "tags": [
+      "tank"
+    ]
   },
   {
     "id": "russia-t90a",
