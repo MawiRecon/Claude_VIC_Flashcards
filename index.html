@@ -22,9 +22,11 @@
       <input id="search-input" class="search-input" type="search"
              placeholder="&#128269; Search by name, designation, or type…" autocomplete="off" />
       <button id="btn-jump" class="btn">&#9776; Jump to</button>
+      <button id="btn-filters-toggle" class="btn filters-toggle" aria-expanded="false">&#9776; Filters</button>
       <button id="search-clear" class="btn btn-ghost" hidden>Clear search</button>
     </div>
 
+    <div class="filter-groups" id="filter-groups">
     <div class="filter-group filter-primary">
       <span class="group-label">Country</span>
       <div class="group-chips" id="deck-filter" aria-label="Country filter"></div>
@@ -44,6 +46,7 @@
       <span class="group-label">Category</span>
       <div class="group-chips" id="category-filter" aria-label="Category filter"></div>
     </div>
+    </div><!-- /filter-groups -->
 
     <div class="filter-row actions-row">
       <button id="btn-clear-filters" class="btn btn-ghost">Clear filters</button>

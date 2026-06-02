@@ -584,6 +584,26 @@ function wireEvents() {
     else if (e.code === 'ArrowRight') go(1);
   });
 
+  // touch: swipe left/right to navigate (tap still flips)
+  let touchX = 0, touchY = 0;
+  $('card').addEventListener('touchstart', (e) => {
+    const t = e.changedTouches[0]; touchX = t.clientX; touchY = t.clientY;
+  }, { passive: true });
+  $('card').addEventListener('touchend', (e) => {
+    const t = e.changedTouches[0];
+    const dx = t.clientX - touchX, dy = t.clientY - touchY;
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) {
+      e.preventDefault(); // suppress the click->flip that follows a swipe
+      go(dx < 0 ? 1 : -1);
+    }
+  }, { passive: false });
+
+  // mobile: collapse/expand the filter groups
+  $('btn-filters-toggle').addEventListener('click', () => {
+    const open = document.body.classList.toggle('filters-open');
+    $('btn-filters-toggle').setAttribute('aria-expanded', String(open));
+  });
+
   // editor expand/collapse (hidden by default to avoid spoiling the answer)
   $('editor-toggle').addEventListener('click', () => {
     state.editorOpen = !state.editorOpen;

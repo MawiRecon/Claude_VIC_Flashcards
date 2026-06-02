@@ -328,7 +328,44 @@ body.test-active .filters,
 body.test-active .stage,
 body.test-active .editor { display: none; }
 
+/* The "Filters" collapse toggle only appears on small screens. */
+.filters-toggle { display: none; }
+
+@media (max-width: 700px) {
+  h1 { font-size: 1rem; }
+  .topbar { padding: 0.6rem 0.75rem; }
+  .filters { padding: 0.6rem 0.75rem; }
+
+  /* Collapse the filter groups behind a toggle so the card is near the top. */
+  .filters-toggle { display: inline-flex; }
+  .filter-groups { display: none; }
+  body.filters-open .filter-groups { display: block; }
+  .search-input { min-width: 130px; }
+  .filter-spacer { display: none; }
+  .actions-row { gap: 0.4rem; }
+
+  /* Card fits the screen; nav arrows overlay its edges (plus swipe). */
+  .stage { position: relative; gap: 0; padding: 0.5rem; min-height: 0; }
+  .card { width: min(94vw, 700px); height: min(62vh, 460px); }
+  .nav-arrow {
+    position: absolute; top: 42%; z-index: 3;
+    width: 42px; height: 42px; font-size: 1.5rem;
+    background: rgba(24, 27, 34, 0.72);
+  }
+  #btn-prev { left: 6px; }
+  #btn-next { right: 6px; }
+
+  /* Roomier tap targets. */
+  .chip { padding: 0.42rem 0.85rem; }
+  .filter-primary .chip { padding: 0.45rem 0.95rem; }
+
+  /* Dialog setup rows stack label above chips for breathing room. */
+  .setup-group { flex-direction: column; gap: 0.25rem; }
+  .setup-group .group-label { flex: none; }
+  .jump-header { flex-direction: column; align-items: stretch; gap: 0.5rem; }
+  .jump-header .search-input { flex: 1 1 auto; }
+}
+
 @media (max-width: 560px) {
   .editor-grid { grid-template-columns: 1fr; }
-  .nav-arrow { width: 40px; height: 40px; font-size: 1.5rem; }
 }
