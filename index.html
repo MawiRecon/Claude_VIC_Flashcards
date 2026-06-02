@@ -22,6 +22,10 @@
     <div class="filter-row" id="tag-filter" aria-label="Tag filter"></div>
     <div class="filter-row">
       <button id="btn-clear-filters" class="btn btn-ghost">Clear filters</button>
+      <button id="btn-shuffle" class="chip" aria-pressed="false">&#128256; Shuffle</button>
+      <button id="btn-reshuffle" class="btn btn-ghost" hidden>&#8635; Reshuffle</button>
+      <span class="filter-spacer"></span>
+      <button id="btn-test" class="btn">&#9654; Practice Test</button>
       <button id="btn-new-card" class="btn btn-primary">+ New card</button>
     </div>
   </nav>
@@ -126,6 +130,40 @@
       </div>
     </form>
   </dialog>
+
+  <!-- Practice Test overlay -->
+  <section id="test-overlay" class="overlay" hidden>
+    <div class="test-topbar">
+      <span id="test-progress">Card 1 / 1</span>
+      <span id="test-phase" class="test-phase">Look</span>
+      <span id="test-countdown" class="test-countdown">8</span>
+      <button id="test-exit" class="btn btn-ghost">Exit test</button>
+    </div>
+
+    <div id="test-running" class="test-running">
+      <div class="test-stage">
+        <img id="test-img" alt="vehicle" />
+        <div id="test-blank" class="test-blank" hidden>Recall &amp; type the name…</div>
+      </div>
+      <form id="test-answer-form" class="test-answer" autocomplete="off">
+        <input id="test-input" type="text" autocomplete="off" autocapitalize="off"
+               spellcheck="false" placeholder="Type the vehicle name, press Enter to save" />
+        <span id="test-saved" class="test-saved" hidden>saved &#10003;</span>
+      </form>
+      <p class="test-hint">8s image &middot; 5s blank to answer &middot; not case/space/dash sensitive</p>
+    </div>
+
+    <div id="test-results" class="test-results" hidden>
+      <h2>Results</h2>
+      <div id="test-score" class="test-score"></div>
+      <p class="note">Correct answers are shown below — handy if you wrote yours on paper.</p>
+      <div id="test-results-list" class="test-results-list"></div>
+      <div class="test-results-actions">
+        <button id="test-retake" class="btn btn-primary">Retake (reshuffle)</button>
+        <button id="test-close" class="btn">Close</button>
+      </div>
+    </div>
+  </section>
 
   <div id="toast" class="toast" hidden></div>
 

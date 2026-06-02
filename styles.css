@@ -174,6 +174,71 @@ dialog::backdrop { background: rgba(0,0,0,0.6); }
 .toast-error { border-color: var(--err); color: var(--err); }
 .toast-info { color: var(--text); }
 
+.filter-spacer { flex: 1 1 auto; }
+
+/* Practice Test overlay ----------------------------------------------------*/
+.overlay {
+  position: fixed; inset: 0; z-index: 100;
+  background: var(--bg);
+  display: flex; flex-direction: column;
+  padding: 1rem 1.25rem; overflow-y: auto;
+}
+.test-topbar {
+  display: flex; align-items: center; gap: 1rem;
+  padding-bottom: 0.75rem; border-bottom: 1px solid var(--line);
+}
+.test-phase {
+  font-weight: 600; padding: 0.2rem 0.7rem; border-radius: 999px;
+  border: 1px solid var(--line); color: var(--muted);
+}
+.test-countdown {
+  margin-left: auto; font-variant-numeric: tabular-nums;
+  font-size: 1.4rem; font-weight: 700; min-width: 2ch; text-align: right;
+}
+.test-topbar .btn { margin-left: 0.5rem; }
+
+.test-running { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; }
+.test-stage {
+  width: min(92vw, 820px); height: min(62vh, 560px);
+  display: grid; place-items: center; overflow: hidden;
+  background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+}
+.test-stage img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.test-blank { font-size: 1.4rem; color: var(--muted); }
+.test-answer { width: min(92vw, 560px); display: flex; gap: 0.5rem; align-items: center; }
+.test-answer input { flex: 1; font-size: 1.05rem; padding: 0.6rem 0.8rem; }
+.test-saved { color: var(--ok); font-size: 0.9rem; }
+.test-hint { color: var(--muted); font-size: 0.8rem; margin: 0; }
+
+/* Results ------------------------------------------------------------------*/
+.test-results { max-width: 760px; margin: 0 auto; width: 100%; }
+.test-score { font-size: 1.6rem; font-weight: 700; margin: 0.5rem 0; }
+.test-results-list { display: flex; flex-direction: column; gap: 0.5rem; margin: 1rem 0; }
+.result-row {
+  display: flex; gap: 0.8rem; align-items: center;
+  padding: 0.5rem 0.7rem; border-radius: 8px;
+  background: var(--panel); border: 1px solid var(--line); border-left-width: 4px;
+}
+.result-row.ok { border-left-color: var(--ok); }
+.result-row.bad { border-left-color: var(--err); }
+.result-thumb {
+  width: 84px; height: 56px; object-fit: contain; flex: none;
+  background: #fff; border-radius: 4px;
+}
+.result-meta { display: flex; flex-direction: column; gap: 0.15rem; font-size: 0.9rem; }
+.result-meta .label { color: var(--muted); margin-right: 0.25rem; }
+.result-correct { font-weight: 600; }
+.result-meta .deck { color: var(--muted); font-weight: 400; }
+.result-row.ok .mark { color: var(--ok); }
+.result-row.bad .mark { color: var(--err); }
+.test-results-actions { display: flex; gap: 0.5rem; justify-content: center; margin-top: 1rem; padding-bottom: 2rem; }
+
+/* Hide the underlying study UI while a test runs */
+body.test-active .topbar,
+body.test-active .filters,
+body.test-active .stage,
+body.test-active .editor { display: none; }
+
 @media (max-width: 560px) {
   .editor-grid { grid-template-columns: 1fr; }
   .nav-arrow { width: 40px; height: 40px; font-size: 1.5rem; }

@@ -5,6 +5,8 @@
 import { DECKS, TOKEN_KEY } from './config.js';
 import * as store from './store.js';
 import { allTags, filterCards } from './filters.js';
+import { shuffle } from './util.js';
+import { initTest, startTest, isTestActive } from './test-mode.js';
 
 // ---------------------------------------------------------------------------
 // State
@@ -17,6 +19,8 @@ const state = {
   index: 0,
   flipped: false,
   editorOpen: false, // editor collapsed by default so the answer stays hidden
+  shuffle: false,    // shuffle the working set in the viewer
+  shuffleOrder: null,// the stable shuffled list, preserved across edits
   token: localStorage.getItem(TOKEN_KEY) || '',
 };
 
@@ -82,7 +86,7 @@ function renderDeckFilter() {
     b.textContent = deck;
     b.onclick = () => {
       state.deck = deck;
-      applyFilters(true);
+      applyFilters(true, true);
     };
     wrap.appendChild(b);
   }
@@ -103,20 +107,39 @@ function renderTagFilter() {
     b.onclick = () => {
       if (state.tags.has(tag)) state.tags.delete(tag);
       else state.tags.add(tag);
-      applyFilters(true);
+      applyFilters(true, true);
     };
     wrap.appendChild(b);
   }
 }
 
-function applyFilters(resetIndex) {
-  state.filtered = filterCards(store.getCards(), { deck: state.deck, tags: state.tags });
+function applyFilters(resetIndex, reshuffle) {
+  const base = filterCards(store.getCards(), { deck: state.deck, tags: state.tags });
+  state.filtered = orderSet(base, reshuffle);
   if (resetIndex || state.index >= state.filtered.length) state.index = 0;
   state.flipped = false;
   if (resetIndex) state.editorOpen = false; // re-hide answer on filter changes, keep open across edits
   renderDeckFilter();
   renderTagFilter();
   renderCard();
+}
+
+// Decide the working order. When shuffle is off, natural (sorted) order. When on,
+// generate a fresh shuffle on reshuffle/first use, else PRESERVE the existing
+// shuffled order (so an edit doesn't reshuffle under the user) while reconciling
+// any added/removed cards.
+function orderSet(base, reshuffle) {
+  if (!state.shuffle) { state.shuffleOrder = null; return base; }
+  if (reshuffle || !state.shuffleOrder) {
+    state.shuffleOrder = shuffle(base);
+    return state.shuffleOrder;
+  }
+  const byId = new Map(base.map((c) => [c.id, c]));
+  const kept = state.shuffleOrder.filter((c) => byId.has(c.id)).map((c) => byId.get(c.id));
+  const keptIds = new Set(kept.map((c) => c.id));
+  const added = base.filter((c) => !keptIds.has(c.id));
+  state.shuffleOrder = [...kept, ...shuffle(added)];
+  return state.shuffleOrder;
 }
 
 // ---------------------------------------------------------------------------
@@ -245,7 +268,7 @@ function escapeHtml(s) {
 // card id when possible.
 function afterMutation(keepId) {
   const id = keepId ?? currentCard()?.id;
-  applyFilters(false);
+  applyFilters(false, false); // preserve current (possibly shuffled) order across edits
   if (id) {
     const i = state.filtered.findIndex((c) => c.id === id);
     if (i >= 0) state.index = i;
@@ -264,6 +287,7 @@ function wireEvents() {
   $('btn-prev').addEventListener('click', () => go(-1));
   $('btn-next').addEventListener('click', () => go(1));
   document.addEventListener('keydown', (e) => {
+    if (isTestActive()) return; // the test overlay owns the keyboard
     if (e.target.matches('input, textarea, select') || document.querySelector('dialog[open]')) return;
     if (e.code === 'Space') { e.preventDefault(); flip(); }
     else if (e.code === 'ArrowLeft') go(-1);
@@ -280,7 +304,24 @@ function wireEvents() {
   $('btn-clear-filters').addEventListener('click', () => {
     state.deck = 'All';
     state.tags.clear();
-    applyFilters(true);
+    applyFilters(true, true);
+  });
+
+  // shuffle toggle + reshuffle
+  $('btn-shuffle').addEventListener('click', () => {
+    state.shuffle = !state.shuffle;
+    const btn = $('btn-shuffle');
+    btn.classList.toggle('active', state.shuffle);
+    btn.setAttribute('aria-pressed', String(state.shuffle));
+    $('btn-reshuffle').hidden = !state.shuffle;
+    applyFilters(true, true);
+  });
+  $('btn-reshuffle').addEventListener('click', () => applyFilters(true, true));
+
+  // practice test (uses the current filter; the test shuffles internally)
+  $('btn-test').addEventListener('click', () => {
+    const base = filterCards(store.getCards(), { deck: state.deck, tags: state.tags });
+    if (!startTest(base)) toast('No cards in the current filter to test.', 'error');
   });
 
   // token
@@ -407,10 +448,11 @@ function wireEvents() {
 
 async function init() {
   wireEvents();
+  initTest();
   refreshTokenUI();
   try {
     await store.loadCards();
-    applyFilters(true);
+    applyFilters(true, false);
     if (!store.getCards().length) toast('No cards in cards.json yet.', 'info');
   } catch (err) {
     console.error(err);
