@@ -13,7 +13,9 @@
     "deck": "China",
     "name": "MBT 3000",
     "image": "images_china/MBT 3000.png",
-    "tags": []
+    "tags": [
+      "tank"
+    ]
   },
   {
     "id": "china-plz05",
