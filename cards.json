@@ -432,7 +432,9 @@
     "deck": "Russia",
     "name": "HIND",
     "image": "images_russia/HIND.png",
-    "tags": []
+    "tags": [
+      "helicopter"
+    ]
   },
   {
     "id": "russia-ka52",
