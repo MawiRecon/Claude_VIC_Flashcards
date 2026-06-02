@@ -57,7 +57,9 @@
     "deck": "China",
     "name": "Type 04",
     "image": "images_china/Type 04.png",
-    "tags": []
+    "tags": [
+      "IFV"
+    ]
   },
   {
     "id": "china-type04a",
