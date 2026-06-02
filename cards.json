@@ -287,7 +287,9 @@
     "deck": "NATO",
     "name": "MLRS",
     "image": "images_NATO/MLRS.png",
-    "tags": []
+    "tags": [
+      "radar"
+    ]
   },
   {
     "id": "nato-paladin",
