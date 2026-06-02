@@ -217,7 +217,9 @@
     "deck": "NATO",
     "name": "Apache",
     "image": "images_NATO/Apache.png",
-    "tags": []
+    "tags": [
+      "helicopter"
+    ]
   },
   {
     "id": "nato-bradley",
