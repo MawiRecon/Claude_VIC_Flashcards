@@ -29,7 +29,9 @@
     "deck": "China",
     "name": "PTL 02",
     "image": "images_china/PTL 02.png",
-    "tags": []
+    "tags": [
+      "practice_china"
+    ]
   },
   {
     "id": "china-qn506",
