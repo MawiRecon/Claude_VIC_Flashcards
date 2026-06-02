@@ -193,7 +193,9 @@
     "deck": "China",
     "name": "ZSL 92",
     "image": "images_china/ZSL 92.png",
-    "tags": []
+    "tags": [
+      "practice_china"
+    ]
   },
   {
     "id": "nato-abrams",
