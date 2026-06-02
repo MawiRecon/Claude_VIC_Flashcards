@@ -38,7 +38,9 @@
     "deck": "China",
     "name": "QN 506",
     "image": "images_china/QN 506.png",
-    "tags": []
+    "tags": [
+      "practice_china"
+    ]
   },
   {
     "id": "china-type03",
