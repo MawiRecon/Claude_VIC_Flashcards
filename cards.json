@@ -226,7 +226,9 @@
     "deck": "NATO",
     "name": "Bradley",
     "image": "images_NATO/Bradley.png",
-    "tags": []
+    "tags": [
+      "IFV"
+    ]
   },
   {
     "id": "nato-challenger2",
