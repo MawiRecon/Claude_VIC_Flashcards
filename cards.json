@@ -303,7 +303,9 @@
     "deck": "NATO",
     "name": "Stryker",
     "image": "images_NATO/Stryker.png",
-    "tags": []
+    "tags": [
+      "IFV"
+    ]
   },
   {
     "id": "nato-warrior",
