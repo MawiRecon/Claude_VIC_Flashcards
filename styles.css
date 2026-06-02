@@ -91,11 +91,16 @@ h2 { font-size: 1rem; margin: 0 0 0.75rem; }
   width: min(90vw, 700px); height: min(70vh, 525px);
   background: var(--panel); border: 1px solid var(--line);
   border-radius: var(--radius); cursor: pointer;
-  display: grid; place-items: center; overflow: hidden; position: relative;
-  outline: none;
+  /* one DEFINITE cell (minmax(0,1fr)) so the face below gets a definite height
+     and the image's max-height:100% actually constrains tall/square images */
+  display: grid; grid-template: minmax(0, 1fr) / minmax(0, 1fr);
+  overflow: hidden; position: relative; outline: none;
 }
 .card:focus-visible { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(79,140,255,0.4); }
-.card-face { width: 100%; height: 100%; display: grid; place-items: center; padding: 1rem; }
+.card-face {
+  grid-area: 1 / 1; min-width: 0; min-height: 0; padding: 1rem;
+  display: flex; align-items: center; justify-content: center;
+}
 .card-front img { max-width: 100%; max-height: 100%; object-fit: contain; }
 .img-fallback {
   font-size: 1.6rem; font-weight: 600; color: var(--muted); text-align: center;
@@ -241,7 +246,7 @@ dialog::backdrop { background: rgba(0,0,0,0.6); }
 .test-running { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; }
 .test-stage {
   width: min(92vw, 820px); height: min(62vh, 560px);
-  display: grid; place-items: center; overflow: hidden;
+  display: flex; align-items: center; justify-content: center; overflow: hidden;
   background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
 }
 .test-stage img { max-width: 100%; max-height: 100%; object-fit: contain; }
