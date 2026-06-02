@@ -359,7 +359,9 @@
     "deck": "Russia",
     "name": "BMP 3",
     "image": "images_russia/BMP 3.png",
-    "tags": []
+    "tags": [
+      "IFV"
+    ]
   },
   {
     "id": "russia-boar",
