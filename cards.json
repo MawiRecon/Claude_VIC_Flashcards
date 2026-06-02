@@ -124,7 +124,9 @@
     "deck": "China",
     "name": "Type 99A",
     "image": "images_china/Type 99A.png",
-    "tags": []
+    "tags": [
+      "tank"
+    ]
   },
   {
     "id": "china-vn17",
