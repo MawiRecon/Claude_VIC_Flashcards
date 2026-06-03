@@ -61,6 +61,7 @@ export function initTest() {
     renderSpeedButton();
     $('test-input').focus();
   });
+  $('test-end-early').addEventListener('click', endEarly);
   // Esc exits the test from anywhere in the overlay.
   $('test-overlay').addEventListener('keydown', (e) => {
     if (e.key === 'Escape') { e.preventDefault(); exitTest(); }
@@ -82,6 +83,8 @@ export function startTest(base, limit) {
   clearTimers();
   $('test-results').hidden = true;
   $('test-running').hidden = false;
+  $('test-end-early').hidden = false;
+  $('test-speed').hidden = false;
   $('test-overlay').hidden = false;
   document.body.classList.add('test-active');
   runCard();
@@ -159,12 +162,25 @@ function advance() {
   runCard();
 }
 
-function finish() {
+// End the test now and score only the cards seen so far (current one included).
+function endEarly() {
+  if ($('test-running').hidden) return; // already at results
+  saveCurrent(false);
+  finish(idx + 1);
+}
+
+// `upTo` (optional) scores only the first N cards (for End early); default = all.
+function finish(upTo) {
   clearTimers();
   $('test-running').hidden = true;
+  $('test-end-early').hidden = true;
+  $('test-speed').hidden = true;
+
+  const count = upTo == null ? deck.length : Math.min(upTo, deck.length);
+  const subset = deck.slice(0, count);
 
   let correct = 0;
-  const rows = deck.map((card, i) => {
+  const rows = subset.map((card, i) => {
     const ua = (answers[i] || '').trim();
     // Accept the name and the alternate name; also split multi-designation
     // strings like "FV-511 or FV-510" so either is accepted.
@@ -178,8 +194,9 @@ function finish() {
     return { card, ua, ok };
   });
 
-  const pct = Math.round((correct / deck.length) * 100);
-  $('test-score').textContent = `Score: ${correct} / ${deck.length} (${pct}%)`;
+  const pct = count ? Math.round((correct / count) * 100) : 0;
+  const early = count < deck.length ? ` — ended early (${count} of ${deck.length})` : '';
+  $('test-score').textContent = `Score: ${correct} / ${count} (${pct}%)${early}`;
 
   const list = $('test-results-list');
   list.innerHTML = '';
