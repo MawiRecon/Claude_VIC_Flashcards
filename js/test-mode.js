@@ -22,6 +22,18 @@ let timers = [];      // active timeouts/intervals to clear on exit/advance
 let lastBase = [];    // the unshuffled set, so Retake can reshuffle it
 let lastLimit = 0;    // question cap from the last run (for Retake)
 
+// Speed mode: when on, submitting an answer (Enter) skips the remaining timers
+// and jumps straight to the next card. Toggleable mid-test; remembered locally.
+const SPEED_KEY = 'vic_flashcards_speed';
+let speedMode = (() => { try { return localStorage.getItem(SPEED_KEY) === '1'; } catch { return false; } })();
+
+function renderSpeedButton() {
+  const b = $('test-speed');
+  b.textContent = `⚡ Speed: ${speedMode ? 'on' : 'off'}`;
+  b.classList.toggle('active', speedMode);
+  b.setAttribute('aria-pressed', String(speedMode));
+}
+
 function clearTimers() {
   for (const t of timers) { clearTimeout(t); clearInterval(t); }
   timers = [];
@@ -41,11 +53,19 @@ export function initTest() {
   $('test-answer-form').addEventListener('submit', (e) => {
     e.preventDefault();
     saveCurrent(true);
+    if (speedMode) advance(); // skip remaining timers, go to the next card
+  });
+  $('test-speed').addEventListener('click', () => {
+    speedMode = !speedMode;
+    try { localStorage.setItem(SPEED_KEY, speedMode ? '1' : '0'); } catch {}
+    renderSpeedButton();
+    $('test-input').focus();
   });
   // Esc exits the test from anywhere in the overlay.
   $('test-overlay').addEventListener('keydown', (e) => {
     if (e.key === 'Escape') { e.preventDefault(); exitTest(); }
   });
+  renderSpeedButton();
 }
 
 // Start a run from a base set. `limit` (optional) caps the number of questions
