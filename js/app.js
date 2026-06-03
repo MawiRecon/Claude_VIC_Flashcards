@@ -177,9 +177,49 @@ function applyFilters(resetIndex, reshuffle) {
   renderView();
 }
 
+// POV control. Two exclusive modes — 'all' and 'standard' — plus three
+// view-type subsets that select among the alternate views and can be combined.
+// state.pov / testSetup.pov hold either the string 'all' | 'standard', or a Set
+// of card `viewType` values (the subset selection). POV_SUBSETS maps each subset
+// chip's data-pov token to the viewType it filters on.
+const POV_SUBSETS = [
+  { token: 'frontback', viewType: 'Front/Back' },
+  { token: 'side', viewType: 'Side/Profile' },
+  { token: 'top', viewType: 'Top' },
+];
+const POV_SUB_BY_TOKEN = new Map(POV_SUBSETS.map((s) => [s.token, s]));
+
+// Copy a pov value (Set is cloned so two scopes don't share one selection).
+function clonePov(pov) {
+  return pov instanceof Set ? new Set(pov) : pov;
+}
+
+// Should the chip for `token` read as active, given the current `pov` value?
+function povChipActive(pov, token) {
+  const sub = POV_SUB_BY_TOKEN.get(token);
+  if (sub) return pov instanceof Set && pov.has(sub.viewType);
+  return pov === token; // 'all' / 'standard'
+}
+
+// Next pov value when `token` is clicked; null = no-op (ignore the click).
+// 'all'/'standard' are exclusive; subset chips toggle within a Set and always
+// keep at least one selected (clicking the last active subset is a no-op).
+function nextPov(pov, token) {
+  const sub = POV_SUB_BY_TOKEN.get(token);
+  if (!sub) return pov === token ? null : token;
+  const set = pov instanceof Set ? new Set(pov) : new Set();
+  if (set.has(sub.viewType)) {
+    if (set.size === 1) return null; // don't allow an empty subset selection
+    set.delete(sub.viewType);
+  } else {
+    set.add(sub.viewType);
+  }
+  return set;
+}
+
 function renderPovFilter() {
   for (const b of document.querySelectorAll('#pov-filter [data-pov]')) {
-    b.classList.toggle('active', b.dataset.pov === state.pov);
+    b.classList.toggle('active', povChipActive(state.pov, b.dataset.pov));
   }
 }
 
@@ -323,7 +363,9 @@ function renderCard() {
   $('card-name').textContent = card.name;
   $('card-altname').textContent = card.altName || '';
   $('card-altname').hidden = !card.altName;
-  const povNote = card.pov === 'alt' ? ` · alt view${card.view ? ' ' + card.view : ''}` : '';
+  const povNote = card.pov === 'alt'
+    ? ` · alt view${card.view ? ' ' + card.view : ''}${card.viewType ? ' (' + card.viewType + ')' : ''}`
+    : '';
   const cat = card.category ? ` · ${card.category}` : '';
   $('card-deck').textContent = card.deck + cat + povNote + (card.missingImage ? ' · (image missing)' : '');
 
@@ -413,7 +455,7 @@ function makeChip(label, active, onclick, extra) {
 
 function openTestSetup() {
   testSetup.decks = new Set(state.decks);
-  testSetup.pov = state.pov;
+  testSetup.pov = clonePov(state.pov);
   testSetup.classes = new Set(state.classes);
   testSetup.categories = new Set(state.categories);
   testSetup.count = 0;
@@ -433,8 +475,13 @@ function renderTestSetup() {
   renderMultiFilter('setup-deck', DECKS, testSetup.decks, renderTestSetup);
 
   for (const b of document.querySelectorAll('#setup-pov [data-pov]')) {
-    b.classList.toggle('active', b.dataset.pov === testSetup.pov);
-    b.onclick = () => { testSetup.pov = b.dataset.pov; renderTestSetup(); };
+    b.classList.toggle('active', povChipActive(testSetup.pov, b.dataset.pov));
+    b.onclick = () => {
+      const next = nextPov(testSetup.pov, b.dataset.pov);
+      if (next === null) return;
+      testSetup.pov = next;
+      renderTestSetup();
+    };
   }
 
   renderMultiFilter('setup-class', allClasses(store.getCards()), testSetup.classes, () => {
@@ -611,11 +658,12 @@ function wireEvents() {
     applyFilters(true, true);
   });
 
-  // POV selector (Standard / All POVs)
+  // POV selector (All / Standard + Front-Back / Side / Top subsets)
   for (const b of document.querySelectorAll('#pov-filter [data-pov]')) {
     b.addEventListener('click', () => {
-      if (state.pov === b.dataset.pov) return;
-      state.pov = b.dataset.pov;
+      const next = nextPov(state.pov, b.dataset.pov);
+      if (next === null) return;
+      state.pov = next;
       applyFilters(true, true);
     });
   }

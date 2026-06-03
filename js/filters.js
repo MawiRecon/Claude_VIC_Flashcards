@@ -34,12 +34,23 @@ function inSet(set, value) {
   return !set || set.size === 0 || set.has(value);
 }
 
+// POV matching. `pov` is one of:
+//   'standard' (default) -> only standard-POV cards
+//   'all'                -> every card (standard + all alt views)
+//   Set<viewType>        -> only alt cards whose `viewType` is in the set
+//                           (e.g. {'Side/Profile','Top'} — a subset of alt views)
+export function povMatch(card, pov) {
+  if (pov instanceof Set) return card.pov === 'alt' && pov.has(card.viewType);
+  if (pov === 'all') return true;
+  return card.pov !== 'alt'; // 'standard' / default
+}
+
 // decks / classes / categories: Sets (empty = no constraint).
 // practiceOnly + practiceSet: when practiceOnly, keep only ids in practiceSet.
-// pov: 'standard' (default) shows only standard cards; 'all' includes alt views.
+// pov: see povMatch above.
 export function filterCards(cards, { decks, classes, categories, practiceOnly, practiceSet, pov }) {
   return cards.filter((c) => {
-    if ((pov || 'standard') === 'standard' && c.pov === 'alt') return false;
+    if (!povMatch(c, pov)) return false;
     if (!inSet(decks, c.deck)) return false;
     if (!inSet(classes, c.class)) return false;
     if (!inSet(categories, c.category)) return false;

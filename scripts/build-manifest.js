@@ -51,6 +51,25 @@ const REF_DECKS = { Russia: 'Russia', China: 'China', NATO: 'NATO' };
 // second name). The single source of truth for second names + Category/Class.
 const NAMES_CSV = path.join(ROOT, REF_ROOT, 'vehicle_names.csv');
 
+// Per-view labels (Filename,Country,Vehicle,View,ViewType). The source of truth
+// for each alternate view's ViewType (Front/Back | Side/Profile | Top), keyed by
+// the alt image's filename. Feeds the POV view-type subset filters in the app.
+const VIEW_LABELS_CSV = path.join(ROOT, REF_ROOT, 'vehicle_view_labels.csv');
+
+// filename (basename, e.g. "NATO_Abrams_View1.jpg") -> viewType.
+function loadViewTypes() {
+  const map = new Map();
+  if (!fs.existsSync(VIEW_LABELS_CSV)) return map;
+  const lines = fs.readFileSync(VIEW_LABELS_CSV, 'utf8').trim().split(/\r?\n/).slice(1);
+  for (const line of lines) {
+    const cols = line.split(',').map((s) => (s || '').trim());
+    const filename = cols[0];
+    const viewType = cols[4];
+    if (filename && viewType && viewType !== '-') map.set(filename, viewType);
+  }
+  return map;
+}
+
 // Build deck -> Map(normalized-name -> { secondary, category, class }), so a card
 // can look up its alternate name + category/class by its own name.
 function loadVehicleInfo() {
@@ -140,7 +159,7 @@ const REF_FILE = /^(.+?)_(.+)_View(\d+)$/i; // <Country>_<Vehicle>_ViewN
  * (per deck) to resolve each reference vehicle to the right answer.
  * Returns { items, altNameForStandard, unresolved }.
  */
-function scanAlt(standardNamesByDeck) {
+function scanAlt(standardNamesByDeck, viewTypes) {
   const items = [];
   const unresolved = [];
   // deck -> (standardName -> altName) to backfill onto standard cards.
@@ -182,6 +201,8 @@ function scanAlt(standardNamesByDeck) {
       const id = `${cardId(deck, name)}-view${view}`;
       const card = { pov: 'alt', deck, name, image, view, id };
       if (altName) card.altName = altName;
+      const viewType = viewTypes && viewTypes.get(entry.name);
+      if (viewType) card.viewType = viewType;
       items.push(card);
     }
   }
@@ -211,7 +232,8 @@ function main() {
     (standardNamesByDeck[s.deck] = standardNamesByDeck[s.deck] || new Map()).set(slug(s.name), s.name);
   }
 
-  const { items: alt, altNameForStandard, unresolved } = scanAlt(standardNamesByDeck);
+  const viewTypes = loadViewTypes();
+  const { items: alt, altNameForStandard, unresolved } = scanAlt(standardNamesByDeck, viewTypes);
 
   const disk = [...standard, ...alt];
   const diskPaths = new Set(disk.map((d) => d.image));
@@ -232,6 +254,7 @@ function main() {
       const card = { id: d.id, deck: d.deck, name: d.name, image: d.image, pov: d.pov };
       if (d.pov === 'alt') card.view = d.view;
       if (d.altName) card.altName = d.altName;
+      if (d.viewType) card.viewType = d.viewType;
       byId.set(d.id, card);
       if (d.pov === 'alt') newAlt += 1; else { newStd += 1; newNames.push(`${d.deck}/${d.name}`); }
     } else {
@@ -240,7 +263,11 @@ function main() {
       if (!prior.deck) prior.deck = d.deck;
       if (prior.name == null) prior.name = d.name;
       if (!prior.pov) prior.pov = d.pov;                     // backfill pov on legacy cards
-      if (d.pov === 'alt' && prior.view == null) prior.view = d.view;
+      if (d.pov === 'alt') {
+        if (prior.view == null) prior.view = d.view;
+        // viewType is derived from the labels CSV — refresh authoritatively.
+        if (d.viewType) prior.viewType = d.viewType; else delete prior.viewType;
+      }
     }
   }
 
@@ -318,6 +345,9 @@ function main() {
   console.log(`pruned alt views (file gone): ${prunedAlt}${prunedNames.length ? '  (' + prunedNames.join(', ') + ')' : ''}`);
   console.log(`second names backfilled from CSV: ${namedCount}`);
   console.log(`categorized (category+class): ${cards.filter((c) => c.category || c.class).length}`);
+  const altTotal = cards.filter((c) => c.pov === 'alt').length;
+  const altLabeled = cards.filter((c) => c.pov === 'alt' && c.viewType).length;
+  console.log(`alt views with viewType label: ${altLabeled} / ${altTotal}`);
   if (unresolved.length) console.log(`UNRESOLVED alt images (${unresolved.length}): ${unresolved.join(', ')}`);
   console.log(`cards.json ${changed ? 'UPDATED' : 'unchanged'}`);
 

@@ -73,6 +73,12 @@ h2 { font-size: 1rem; margin: 0 0 0.75rem; }
 .chip.active { background: var(--accent); border-color: var(--accent); color: #fff; }
 .chip-tag.active { background: #6b4fff; border-color: #6b4fff; }
 
+/* POV view-type subset chips (Front/Back, Side, Top): tinted purple so they read
+   as a subset of the alternate views, distinct from the All / Standard toggles. */
+.chip-sub { color: #b3a6ff; border-color: #4a3f8f; border-style: dashed; }
+.chip-sub:hover { border-color: #6b4fff; }
+.chip-sub.active { background: #6b4fff; border-color: #6b4fff; border-style: solid; color: #fff; }
+
 /* Stage / card -------------------------------------------------------------*/
 .stage {
   display: flex; align-items: center; justify-content: center;
