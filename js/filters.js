@@ -15,28 +15,34 @@ export function allClasses(cards) {
   ];
 }
 
-// Distinct categories present, alphabetical. If `klass` is given (not 'All'),
-// only categories belonging to that class are returned (drill-down).
-export function allCategories(cards, klass) {
+// Distinct categories present, alphabetical. If `classes` (a Set) is non-empty,
+// only categories belonging to those classes are returned (drill-down).
+export function allCategories(cards, classes) {
+  const limit = classes && classes.size ? classes : null;
   const set = new Set();
   for (const c of cards) {
     if (!c.category) continue;
-    if (klass && klass !== 'All' && c.class !== klass) continue;
+    if (limit && !limit.has(c.class)) continue;
     set.add(c.category);
   }
   return [...set].sort((a, b) => a.localeCompare(b));
 }
 
-// deck: 'All' | 'NATO' | 'China' | 'Russia'
-// klass / category: 'All' or a specific value (single-select, AND together).
+// A multi-select dimension matches when its Set is empty (= All) OR contains the
+// card's value. Dimensions AND together; values within a dimension OR together.
+function inSet(set, value) {
+  return !set || set.size === 0 || set.has(value);
+}
+
+// decks / classes / categories: Sets (empty = no constraint).
 // practiceOnly + practiceSet: when practiceOnly, keep only ids in practiceSet.
 // pov: 'standard' (default) shows only standard cards; 'all' includes alt views.
-export function filterCards(cards, { deck, klass, category, practiceOnly, practiceSet, pov }) {
+export function filterCards(cards, { decks, classes, categories, practiceOnly, practiceSet, pov }) {
   return cards.filter((c) => {
     if ((pov || 'standard') === 'standard' && c.pov === 'alt') return false;
-    if (deck && deck !== 'All' && c.deck !== deck) return false;
-    if (klass && klass !== 'All' && c.class !== klass) return false;
-    if (category && category !== 'All' && c.category !== category) return false;
+    if (!inSet(decks, c.deck)) return false;
+    if (!inSet(classes, c.class)) return false;
+    if (!inSet(categories, c.category)) return false;
     if (practiceOnly && !(practiceSet && practiceSet.has(c.id))) return false;
     return true;
   });

@@ -13,9 +13,9 @@ import { initTest, startTest, isTestActive } from './test-mode.js';
 // ---------------------------------------------------------------------------
 
 const state = {
-  deck: 'All',
-  klass: 'All',
-  category: 'All',
+  decks: new Set(),       // empty = All (multi-select)
+  classes: new Set(),     // empty = All
+  categories: new Set(),  // empty = All
   filtered: [], // array of card objects, post-filter
   index: 0,
   flipped: false,
@@ -122,53 +122,47 @@ function requireToken() {
 // Filters
 // ---------------------------------------------------------------------------
 
-function renderDeckFilter() {
-  const wrap = $('deck-filter');
+// Multi-select chip row. "All" is active when the set is empty and clears it;
+// each option toggles membership. `onChange` re-applies filters.
+function renderMultiFilter(wrapId, options, set, onChange) {
+  const wrap = $(wrapId);
   wrap.innerHTML = '';
-  for (const deck of ['All', ...DECKS]) {
-    const b = document.createElement('button');
-    b.className = 'chip' + (state.deck === deck ? ' active' : '');
-    b.textContent = deck;
-    b.onclick = () => {
-      state.deck = deck;
-      applyFilters(true, true);
-    };
-    wrap.appendChild(b);
+  wrap.appendChild(makeChip('All', set.size === 0, () => { set.clear(); onChange(); }));
+  for (const opt of options) {
+    wrap.appendChild(makeChip(opt, set.has(opt), () => {
+      if (set.has(opt)) set.delete(opt); else set.add(opt);
+      onChange();
+    }));
   }
 }
 
-// Single-select chip row helper (Class / Category share this shape).
-function renderSelectFilter(wrapId, options, selected, onPick) {
-  const wrap = $(wrapId);
-  wrap.innerHTML = '';
-  for (const opt of ['All', ...options]) {
-    const b = document.createElement('button');
-    b.className = 'chip' + (selected === opt ? ' active' : '');
-    b.textContent = opt;
-    b.onclick = () => onPick(opt);
-    wrap.appendChild(b);
-  }
+function renderDeckFilter() {
+  renderMultiFilter('deck-filter', DECKS, state.decks, () => applyFilters(true, true));
 }
 
 function renderClassFilter() {
-  renderSelectFilter('class-filter', allClasses(store.getCards()), state.klass, (k) => {
-    state.klass = k;
-    state.category = 'All'; // changing class resets the (drill-down) category
+  renderMultiFilter('class-filter', allClasses(store.getCards()), state.classes, () => {
+    pruneCategories(state.classes, state.categories); // keep category ⊆ selected classes
     applyFilters(true, true);
   });
 }
 
 function renderCategoryFilter() {
-  // categories drill down from the selected class
-  renderSelectFilter('category-filter', allCategories(store.getCards(), state.klass), state.category, (c) => {
-    state.category = c;
-    applyFilters(true, true);
-  });
+  // categories drill down from the selected class(es)
+  renderMultiFilter('category-filter', allCategories(store.getCards(), state.classes), state.categories,
+    () => applyFilters(true, true));
+}
+
+// Drop any selected categories that aren't within the selected classes.
+function pruneCategories(classesSet, categoriesSet) {
+  if (!classesSet.size) return;
+  const valid = new Set(allCategories(store.getCards(), classesSet));
+  for (const c of [...categoriesSet]) if (!valid.has(c)) categoriesSet.delete(c);
 }
 
 function applyFilters(resetIndex, reshuffle) {
   const base = filterCards(store.getCards(), {
-    deck: state.deck, klass: state.klass, category: state.category,
+    decks: state.decks, classes: state.classes, categories: state.categories,
     practiceOnly: state.practiceOnly, practiceSet: state.practice,
     pov: state.pov,
   });
@@ -406,7 +400,7 @@ function afterMutation(keepId) {
 // ---------------------------------------------------------------------------
 
 const COUNTS = [10, 25, 50];
-const testSetup = { deck: 'All', pov: 'standard', klass: 'All', category: 'All', count: 0, practiceOnly: false };
+const testSetup = { decks: new Set(), pov: 'standard', classes: new Set(), categories: new Set(), count: 0, practiceOnly: false };
 
 function makeChip(label, active, onclick, extra) {
   const b = document.createElement('button');
@@ -418,10 +412,10 @@ function makeChip(label, active, onclick, extra) {
 }
 
 function openTestSetup() {
-  testSetup.deck = state.deck;
+  testSetup.decks = new Set(state.decks);
   testSetup.pov = state.pov;
-  testSetup.klass = state.klass;
-  testSetup.category = state.category;
+  testSetup.classes = new Set(state.classes);
+  testSetup.categories = new Set(state.categories);
   testSetup.count = 0;
   testSetup.practiceOnly = state.practiceOnly && state.practice.size > 0;
   renderTestSetup();
@@ -430,38 +424,24 @@ function openTestSetup() {
 
 function setupBase() {
   return filterCards(store.getCards(), {
-    deck: testSetup.deck, klass: testSetup.klass, category: testSetup.category, pov: testSetup.pov,
+    decks: testSetup.decks, classes: testSetup.classes, categories: testSetup.categories, pov: testSetup.pov,
     practiceOnly: testSetup.practiceOnly, practiceSet: state.practice,
   });
 }
 
 function renderTestSetup() {
-  const deckWrap = $('setup-deck');
-  deckWrap.innerHTML = '';
-  for (const d of ['All', ...DECKS]) {
-    deckWrap.appendChild(makeChip(d, testSetup.deck === d, () => { testSetup.deck = d; renderTestSetup(); }));
-  }
+  renderMultiFilter('setup-deck', DECKS, testSetup.decks, renderTestSetup);
 
   for (const b of document.querySelectorAll('#setup-pov [data-pov]')) {
     b.classList.toggle('active', b.dataset.pov === testSetup.pov);
     b.onclick = () => { testSetup.pov = b.dataset.pov; renderTestSetup(); };
   }
 
-  const classWrap = $('setup-class');
-  classWrap.innerHTML = '';
-  for (const k of ['All', ...allClasses(store.getCards())]) {
-    classWrap.appendChild(makeChip(k, testSetup.klass === k, () => {
-      testSetup.klass = k; testSetup.category = 'All'; renderTestSetup();
-    }));
-  }
-
-  const catWrap = $('setup-category');
-  catWrap.innerHTML = '';
-  for (const c of ['All', ...allCategories(store.getCards(), testSetup.klass)]) {
-    catWrap.appendChild(makeChip(c, testSetup.category === c, () => {
-      testSetup.category = c; renderTestSetup();
-    }));
-  }
+  renderMultiFilter('setup-class', allClasses(store.getCards()), testSetup.classes, () => {
+    pruneCategories(testSetup.classes, testSetup.categories);
+    renderTestSetup();
+  });
+  renderMultiFilter('setup-category', allCategories(store.getCards(), testSetup.classes), testSetup.categories, renderTestSetup);
 
   // Practice-set option only when the user has a non-empty set.
   const hasSet = state.practice.size > 0;
@@ -547,9 +527,9 @@ function renderJumpList(q) {
 function jumpToVehicle(id) {
   const card = store.findById(id);
   if (!card) return;
-  state.deck = card.deck;
-  state.klass = 'All';
-  state.category = 'All';
+  state.decks = new Set([card.deck]);
+  state.classes.clear();
+  state.categories.clear();
   state.practiceOnly = false;
   state.search = '';
   $('search-input').value = '';
@@ -625,9 +605,9 @@ function wireEvents() {
 
   // filters
   $('btn-clear-filters').addEventListener('click', () => {
-    state.deck = 'All';
-    state.klass = 'All';
-    state.category = 'All';
+    state.decks.clear();
+    state.classes.clear();
+    state.categories.clear();
     applyFilters(true, true);
   });
 
@@ -762,7 +742,7 @@ function wireEvents() {
     if (!requireToken()) return;
     const sel = $('new-deck');
     sel.innerHTML = DECKS.map((d) => `<option>${d}</option>`).join('');
-    if (state.deck !== 'All') sel.value = state.deck;
+    if (state.decks.size === 1) sel.value = [...state.decks][0]; // pre-fill if exactly one country filtered
     $('new-name').value = '';
     $('new-file').value = '';
     $('new-card-dialog').showModal();
@@ -776,8 +756,8 @@ function wireEvents() {
     if (!name || !file) { toast('Name and image are required.', 'error'); return; }
     withFeedback($('btn-new-card'), 'Create card', async () => {
       const card = await store.createCard({ deck, name, file }, state.token);
-      // make sure the new deck/card is visible
-      if (state.deck !== 'All' && state.deck !== deck) state.deck = 'All';
+      // make sure the new card is visible (clear a country filter that would hide it)
+      if (state.decks.size && !state.decks.has(deck)) state.decks.clear();
       afterMutation(card.id);
     });
   });
