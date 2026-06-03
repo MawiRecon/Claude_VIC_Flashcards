@@ -171,7 +171,7 @@
     "altName": "Type-05",
     "category": "Self-Propelled Artillery",
     "class": "Artillery",
-    "viewType": "Side/Profile"
+    "viewType": "Front/Back"
   },
   {
     "id": "china-plz05-view4",
@@ -637,7 +637,7 @@
     "altName": "ZTQ-15",
     "category": "Light Tank",
     "class": "Armor",
-    "viewType": "Side/Profile"
+    "viewType": "Front/Back"
   },
   {
     "id": "china-type15-view4",
@@ -777,7 +777,7 @@
     "altName": "ZTS-63A",
     "category": "Light Tank",
     "class": "Armor",
-    "viewType": "Side/Profile"
+    "viewType": "Top"
   },
   {
     "id": "china-type63a-view4",
@@ -835,7 +835,7 @@
     "altName": "PGZ-95",
     "category": "Self-Propelled Air Defense",
     "class": "Air Defense",
-    "viewType": "Side/Profile"
+    "viewType": "Front/Back"
   },
   {
     "id": "china-type95-view4",
@@ -997,7 +997,7 @@
     "altName": "ZTZ-99A",
     "category": "Main Battle Tank",
     "class": "Armor",
-    "viewType": "Side/Profile"
+    "viewType": "Front/Back"
   },
   {
     "id": "china-type99a-view3",
@@ -1361,7 +1361,7 @@
     "view": 2,
     "category": "Infantry Fighting Vehicle",
     "class": "Armor",
-    "viewType": "Side/Profile"
+    "viewType": "Front/Back"
   },
   {
     "id": "china-zsl92-view3",
@@ -1774,7 +1774,7 @@
     "view": 2,
     "category": "Main Battle Tank",
     "class": "Armor",
-    "viewType": "Side/Profile"
+    "viewType": "Front/Back"
   },
   {
     "id": "nato-k1a1-view3",
@@ -1785,7 +1785,7 @@
     "view": 3,
     "category": "Main Battle Tank",
     "class": "Armor",
-    "viewType": "Side/Profile"
+    "viewType": "Top"
   },
   {
     "id": "nato-k1a1-view4",
@@ -2006,7 +2006,7 @@
     "altName": "M109",
     "category": "Self-Propelled Artillery",
     "class": "Artillery",
-    "viewType": "Side/Profile"
+    "viewType": "Top"
   },
   {
     "id": "nato-paladin-view4",
@@ -2238,7 +2238,7 @@
     "altName": "Koalitsiya",
     "category": "Self-Propelled Artillery",
     "class": "Artillery",
-    "viewType": "Side/Profile"
+    "viewType": "Front/Back"
   },
   {
     "id": "russia-2s5",
@@ -2272,7 +2272,7 @@
     "altName": "Giatsnit",
     "category": "Self-Propelled Artillery",
     "class": "Artillery",
-    "viewType": "Side/Profile"
+    "viewType": "Front/Back"
   },
   {
     "id": "russia-2s5-view3",
@@ -2296,7 +2296,7 @@
     "altName": "Giatsnit",
     "category": "Self-Propelled Artillery",
     "class": "Artillery",
-    "viewType": "Side/Profile"
+    "viewType": "Front/Back"
   },
   {
     "id": "russia-2s6",
@@ -2342,7 +2342,7 @@
     "altName": "Tunguska-M",
     "category": "Self-Propelled Air Defense",
     "class": "Air Defense",
-    "viewType": "Side/Profile"
+    "viewType": "Front/Back"
   },
   {
     "id": "russia-2s6-view4",
@@ -2354,7 +2354,7 @@
     "altName": "Tunguska-M",
     "category": "Self-Propelled Air Defense",
     "class": "Air Defense",
-    "viewType": "Side/Profile"
+    "viewType": "Front/Back"
   },
   {
     "id": "russia-bm27",
@@ -2412,7 +2412,7 @@
     "altName": "Uragan",
     "category": "Rocket Artillery",
     "class": "Artillery",
-    "viewType": "Side/Profile"
+    "viewType": "Front/Back"
   },
   {
     "id": "russia-bmd3",
@@ -2443,7 +2443,7 @@
     "view": 2,
     "category": "Infantry Fighting Vehicle",
     "class": "Armor",
-    "viewType": "Side/Profile"
+    "viewType": "Front/Back"
   },
   {
     "id": "russia-bmd3-view3",
@@ -2465,7 +2465,7 @@
     "view": 4,
     "category": "Infantry Fighting Vehicle",
     "class": "Armor",
-    "viewType": "Side/Profile"
+    "viewType": "Front/Back"
   },
   {
     "id": "russia-bmd4",
@@ -2658,7 +2658,7 @@
     "altName": "BMR-3M",
     "category": "Engineering Vehicle",
     "class": "Support",
-    "viewType": "Side/Profile"
+    "viewType": "Front/Back"
   },
   {
     "id": "russia-boar-view3",
@@ -2670,7 +2670,7 @@
     "altName": "BMR-3M",
     "category": "Engineering Vehicle",
     "class": "Support",
-    "viewType": "Side/Profile"
+    "viewType": "Top"
   },
   {
     "id": "russia-boar-view4",
@@ -2682,7 +2682,7 @@
     "altName": "BMR-3M",
     "category": "Engineering Vehicle",
     "class": "Support",
-    "viewType": "Side/Profile"
+    "viewType": "Front/Back"
   },
   {
     "id": "russia-btr70",
@@ -2713,7 +2713,7 @@
     "view": 2,
     "category": "Armored Personnel Carrier",
     "class": "Armor",
-    "viewType": "Side/Profile"
+    "viewType": "Top"
   },
   {
     "id": "russia-btr70-view3",
@@ -2735,7 +2735,7 @@
     "view": 4,
     "category": "Armored Personnel Carrier",
     "class": "Armor",
-    "viewType": "Side/Profile"
+    "viewType": "Front/Back"
   },
   {
     "id": "russia-btr80",
@@ -2846,7 +2846,7 @@
     "altName": "MiG-31",
     "category": "Fighter Aircraft",
     "class": "Aviation",
-    "viewType": "Side/Profile"
+    "viewType": "Top"
   },
   {
     "id": "russia-foxhound-view5",
@@ -2858,7 +2858,7 @@
     "altName": "MiG-31",
     "category": "Fighter Aircraft",
     "class": "Aviation",
-    "viewType": "Side/Profile"
+    "viewType": "Front/Back"
   },
   {
     "id": "russia-gauntlet",
@@ -2904,7 +2904,7 @@
     "altName": "SA-15",
     "category": "Surface-to-Air Missile System",
     "class": "Air Defense",
-    "viewType": "Side/Profile"
+    "viewType": "Front/Back"
   },
   {
     "id": "russia-gauntlet-view4",
@@ -2916,7 +2916,7 @@
     "altName": "SA-15",
     "category": "Surface-to-Air Missile System",
     "class": "Air Defense",
-    "viewType": "Side/Profile"
+    "viewType": "Front/Back"
   },
   {
     "id": "russia-gopher",
@@ -3008,7 +3008,7 @@
     "altName": "SA-17",
     "category": "Surface-to-Air Missile System",
     "class": "Air Defense",
-    "viewType": "Side/Profile"
+    "viewType": "Front/Back"
   },
   {
     "id": "russia-grizzly-view3",
@@ -3078,7 +3078,7 @@
     "altName": "MI-28",
     "category": "Attack Helicopter",
     "class": "Aviation",
-    "viewType": "Side/Profile"
+    "viewType": "Top"
   },
   {
     "id": "russia-havoc-view4",
@@ -3435,7 +3435,7 @@
     "altName": "GAZ-2975",
     "category": "Light Utility Vehicle",
     "class": "Support",
-    "viewType": "Side/Profile"
+    "viewType": "Front/Back"
   },
   {
     "id": "russia-tos1a",

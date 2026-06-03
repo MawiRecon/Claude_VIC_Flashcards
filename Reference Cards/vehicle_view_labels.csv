@@ -25,8 +25,8 @@ NATO_HIMARS_View2.jpg,NATO,HIMARS,View2,Front/Back
 NATO_HIMARS_View3.jpg,NATO,HIMARS,View3,Top
 NATO_HIMARS_View4.jpg,NATO,HIMARS,View4,Side/Profile
 NATO_K1A1_View1.jpg,NATO,K1A1,View1,Side/Profile
-NATO_K1A1_View2.jpg,NATO,K1A1,View2,Side/Profile
-NATO_K1A1_View3.jpg,NATO,K1A1,View3,Side/Profile
+NATO_K1A1_View2.jpg,NATO,K1A1,View2,Front/Back
+NATO_K1A1_View3.jpg,NATO,K1A1,View3,Top
 NATO_K1A1_View4.jpg,NATO,K1A1,View4,Side/Profile
 NATO_Leopard 2A4_View1.jpg,NATO,Leopard 2A4,View1,Side/Profile
 NATO_Leopard 2A4_View2.jpg,NATO,Leopard 2A4,View2,Front/Back
@@ -42,7 +42,7 @@ NATO_MLRS_View3.jpg,NATO,MLRS,View3,Top
 NATO_MLRS_View4.png,NATO,MLRS,View4,Side/Profile
 NATO_Paladin_View1.jpg,NATO,Paladin,View1,Side/Profile
 NATO_Paladin_View2.jpg,NATO,Paladin,View2,Front/Back
-NATO_Paladin_View3.jpg,NATO,Paladin,View3,Side/Profile
+NATO_Paladin_View3.jpg,NATO,Paladin,View3,Top
 NATO_Paladin_View4.jpg,NATO,Paladin,View4,Side/Profile
 NATO_Stryker_View1.jpg,NATO,Stryker,View1,Side/Profile
 NATO_Stryker_View2.jpg,NATO,Stryker,View2,Front/Back
@@ -70,7 +70,7 @@ China_Type 09_View3.jpg,China,Type 09,View3,Top
 China_Type 09_View4.jpg,China,Type 09,View4,Side/Profile
 China_Type 15_View1.jpg,China,Type 15,View1,Side/Profile
 China_Type 15_View2.jpg,China,Type 15,View2,Front/Back
-China_Type 15_View3.jpg,China,Type 15,View3,Side/Profile
+China_Type 15_View3.jpg,China,Type 15,View3,Front/Back
 China_Type 15_View4.jpg,China,Type 15,View4,Top
 China_Type 15_View5.jpg,China,Type 15,View5,Side/Profile
 China_Type 86_View1.jpg,China,Type 86,View1,Side/Profile
@@ -88,7 +88,7 @@ China_Type-04A_View3.jpg,China,Type-04A,View3,Top
 China_Type-04A_View4.jpg,China,Type-04A,View4,Side/Profile
 China_Type-05_View1.jpg,China,Type-05,View1,Side/Profile
 China_Type-05_View2.jpg,China,Type-05,View2,Front/Back
-China_Type-05_View3.jpg,China,Type-05,View3,Side/Profile
+China_Type-05_View3.jpg,China,Type-05,View3,Front/Back
 China_Type-05_View4.jpg,China,Type-05,View4,Top
 China_Type-05_View5.jpg,China,Type-05,View5,Side/Profile
 China_Type-07_View1.jpg,China,Type-07,View1,Side/Profile
@@ -102,7 +102,7 @@ China_Type-59_View4.jpg,China,Type-59,View4,Side/Profile
 China_Type-59_View5.jpg,China,Type-59,View5,Top
 China_Type-63A_View1.jpg,China,Type-63A,View1,Side/Profile
 China_Type-63A_View2.jpg,China,Type-63A,View2,Front/Back
-China_Type-63A_View3.jpg,China,Type-63A,View3,Side/Profile
+China_Type-63A_View3.jpg,China,Type-63A,View3,Top
 China_Type-63A_View4.jpg,China,Type-63A,View4,Top
 China_Type-90-II_View1.jpg,China,Type-90-II,View1,Side/Profile
 China_Type-90-II_View2.jpg,China,Type-90-II,View2,Front/Back
@@ -110,7 +110,7 @@ China_Type-90-II_View3.jpg,China,Type-90-II,View3,Side/Profile
 China_Type-90-II_View4.jpg,China,Type-90-II,View4,Side/Profile
 China_Type-95_View1.jpg,China,Type-95,View1,Side/Profile
 China_Type-95_View2.jpg,China,Type-95,View2,Front/Back
-China_Type-95_View3.jpg,China,Type-95,View3,Side/Profile
+China_Type-95_View3.jpg,China,Type-95,View3,Front/Back
 China_Type-95_View4.jpg,China,Type-95,View4,Top
 China_Type-96A_View1.jpg,China,Type-96A,View1,Side/Profile
 China_Type-96A_View2.jpg,China,Type-96A,View2,Front/Back
@@ -121,7 +121,7 @@ China_Type-98_View2.jpg,China,Type-98,View2,Front/Back
 China_Type-98_View3.jpg,China,Type-98,View3,Top
 China_Type-98_View4.jpg,China,Type-98,View4,Side/Profile
 China_Type-99A_View1.jpg,China,Type-99A,View1,Side/Profile
-China_Type-99A_View2.jpg,China,Type-99A,View2,Side/Profile
+China_Type-99A_View2.jpg,China,Type-99A,View2,Front/Back
 China_Type-99A_View3.jpg,China,Type-99A,View3,Front/Back
 China_Type-99A_View4.jpg,China,Type-99A,View4,Top
 China_Type-99A_View5.jpg,China,Type-99A,View5,Side/Profile
@@ -147,13 +147,13 @@ China_Z-19_View2.jpg,China,Z-19,View2,Side/Profile
 China_Z-19_View3.jpg,China,Z-19,View3,Front/Back
 China_Z-19_View4.jpg,China,Z-19,View4,Top
 China_ZSL-92_View1.jpg,China,ZSL-92,View1,Side/Profile
-China_ZSL-92_View2.jpg,China,ZSL-92,View2,Side/Profile
+China_ZSL-92_View2.jpg,China,ZSL-92,View2,Front/Back
 China_ZSL-92_View3.jpg,China,ZSL-92,View3,Front/Back
 China_ZSL-92_View4.jpg,China,ZSL-92,View4,Side/Profile
 Russia_BMD-3_View1.jpg,Russia,BMD-3,View1,Side/Profile
-Russia_BMD-3_View2.jpg,Russia,BMD-3,View2,Side/Profile
+Russia_BMD-3_View2.jpg,Russia,BMD-3,View2,Front/Back
 Russia_BMD-3_View3.jpg,Russia,BMD-3,View3,Side/Profile
-Russia_BMD-3_View4.jpg,Russia,BMD-3,View4,Side/Profile
+Russia_BMD-3_View4.jpg,Russia,BMD-3,View4,Front/Back
 Russia_BMD-4_View1.jpg,Russia,BMD-4,View1,Side/Profile
 Russia_BMD-4_View2.jpg,Russia,BMD-4,View2,Front/Back
 Russia_BMD-4_View3.jpg,Russia,BMD-4,View3,Top
@@ -167,41 +167,41 @@ Russia_BMP-3_View2.jpg,Russia,BMP-3,View2,Front/Back
 Russia_BMP-3_View3.jpg,Russia,BMP-3,View3,Top
 Russia_BMP-3_View4.jpg,Russia,BMP-3,View4,Side/Profile
 Russia_BTR-70_View1.jpg,Russia,BTR-70,View1,Side/Profile
-Russia_BTR-70_View2.jpg,Russia,BTR-70,View2,Side/Profile
+Russia_BTR-70_View2.jpg,Russia,BTR-70,View2,Top
 Russia_BTR-70_View3.jpg,Russia,BTR-70,View3,Side/Profile
-Russia_BTR-70_View4.jpg,Russia,BTR-70,View4,Side/Profile
+Russia_BTR-70_View4.jpg,Russia,BTR-70,View4,Front/Back
 Russia_BTR-80_View1.jpg,Russia,BTR-80,View1,Side/Profile
 Russia_BTR-80_View2.jpg,Russia,BTR-80,View2,Front/Back
 Russia_BTR-80_View3.jpg,Russia,BTR-80,View3,Side/Profile
 Russia_BTR-80_View4.jpg,Russia,BTR-80,View4,Side/Profile
 Russia_Boar_View1.jpg,Russia,Boar,View1,Side/Profile
-Russia_Boar_View2.jpg,Russia,Boar,View2,Side/Profile
-Russia_Boar_View3.jpg,Russia,Boar,View3,Side/Profile
-Russia_Boar_View4.jpg,Russia,Boar,View4,Side/Profile
+Russia_Boar_View2.jpg,Russia,Boar,View2,Front/Back
+Russia_Boar_View3.jpg,Russia,Boar,View3,Top
+Russia_Boar_View4.jpg,Russia,Boar,View4,Front/Back
 Russia_Foxhound_View1.jpg,Russia,Foxhound,View1,Side/Profile
 Russia_Foxhound_View2.jpg,Russia,Foxhound,View2,Top
 Russia_Foxhound_View3.jpg,Russia,Foxhound,View3,Side/Profile
-Russia_Foxhound_View4.jpg,Russia,Foxhound,View4,Side/Profile
-Russia_Foxhound_View5.jpg,Russia,Foxhound,View5,Side/Profile
+Russia_Foxhound_View4.jpg,Russia,Foxhound,View4,Top
+Russia_Foxhound_View5.jpg,Russia,Foxhound,View5,Front/Back
 Russia_Gauntlet_View1.jpg,Russia,Gauntlet,View1,Side/Profile
 Russia_Gauntlet_View2.jpg,Russia,Gauntlet,View2,Side/Profile
-Russia_Gauntlet_View3.jpg,Russia,Gauntlet,View3,Side/Profile
-Russia_Gauntlet_View4.jpg,Russia,Gauntlet,View4,Side/Profile
+Russia_Gauntlet_View3.jpg,Russia,Gauntlet,View3,Front/Back
+Russia_Gauntlet_View4.jpg,Russia,Gauntlet,View4,Front/Back
 Russia_Giatsnit_View1.jpg,Russia,Giatsnit,View1,Side/Profile
-Russia_Giatsnit_View2.jpg,Russia,Giatsnit,View2,Side/Profile
+Russia_Giatsnit_View2.jpg,Russia,Giatsnit,View2,Front/Back
 Russia_Giatsnit_View3.jpg,Russia,Giatsnit,View3,Side/Profile
-Russia_Giatsnit_View4.jpg,Russia,Giatsnit,View4,Side/Profile
+Russia_Giatsnit_View4.jpg,Russia,Giatsnit,View4,Front/Back
 Russia_Gopher_View1.jpg,Russia,Gopher,View1,Top
 Russia_Gopher_View2.jpg,Russia,Gopher,View2,Front/Back
 Russia_Gopher_View3.jpg,Russia,Gopher,View3,Top
 Russia_Gopher_View4.jpg,Russia,Gopher,View4,Side/Profile
 Russia_Grizzly_View1.jpg,Russia,Grizzly,View1,Side/Profile
-Russia_Grizzly_View2.jpg,Russia,Grizzly,View2,Side/Profile
+Russia_Grizzly_View2.jpg,Russia,Grizzly,View2,Front/Back
 Russia_Grizzly_View3.jpg,Russia,Grizzly,View3,Side/Profile
 Russia_Grizzly_View4.jpg,Russia,Grizzly,View4,Top
 Russia_Havoc_View1.jpg,Russia,Havoc,View1,Side/Profile
 Russia_Havoc_View2.jpg,Russia,Havoc,View2,Front/Back
-Russia_Havoc_View3.jpg,Russia,Havoc,View3,Side/Profile
+Russia_Havoc_View3.jpg,Russia,Havoc,View3,Top
 Russia_Havoc_View4.jpg,Russia,Havoc,View4,Side/Profile
 Russia_Hind_View1.jpg,Russia,Hind,View1,Side/Profile
 Russia_Hind_View2.jpg,Russia,Hind,View2,Side/Profile
@@ -214,7 +214,7 @@ Russia_Hokum-B_View3.jpg,Russia,Hokum-B,View3,Front/Back
 Russia_Hokum-B_View4.jpg,Russia,Hokum-B,View4,Top
 Russia_Koalitsiya_View1.jpg,Russia,Koalitsiya,View1,Side/Profile
 Russia_Koalitsiya_View2.jpg,Russia,Koalitsiya,View2,Side/Profile
-Russia_Koalitsiya_View3.jpg,Russia,Koalitsiya,View3,Side/Profile
+Russia_Koalitsiya_View3.jpg,Russia,Koalitsiya,View3,Front/Back
 Russia_Koalitsiya_View4.jpg,Russia,Koalitsiya,View4,Top
 Russia_MSTA-S_View1.jpg,Russia,MSTA-S,View1,Side/Profile
 Russia_MSTA-S_View2.jpg,Russia,MSTA-S,View2,Front/Back
@@ -241,12 +241,12 @@ Russia_T-90A_View4.jpg,Russia,T-90A,View4,Side/Profile
 Russia_Tigr_View1.jpg,Russia,Tigr,View1,Side/Profile
 Russia_Tigr_View2.jpg,Russia,Tigr,View2,Side/Profile
 Russia_Tigr_View3.jpg,Russia,Tigr,View3,Front/Back
-Russia_Tigr_View4.jpg,Russia,Tigr,View4,Side/Profile
+Russia_Tigr_View4.jpg,Russia,Tigr,View4,Front/Back
 Russia_Tunguska-M_View1.jpg,Russia,Tunguska-M,View1,Side/Profile
 Russia_Tunguska-M_View2.jpg,Russia,Tunguska-M,View2,Side/Profile
-Russia_Tunguska-M_View3.jpg,Russia,Tunguska-M,View3,Side/Profile
-Russia_Tunguska-M_View4.jpg,Russia,Tunguska-M,View4,Side/Profile
+Russia_Tunguska-M_View3.jpg,Russia,Tunguska-M,View3,Front/Back
+Russia_Tunguska-M_View4.jpg,Russia,Tunguska-M,View4,Front/Back
 Russia_Uragan_View1.jpg,Russia,Uragan,View1,Side/Profile
 Russia_Uragan_View2.jpg,Russia,Uragan,View2,Side/Profile
 Russia_Uragan_View3.jpg,Russia,Uragan,View3,Side/Profile
-Russia_Uragan_View4.jpg,Russia,Uragan,View4,Side/Profile
+Russia_Uragan_View4.jpg,Russia,Uragan,View4,Front/Back
